@@ -6,7 +6,7 @@
       "task_description": "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! Du kannst diese mit den Tasten 1, 2, 3, 4 oder 5 auswählen."
     },
     "no_autocompletion": {
-      "example_text": "Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.",
+      "example_text": "Jemand musste Josef K verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.",
       "task_description": "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. Autokorrektur oder Autovervollständigung!"
     }
   },
