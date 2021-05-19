@@ -395,8 +395,7 @@ class TextEntryLogger:
             self.__questionnaire_data = pd.read_csv(self.__questionnaire_log_file_name)
         else:
             self.__questionnaire_data = pd.DataFrame(
-                columns=['timestamp', 'participantID', 'age', 'gender', 'occupation', 'usedHand', 'keyboardType',
-                         'keyboardUsage', 'hasEyeImpairment', 'eyeImpairment'])
+                columns=['participant_id', 'age', 'gender', 'occupation', 'keyboard_usage', 'entry_speed'])
 
     def log_event(self, event: EventTypes, timestamp: float, participant_id: int, condition: str, autocompletion: bool,
                   entered_content: str, start_time_in_s: float, end_time_in_s: float, duration_in_s: float) -> None:
