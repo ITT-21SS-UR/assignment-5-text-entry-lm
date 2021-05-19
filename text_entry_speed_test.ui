@@ -262,7 +262,7 @@
          </font>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte gib den untenstehenden Text so schnell und fehlerfrei wie möglich in das Textfeld ein (Copy &amp;amp; Paste ist selbsverständlich nicht erlaubt). Fehler müssen dabei nicht korrigiert werden! Sobald du fertig bist, klicke auf den Button unten.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte gib den untenstehenden Text &lt;span style=&quot; font-weight:600;&quot;&gt;so schnell und fehlerfrei wie möglich&lt;/span&gt; in das Textfeld ein (Copy &amp;amp; Paste ist selbsverständlich nicht erlaubt). &lt;span style=&quot; font-weight:600;&quot;&gt;Fehler müssen dabei nicht korrigiert werden!&lt;/span&gt; Sobald du fertig bist, klicke auf den Button unten.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

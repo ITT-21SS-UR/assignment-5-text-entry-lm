@@ -1,0 +1,26 @@
+event_type timestamp participant_id condition with_autocompletion entered_content start_time_in_s end_time_in_s duration_in_s
+EventTypes.KEY_PRESSED,1621441166.7624898,1,with_autocompletion_text_2,True,,1621441166.7624915,1621441166.762492,0
+EventTypes.KEY_PRESSED,1621441166.9650965,1,with_autocompletion_text_2,True,I,1621441166.9650977,1621441166.9650981,0
+EventTypes.KEY_PRESSED,1621441167.0692165,1,with_autocompletion_text_2,True,c,1621441167.0692184,1621441167.0692186,0
+EventTypes.KEY_PRESSED,1621441167.209633,1,with_autocompletion_text_2,True,h,1621441167.2096343,1621441167.2096345,0
+EventTypes.KEY_PRESSED,1621441167.5671694,1,with_autocompletion_text_2,True,k,1621441167.567171,1621441167.5671713,0
+EventTypes.KEY_PRESSED,1621441167.790706,1,with_autocompletion_text_2,True,ö,1621441167.790708,1621441167.7907083,0
+EventTypes.KEY_PRESSED,1621441167.9550424,1,with_autocompletion_text_2,True,n,1621441167.9550438,1621441167.955044,0
+EventTypes.KEY_PRESSED,1621441172.4908092,1,with_autocompletion_text_2,True,,1621441172.4908106,1621441172.4908109,0
+EventTypes.KEY_PRESSED,1621441172.6828227,1,with_autocompletion_text_2,True,?,1621441172.6828253,1621441172.682826,0
+EventTypes.WORD_TYPED,1621441172.6829507,1,with_autocompletion_text_2,True,Ich,1621441172.6829462,1621441166.9651787,5.7177674770355225
+EventTypes.SENTENCE_TYPED,1621441172.6830115,1,with_autocompletion_text_2,True,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621441172.683008,1621441166.7624748,5.920533180236816
+EventTypes.KEY_PRESSED,1621441172.8654118,1,with_autocompletion_text_2,True,?,1621441172.8654132,1621441172.8654137,0
+EventTypes.WORD_TYPED,1621441172.8654804,1,with_autocompletion_text_2,True,könnte,1621441172.8654788,1621441166.9651787,5.900300025939941
+EventTypes.SENTENCE_TYPED,1621441172.865504,1,with_autocompletion_text_2,True,Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621441172.8655028,1621441172.6830392,0.1824636459350586
+EventTypes.TEST_FINISHED,1621441172.865528,1,with_autocompletion_text_2,True,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621441172.8655252,1621441166.7624748,6.103050470352173
+EventTypes.KEY_PRESSED,1621441246.346442,2,no_autocompletion_text_1,False,,1621441246.3464434,1621441246.3464441,0
+EventTypes.KEY_PRESSED,1621441246.5173807,2,no_autocompletion_text_1,False,E,1621441246.5173843,1621441246.5173852,0
+EventTypes.KEY_PRESSED,1621441246.8513603,2,no_autocompletion_text_1,False,i,1621441246.8513622,1621441246.8513627,0
+EventTypes.KEY_PRESSED,1621441247.014557,2,no_autocompletion_text_1,False,n,1621441247.0145583,1621441247.0145586,0
+EventTypes.KEY_PRESSED,1621441247.131563,2,no_autocompletion_text_1,False,e,1621441247.131565,1621441247.1315658,0
+EventTypes.KEY_PRESSED,1621441249.674991,2,no_autocompletion_text_1,False, ,1621441249.6749923,1621441249.6749926,0
+EventTypes.WORD_TYPED,1621441249.6751864,2,no_autocompletion_text_1,False,Eine,1621441249.6751838,1621441246.5177977,3.157386064529419
+EventTypes.KEY_PRESSED,1621441250.5025501,2,no_autocompletion_text_1,False,k,1621441250.5025516,1621441250.502552,0
+EventTypes.KEY_PRESSED,1621441250.5884717,2,no_autocompletion_text_1,False,l,1621441250.5884733,1621441250.5884743,0
+EventTypes.KEY_PRESSED,1621441250.7500145,2,no_autocompletion_text_1,False,k,1621441250.7500157,1621441250.7500162,0

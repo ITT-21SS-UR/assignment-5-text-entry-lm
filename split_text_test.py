@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+"""
+Only used for testing different word and sentence splitting options.
+"""
+
 import spacy
 import re
 import nltk.data

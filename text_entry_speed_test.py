@@ -10,10 +10,14 @@ Both parts of the text (task text 1 and 2) consist of 58 words.
 The example texts were taken from the same page but from other blind texts to prevent too many similarities with the
 real experiment text. The first one was taken from "Er hörte leise" and the second example text was taken from
 "Kafka". Both consist of 19 words.
+
+
+The speed test experiment logic and logging, the ui and the automatic setup (setup_experiment.py) have been implemented
+by Michael Meckl. The integration of the custom input technique has been done by Johannes Lorper.
 """
 
 import sys
-from PyQt5 import QtCore, QtWidgets, uic, QtGui
+from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import QEvent, QElapsedTimer
 from PyQt5.QtWidgets import QMainWindow
 import re
@@ -23,8 +27,7 @@ import pandas as pd
 import time
 import json
 from enum import Enum
-from CompleterTextEdit import CompleterTextEdit
-
+from text_input_technique import CompleterTextEdit
 
 
 class EventTypes(Enum):
@@ -34,23 +37,23 @@ class EventTypes(Enum):
     TEST_FINISHED = "test_finished"
 
 
-def _test_timers():
-    # simple test to compare timing functions:
-    timer = QElapsedTimer()
-    timer.start()
-    time_start = time.time()
-    t1 = time.perf_counter()
-
-    # do some calculations (actually this calculates the fibonacci number, see https://stackoverflow.com/a/4936086)
-    n = 127
-    fib_n = int(((1 + math.sqrt(5)) / 2) ** n / math.sqrt(5) + 0.5)
-    time.sleep(2)
-
-    time_end = time.time()
-    t2 = time.perf_counter()
-    print("Duration with time module: ", time_end - time_start)
-    print("Duration with perfcounter module: ", t2 - t1)
-    print("Duration with QElapsedTimer: ", timer.elapsed())
+# def _test_timers():
+#     # simple test to compare timing functions:
+#     timer = QElapsedTimer()
+#     timer.start()
+#     time_start = time.time()
+#     t1 = time.perf_counter()
+#
+#     # do some calculations (actually this calculates the fibonacci number, see https://stackoverflow.com/a/4936086)
+#     n = 127
+#     fib_n = int(((1 + math.sqrt(5)) / 2) ** n / math.sqrt(5) + 0.5)
+#     time.sleep(2)
+#
+#     time_end = time.time()
+#     t2 = time.perf_counter()
+#     print("Duration with time module: ", time_end - time_start)
+#     print("Duration with perfcounter module: ", t2 - t1)
+#     print("Duration with QElapsedTimer: ", timer.elapsed())
 
 
 def get_current_time() -> float:
@@ -61,13 +64,12 @@ def parse_setup_file(file_name: str) -> dict:
     # check if the file exists
     if os.path.isfile(file_name):
         with open(file_name) as setup_file:
-            content = json.load(setup_file)  # load the json file content as dictionary
-
-            # number_of_trials: int = content['number_of_trials']
+            content = json.load(setup_file)
+            # load the json condition object as a python dictionary
             conditions: dict = content['conditions']
             return conditions
     else:
-        print("Given setup file does not exist!")
+        sys.stderr.write("Given setup file does not exist!")
         exit(1)
 
 
@@ -79,9 +81,7 @@ def split_text(text: str) -> dict[str, list[str]]:
     for sent in sentences:
         # for every sentence, save the corresponding words as a list
         words = sent.split()
-        # print("normal words: ", words)
         words = [word.rstrip(',;!?.') for word in words]  # strip trailing commas, semicolons and point characters
-        # print("stripped words: ", words)
         text_content_dict[sent] = words
 
     return text_content_dict
@@ -107,20 +107,21 @@ def get_balanced_condition_list(condition_list, participant_id):
 
 
 class TextEntryExperiment(QMainWindow):
-
     __TASK_DESCRIPTION_AUTOCOMPLETE = "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! " \
-                                      "Du kannst diese NUR mit den Tasten 1, 2 oder 3 auswählen. Eine Bestätigung mit" \
-                                      "der Entertaste wie in anderen Programmen funktioniert nicht"
+                                      "Du kannst diese NUR mit den Tasten 1, 2 oder 3 auswählen. Eine Bestätigung " \
+                                      "mit der Entertaste wie in anderen Programmen ist nicht möglich!"
     __TASK_DESCRIPTION_NO_AUTOCOMPLETE = "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. " \
                                          "Autokorrektur oder Autovervollständigung!"
 
-    def __init__(self, participant_id, setup_file):
+    def __init__(self, participant_id, setup_file, debug=False):
         super(TextEntryExperiment, self).__init__()
+        self.__debug = debug
         self.__participant_id = participant_id
         self.__condition_dict = parse_setup_file(setup_file)
         conditions = list(self.__condition_dict.keys())
         self.__balanced_condition_list = get_balanced_condition_list(conditions, self.__participant_id)
-        print("Balanced conditions: ", self.__balanced_condition_list)
+        if self.__debug:
+            print("Balanced conditions: ", self.__balanced_condition_list)
 
         self.__curr_trial_index = 0
         self._init_trial_data()
@@ -132,17 +133,16 @@ class TextEntryExperiment(QMainWindow):
         self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
         self.ui.task_finished_btn.clicked.connect(self._decide_next_task_page)
 
-        self.completer_text_widget = CompleterTextEdit()
-
-
+        self.completer_text_widget = CompleterTextEdit()  # the text field widget with our custom input technique
 
     def _init_trial_data(self):
         self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
-        print("Current Condition: ", self.__current_condition)
         self.__current_example_text = self.__condition_dict[self.__current_condition]['example_text']
         self.__current_task_text = self.__condition_dict[self.__current_condition]['task_text']
-
         self.__autocompletion_active = self.__condition_dict[self.__current_condition]['autocompletion']
+
+        if self.__debug:
+            print("Current Condition: ", self.__current_condition)
 
         self.__task_started = False
         self.__text_dict = split_text(self.__current_task_text)
@@ -162,9 +162,12 @@ class TextEntryExperiment(QMainWindow):
     def _get_sentence(self, index):
         sentences = list(self.__text_dict.keys())
         sent_count = len(sentences)
-        print(f"\n------------- get sentence: sentence_count:{sent_count}; sentenced index: {index} --------------\n")
+        if self.__debug:
+            print(f"\n--------- get sentence: sentence_count:{sent_count}; sentenced index: {index} ---------\n")
+
         if index >= sent_count:
-            sys.stderr.write(f"Attempted to get sentence at position {index} even though there are only {sent_count}")
+            if self.__debug:
+                sys.stderr.write(f"Attempted to get sentence at position {index}; Max. sentences: {sent_count}")
             return None
 
         # get the key at the specified position; works because since Python 3.7 the order in dictionaries won't change
@@ -175,18 +178,15 @@ class TextEntryExperiment(QMainWindow):
         if current_sentence is not None:
             return self._get_word(current_sentence, self.__curr_word_index)
 
-    # def _get_last_word_of_sentence(self):
-    #     current_sentence = self.__current_sentence
-    #     if current_sentence is not None:
-    #         last_sentence_idx = len(self.__text_dict.get(current_sentence))
-    #         return self._get_word(current_sentence, last_sentence_idx)
-
     def _get_word(self, sentence, index):
         words = self.__text_dict.get(sentence)
         word_count = len(words)
-        print(f"\n-------------------- get word: word_count:{word_count}; word index: {index} --------------------\n")
+        if self.__debug:
+            print(f"\n------------ get word: word_count:{word_count}; word index: {index} --------------\n")
+
         if index >= word_count:
-            sys.stderr.write(f"Attempted to get word at position {index} even though there are only {word_count}\n")
+            if self.__debug:
+                sys.stderr.write(f"Attempted to get word at position {index}; Max. words: {word_count}\n")
             return None
 
         return words[index]
@@ -194,7 +194,6 @@ class TextEntryExperiment(QMainWindow):
     def _setup_introduction(self):
         self._get_sub_pages()
         self.ui.stackedWidget.setCurrentIndex(0)
-        # self.ui.trial_number_label.setText(str(self.__num_trials))
 
         self.ui.start_study_btn.setFocusPolicy(QtCore.Qt.NoFocus)  # prevent auto-focus of the start button
         self.ui.start_study_btn.clicked.connect(lambda: self._go_to_page(1))
@@ -208,7 +207,9 @@ class TextEntryExperiment(QMainWindow):
         self.fifthPage = self.ui.finish_page
 
     def _go_to_page(self, index=None):
-        print(f"go to page index: {index}")
+        if self.__debug:
+            print(f"go to page with index: {index}")
+
         if index is None:
             # if no index is given, simply move to the next page
             index = self.ui.stackedWidget.currentIndex() + 1
@@ -236,7 +237,6 @@ class TextEntryExperiment(QMainWindow):
 
     def _show_example(self):
         # change task text based on condition!
-
         if self.__autocompletion_active:
             self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
         else:
@@ -245,6 +245,7 @@ class TextEntryExperiment(QMainWindow):
         container_layout = self.ui.example_text_box_container.layout()
 
         for i in reversed(range(container_layout.count())):
+            # insert custom widget at correct position in the layout
             container_layout.itemAt(i).widget().setParent(None)
 
         text_box = self.new_text_box_widget(self.__autocompletion_active)
@@ -253,14 +254,12 @@ class TextEntryExperiment(QMainWindow):
 
         self.ui.example_text.setText(self.__current_example_text)
         # clear the text field to prevent leftovers from the last trial
-        #  input_field.clear()
+        # input_field.clear()
+
         # focus the text field automatically so user doesn't have to click it first!
         text_box.setFocus()
 
-
-
     def _start_study(self):
-
         self.ui.task_text_label.setText(self.__current_task_text)
         container_layout = self.ui.task_text_box_container.layout()
         for i in reversed(range(container_layout.count())):
@@ -270,8 +269,9 @@ class TextEntryExperiment(QMainWindow):
         self.current_text_input_field = text_box
         container_layout.addWidget(text_box)
 
-        #input_field.clear()
+        # input_field.clear()
         text_box.setFocus()
+
         # install event filter to only listen to keypress events on this text edit field,
         # see https://stackoverflow.com/questions/46505769/pyqt-keypress-event-in-lineedit
         text_box.installEventFilter(self)
@@ -279,10 +279,9 @@ class TextEntryExperiment(QMainWindow):
 
         self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
 
-
-
     def _start_measuring_text_entry_speed(self):
-        print("Starting to measure text entry...")
+        if self.__debug:
+            print("Starting to measure text entry...")
         current_time = get_current_time()
         self.__start_time_task = current_time
         self.__start_time_word = current_time
@@ -298,10 +297,10 @@ class TextEntryExperiment(QMainWindow):
                 self.__task_started = True
                 self._start_measuring_text_entry_speed()
 
-            print('key press:', (event.key(), event.text()))
+            if self.__debug:
+                print('key press:', (event.key(), event.text()))
             pressed_key = event.text()
 
-            # TODO logging duration doesn't really make much sense for keypresses ...
             self.__logger.log_event(EventTypes.KEY_PRESSED, get_current_time(), self.__participant_id,
                                     self.__current_condition, self.__autocompletion_active, pressed_key, time.time(),
                                     time.time(), 0)
@@ -316,10 +315,14 @@ class TextEntryExperiment(QMainWindow):
             elif re.match(r"\w", pressed_key):
                 # if a word character has been entered and the character before wasn't one too (or a digit), we
                 # probably started a new word
-                print(f"char entered; last char was: {self.__last_char}")
+
+                if self.__debug:
+                    print(f"char entered; last char was: {self.__last_char}")
+
                 if self.__last_char is not None and not self.__last_char.isalnum():
                     # new word has started, restart timer
-                    print("new word started")
+                    if self.__debug:
+                        print("new word started")
                     self.__start_time_word = get_current_time()
 
             self.__last_char = pressed_key  # save the entered char
@@ -332,28 +335,31 @@ class TextEntryExperiment(QMainWindow):
             return
 
         # word has been finished
-        print("word finished")
+        if self.__debug:
+            print("word finished")
+
         current_time = get_current_time()
         end_time_word = current_time
         word_duration = end_time_word - self.__start_time_word
-        print(f"Took {word_duration} seconds to enter this word.")
         self.__logger.log_event(EventTypes.WORD_TYPED, get_current_time(), self.__participant_id,
                                 self.__current_condition, self.__autocompletion_active, self.__current_word,
                                 end_time_word, self.__start_time_word, word_duration)
 
         self.__curr_word_index += 1
         self.__current_word = self._get_current_word()
-        print(f"\n###########################\nCurrent word is now: {self.__current_word}\n")
+        if self.__debug:
+            print(f"\n###########################\nCurrent word is now: {self.__current_word}\n")
 
         if entered_char in ['.', '!', '?']:
             # sentence has been finished
             self._handle_sentence_finished()
 
     def _handle_sentence_finished(self):
-        print("sentence finished")
+        if self.__debug:
+            print("sentence finished")
+
         end_time_sentence = get_current_time()
         sentence_duration = end_time_sentence - self.__start_time_sentence
-        print(f"Took {sentence_duration} seconds to enter this sentence.")
         self.__logger.log_event(EventTypes.SENTENCE_TYPED, get_current_time(), self.__participant_id,
                                 self.__current_condition, self.__autocompletion_active, self.__current_sentence,
                                 end_time_sentence, self.__start_time_sentence, sentence_duration)
@@ -362,13 +368,15 @@ class TextEntryExperiment(QMainWindow):
 
         self.__curr_sentence_index += 1
         self.__current_sentence = self._get_current_sentence()
-        print(f"\n###########################\nCurrent sentence is now: {self.__current_sentence}\n")
+        if self.__debug:
+            print(f"\n###########################\nCurrent sentence is now: {self.__current_sentence}\n")
 
         if self.__current_sentence is not None:
             # it would only be None if this was the last sentence, so start timer for the next sentence
             self.__start_time_sentence = get_current_time()
         else:
-            print("\n###############################\nFinished entering text!")
+            if self.__debug:
+                print("\n###############################\nFinished entering text!")
             # TODO check for number of errors and discard this participant if too many errors were made??
 
             # text has been completely entered
@@ -385,15 +393,11 @@ class TextEntryExperiment(QMainWindow):
         self.__curr_trial_index += 1
         if self._was_last_trial():
             # go to next page when finished with the last trial
-
             self._go_to_page(3)
         else:
             # start next trial
-            # self.__start_time_word = None
-            # self.__start_time_sentence = None
-
             self._init_trial_data()
-            self._go_to_page(1)  # TODO right now the example is always shown (maybe show only once per autocomplete/not-autocomplete condition?)
+            self._go_to_page(1)
 
     def _setup_questionnaire(self):
         self.ui.send_questionnaire_btn.clicked.connect(self._save_questionnaire_answers)
@@ -422,8 +426,8 @@ class TextEntryLogger:
         self._init_logger()
 
     def _init_logger(self) -> None:
-        if not os.path.isfile(self.__log_file_name):
-            # file does not yet exist, create with the csv headers
+        if os.stat(self.__log_file_name).st_size == 0:
+            # log file is empty, add the csv headers
             print('event_type', 'timestamp', 'participant_id', 'condition', 'with_autocompletion', 'entered_content',
                   'start_time_in_s', 'end_time_in_s', 'duration_in_s')
 
@@ -455,8 +459,8 @@ class TextEntryLogger:
 
 def main():
     if len(sys.argv) < 2:
-        print("Missing command line arguments: participant_id and setup_file!"
-              "\nUsage: text_entry_speed_test.py participant_id setup_file >> output_file.csv")
+        sys.stderr.write("Missing command line arguments: participant_id and setup_file!"
+                         "\nUsage: text_entry_speed_test.py participant_id setup_file >> output_file.csv")
         exit(1)
     else:
         # get the passed command line arguments
@@ -464,7 +468,7 @@ def main():
         setup_file = sys.argv[2]
 
         app = QtWidgets.QApplication(sys.argv)
-        text_entry_experiment = TextEntryExperiment(participant_id, setup_file)
+        text_entry_experiment = TextEntryExperiment(participant_id, setup_file, debug=False)
         text_entry_experiment.show()
         sys.exit(app.exec_())
 
