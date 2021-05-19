@@ -1,17 +1,39 @@
 {
-  "number_of_trials": 10,
-  "conditions": {
-    "with_autocompletion": {
+  "number_of_trials": 5,
+  "_conditions": {
+    "with_autocompletion_text_1": {
       "example_text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht?",
-      "task_description": "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! Du kannst diese mit den Tasten 1, 2, 3, 4 oder 5 auswählen."
+      "task_description": "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! Du kannst diese mit den Tasten 1, 2 oder 3 auswählen.",
+      "task_text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet."
     },
-    "no_autocompletion": {
+    "with_autocompletion_text_2": {
+      "example_text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht?",
+      "task_description": "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! Du kannst diese mit den Tasten 1, 2 oder 3 auswählen.",
+      "task_text": "Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege."
+    },
+    "no_autocompletion_text_1": {
       "example_text": "Jemand musste Josef K verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.",
-      "task_description": "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. Autokorrektur oder Autovervollständigung!"
+      "task_description": "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. Autokorrektur oder Autovervollständigung!",
+      "task_text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet."
+    },
+    "no_autocompletion_text_2": {
+      "example_text": "Jemand musste Josef K verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.",
+      "task_description": "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. Autokorrektur oder Autovervollständigung!",
+      "task_text": "Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege."
     }
   },
-  "task_text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",
-  "task_text_2": "Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",
-  "example_text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel?",
-  "example_text_alternative": "Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen."
+
+  "Delete below and remove _ above": "this is a comment in json ;)",
+  "conditions": {
+    "cond_1": {
+      "example_text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht?",
+      "task_description": "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! Du kannst diese mit den Tasten 1, 2 oder 3 auswählen.",
+      "task_text": "Er hörte Schritte hinter sich. Das war nichts Gutes. Wer würde ihm, schon folgen?"
+    },
+    "cond_2": {
+      "example_text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht?",
+      "task_description": "Beim Eingeben der Texte werden KEINE Autovervollständigungen angezeigt!",
+      "task_text": "Er hörte Dinge."
+    }
+  }
 }

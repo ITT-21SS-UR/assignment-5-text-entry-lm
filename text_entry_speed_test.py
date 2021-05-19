@@ -1,13 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# TODO längere Texte nehmen und dafür keine wiederholungen?
-
 """
 The text used for the task in this study has been taken from https://www.blindtextgenerator.de/ (Werther) and is a
 short extract of "Die Leiden des jungen Werther" from Johann Wolfgang von Goethe. It was chosen because it is a
 meaningful text unlike other blind texts like 'Lorem Ipsum' but on the other hand shouldn't be too easy.
-The text consists of 58 words.
+Both parts of the text (task text 1 and 2) consist of 58 words.
 
 The example texts were taken from the same page but from other blind texts to prevent too many similarities with the
 real experiment text. The first one was taken from "Er hörte leise" and the second example text was taken from
@@ -24,22 +22,6 @@ import os
 import pandas as pd
 import time
 import json
-
-
-def parse_setup_file(file_name: str) -> tuple[int, str, dict]:
-    # check if the file exists
-    if os.path.isfile(file_name):
-        with open(file_name) as setup_file:
-            content = json.load(setup_file)  # load the json file content as dictionary
-
-            number_of_trials: int = content['number_of_trials']
-            task_text: str = content['task_text']
-            conditions: dict = content['conditions']
-
-            return number_of_trials, task_text, conditions
-    else:
-        print("Given setup file does not exist!")
-        exit(1)
 
 
 def _test_timers():
@@ -59,6 +41,25 @@ def _test_timers():
     print("Duration with time module: ", time_end - time_start)
     print("Duration with perfcounter module: ", t2 - t1)
     print("Duration with QElapsedTimer: ", timer.elapsed())
+
+
+def get_current_time() -> float:
+    # return time.perf_counter()
+    return time.time()
+
+
+def parse_setup_file(file_name: str) -> dict:
+    # check if the file exists
+    if os.path.isfile(file_name):
+        with open(file_name) as setup_file:
+            content = json.load(setup_file)  # load the json file content as dictionary
+
+            # number_of_trials: int = content['number_of_trials']
+            conditions: dict = content['conditions']
+            return conditions
+    else:
+        print("Given setup file does not exist!")
+        exit(1)
 
 
 def split_text(text: str) -> dict[str, list[str]]:
@@ -101,30 +102,36 @@ class TextEntryExperiment(QMainWindow):
     def __init__(self, participant_id, setup_file):
         super(TextEntryExperiment, self).__init__()
         self.__participant_id = participant_id
-        self.__num_trials, self.__task_text, self.__condition_dict = parse_setup_file(setup_file)
-
+        self.__condition_dict = parse_setup_file(setup_file)
         conditions = list(self.__condition_dict.keys())
         self.__balanced_condition_list = get_balanced_condition_list(conditions, self.__participant_id)
+        print("Balanced conditions: ", self.__balanced_condition_list)
 
-        self.__current_condition = self.__balanced_condition_list[0]
+        self.__curr_trial_index = 0
+        self._init_trial_data()
+
+        self.__logger = TextEntryLogger()
+        self.ui = uic.loadUi("text_entry_speed_test.ui", self)
+        self._setup_introduction()
+
+    def _init_trial_data(self):
+        self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
         print("Current Condition: ", self.__current_condition)
         self.__current_example_text = self.__condition_dict[self.__current_condition]['example_text']
         self.__current_task_description = self.__condition_dict[self.__current_condition]['task_description']
+        self.__current_task_text = self.__condition_dict[self.__current_condition]['task_text']
 
         self.__task_started = False
-        self.__text_dict = split_text(self.__task_text)
+        self.__text_dict = split_text(self.__current_task_text)
+
         self.__curr_sentence_index = 0
         self.__curr_word_index = 0
         self.__current_sentence = self._get_current_sentence()
         self.__current_word = self._get_current_word()
         self.__last_char = None
 
-        print("Current Sentence: ", self.__current_sentence)
-        print("Current Word: ", self.__current_word)
-
-        self.__logger = TextEntryLogger()
-        self.ui = uic.loadUi("text_entry_speed_test.ui", self)
-        self._setup_introduction()
+    def _was_last_trial(self):
+        return True if self.__curr_trial_index >= len(self.__balanced_condition_list) else False
 
     def _get_current_sentence(self):
         return self._get_sentence(self.__curr_sentence_index)
@@ -132,7 +139,8 @@ class TextEntryExperiment(QMainWindow):
     def _get_sentence(self, index):
         sentences = list(self.__text_dict.keys())
         sent_count = len(sentences)
-        if index > sent_count:
+        print(f"\n-------------------- get sentence: sentence_count:{sent_count}; sentenced index: {index} -------------------------\n")
+        if index >= sent_count:
             sys.stderr.write(f"Attempted to get sentence at position {index} even though there are only {sent_count}")
             return None
 
@@ -153,8 +161,9 @@ class TextEntryExperiment(QMainWindow):
     def _get_word(self, sentence, index):
         words = self.__text_dict.get(sentence)
         word_count = len(words)
-        if index > word_count:
-            sys.stderr.write(f"Attempted to get word at position {index} even though there are only {word_count}")
+        print(f"\n-------------------- get word: word_count:{word_count}; word index: {index} -------------------------\n")
+        if index >= word_count:
+            sys.stderr.write(f"Attempted to get word at position {index} even though there are only {word_count}\n")
             return None
 
         return words[index]
@@ -162,7 +171,7 @@ class TextEntryExperiment(QMainWindow):
     def _setup_introduction(self):
         self._get_sub_pages()
         self.ui.stackedWidget.setCurrentIndex(0)
-        self.ui.trial_number_label.setText(str(self.__num_trials))
+        # self.ui.trial_number_label.setText(str(self.__num_trials))
 
         # change task text based on condition!
         self.ui.task_description_label.setText(self.__current_task_description)
@@ -199,98 +208,122 @@ class TextEntryExperiment(QMainWindow):
     def _show_example(self):
         self.ui.example_task_description.setText(self.__current_task_description)
         self.ui.example_text.setText(self.__current_example_text)
+        # clear the text field to prevent leftovers from the last trial
+        self.ui.example_input_field.clear()
+        # focus the text field automatically so user doesn't have to click it first!
+        self.ui.example_input_field.setFocus()
         self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
 
-        # TODO only for testing here: (should only be called in start_study below)
-        self.ui.example_input_field.installEventFilter(self)
-        self.ui.example_input_field.textChanged.connect(self._text_content_changed)
-
     def _start_study(self):
-        self.ui.task_text_label.setText(self.__task_text)
-
-        # TODO focus the text field automatically so user doesn't have to click it first!
-
+        self.ui.task_text_label.setText(self.__current_task_text)
+        self.ui.task_input_field.clear()
+        self.ui.task_input_field.setFocus()
         # install event filter to only listen to keypress events on this text edit field,
         # see https://stackoverflow.com/questions/46505769/pyqt-keypress-event-in-lineedit
         self.ui.task_input_field.installEventFilter(self)
-        self.ui.task_input_field.textChanged.connect(self._text_content_changed)
+        # self.ui.task_input_field.textChanged.connect(self._text_content_changed)
 
-        # TODO only go to questionnaire after the second trial!!
-        self.ui.task_finished_btn.clicked.connect(lambda: self._go_to_page(3))
+        self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
+        self.ui.task_finished_btn.clicked.connect(self._decide_next_task_page)
 
     def _start_measuring_text_entry_speed(self):
         print("Starting to measure text entry...")
-        current_time = time.time()
+        current_time = get_current_time()
         self.__start_time_word = current_time
         self.__start_time_sentence = current_time
 
-    def _text_content_changed(self):
-        self.__current_input = self.ui.example_input_field.toPlainText()  # self.ui.task_input_field
-        # print("Current Input Field Content: ", self.__current_input)
+    # def _text_content_changed(self):
+    #     self.__current_input = self.ui.task_input_field.toPlainText()
+    #     # print("Current Input Field Content: ", self.__current_input)
 
     def eventFilter(self, source, event):
-        if event.type() == QEvent.KeyPress and source is self.ui.example_input_field:  # self.ui.task_input_field
+        if event.type() == QEvent.KeyPress and source is self.ui.task_input_field:
             if not self.__task_started:
                 self.__task_started = True
                 self._start_measuring_text_entry_speed()
 
             print('key press:', (event.key(), event.text()))
             pressed_key = event.text()
-            if pressed_key in [' ', ',', ';', ':', '\n', '\r', '.', '!', '?']:
-                self._handle_word_sentence_finished(pressed_key)
+            self.__logger.log_keypress()
+            # check if the pressed key was one of the defined ending characters;
+            # if yes, either a word or a word and a sentence have been finished! (naive implementation)
+            if pressed_key in [' ', ',', ';', ':', '.', '!', '?']:  # '\n', '\r',
+                # TODO right now word time includes the typing of the whitespace character afterwards !!
+                self._handle_word_finished(pressed_key)
 
-            # elif re.match(r"\b(\w)", pressed_key):
+            # elif re.match(r"\b(\w)", pressed_key):  # use \b (word boundaries) ?
             elif re.match(r"\w", pressed_key):
-                if self.__last_char is not None and self.__last_char.isspace():
-                    # TODO this isn't always called on new word; investigate this issue!
+                # if a word character has been entered and the character before wasn't one too (or a digit), we
+                # probably started a new word
+                print(f"char entered; last char was: {self.__last_char}")
+                if self.__last_char is not None and not self.__last_char.isalnum():
                     # new word has started, restart timer
                     print("new word started")
-                    self.__start_time_word = time.time()
+                    self.__start_time_word = get_current_time()
 
             self.__last_char = pressed_key  # save the entered char
 
         return super(TextEntryExperiment, self).eventFilter(source, event)
 
-    def _handle_word_sentence_finished(self, entered_char):
+    def _handle_word_finished(self, entered_char):
         if entered_char == ' ' and self.__last_char in [',', ';', ':', '.', '!', '?']:
             # this is just a whitespace after one of the other ending chars; ignore it
             return
 
         # word has been finished
         print("word finished")
-        current_time = time.time()
+        current_time = get_current_time()
         end_time_word = current_time
         print(f"Took {end_time_word - self.__start_time_word} seconds to enter this word.")
-        # TODO log
-        # reset timer
-        # self.__start_time_word = None  # TODO resetting causes crash sometimes, this shouldn't happen !!! (maybe because of the TODO above)
+        self.__logger.log_word_finished()
 
         self.__curr_word_index += 1
+        self.__current_word = self._get_current_word()
         print(f"\n###########################\nCurrent word is now: {self.__current_word}\n")
 
         if entered_char in ['.', '!', '?']:
             # sentence has been finished
-            print("sentence finished")
-            end_time_sentence = current_time
-            print(f"Took {end_time_sentence - self.__start_time_sentence} seconds to enter this sentence.")
-            # TODO log
-            # reset timer
-            # self.__start_time_sentence = None  # TODO perf_counter() instead of time?
+            self._handle_sentence_finished()
 
-            self.__curr_sentence_index += 1
-            self.__current_sentence = self._get_current_sentence()
-            print(f"\n###########################\nCurrent sentence is now: {self.__current_sentence}\n")
+    def _handle_sentence_finished(self):
+        print("sentence finished")
+        end_time_sentence = get_current_time()
+        print(f"Took {end_time_sentence - self.__start_time_sentence} seconds to enter this sentence.")
+        self.__logger.log_sentence_finished()
 
-            if self.__current_sentence is not None:  # it would only be None if this was the last sentence
-                self.__start_time_sentence = time.time()
-            else:
-                # text has been completely entered # TODO log this!
-                print("\n###############################\nFinished entering text!")
+        self.__curr_word_index = 0  # reset word index to start with the first word of the new sentence again
+
+        self.__curr_sentence_index += 1
+        self.__current_sentence = self._get_current_sentence()
+        print(f"\n###########################\nCurrent sentence is now: {self.__current_sentence}\n")
+
+        if self.__current_sentence is not None:
+            # it would only be None if this was the last sentence, so start timer for the next sentence
+            self.__start_time_sentence = get_current_time()
+        else:
+            print("\n###############################\nFinished entering text!")
+            # TODO check for number of errors and discard this participant if too many errors were made??
+            # text has been completely entered
+            self.__logger.log_text_finished()
+            # now enable the button at the bottom
+            self.ui.task_finished_btn.setEnabled(True)
+
+    def _decide_next_task_page(self):
+        self.__curr_trial_index += 1
+        if self._was_last_trial():
+            # go to next page when finished with the last trial
+            self._go_to_page(3)
+        else:
+            # start next trial
+            # self.__start_time_word = None
+            # self.__start_time_sentence = None
+            self._init_trial_data()
+            self._go_to_page(1)  # TODO right now the example is always shown (maybe show only once per autocomplete/not-autocomplete condition?)
 
     def _setup_questionnaire(self):
-        self.ui.send_questionnaire_btn.clicked.connect(self._save_answers)
+        self.ui.send_questionnaire_btn.clicked.connect(self._save_questionnaire_answers)
 
-    def _save_answers(self):
+    def _save_questionnaire_answers(self):
         participant_age = str(self.ui.age_selection.value())
         participant_gender = str(self.ui.gender_selection.currentText())
         participant_occupation = str(self.ui.occupation_input.text())
@@ -298,7 +331,7 @@ class TextEntryExperiment(QMainWindow):
         entry_speed = str(self.ui.speed_estimation_slider.value())
 
         # TODO this part should be extracted to the logger below!
-        # self.__questionnaire_data = self.__questionnaire_data.append({'timestampInMs': time.time(),
+        # self.__questionnaire_data = self.__questionnaire_data.append({'timestampInMs': get_current_time(),
         #                                                               'participantID': self._participant_id,
         #                                                               'age': participant_age,
         #                                                               'gender': participant_gender,
@@ -339,22 +372,22 @@ class TextEntryLogger:
         # TODO mit os aus der setup python file das hier ausführen? oder lieber direkt über cmd?
         #  python3 testsetup.py >> log.csv
 
-    def _log_keypress(self):
+    def log_keypress(self):
         pass
 
-    def _log_word_finished(self):
+    def log_word_finished(self):
         pass
 
-    def _log_sentence_finished(self):
+    def log_sentence_finished(self):
         pass
 
-    def _log_task_finished(self):
+    def log_text_finished(self):
         pass
 
     def add_new_log_data(self, participant_id, condition, pointer_position_list, time_per_target_list, start_time,
                          end_time, missed_clicks, bubble_pointing_active):
 
-        self.__study_data = self.__study_data.append({'timestampInMs': time.time(), 'participantID': participant_id,
+        self.__study_data = self.__study_data.append({'timestampInMs': get_current_time(), 'participantID': participant_id,
                                                       'condition': condition,
                                                       'pointerPositionsPerTarget': pointer_position_list,
                                                       'timesPerTargetInS':
