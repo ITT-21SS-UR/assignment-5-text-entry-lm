@@ -1,8 +1,8 @@
-This documentation has been written by Michael Meckl.
+This documentation has been written by Michael Meckl, the demo video has been recorded by Johannes Lorper.
 
 ## Goal
 
-The goal of this study was to compare two keyboard text input techniques regarding the speed with which a user can enter a given text (a standard “text copy task”). Therefore, a standard, unenhanced keyboard input was compared with our own input technique which enhanced the keyboard input with autocompletions shown as a dropdown list. The application was created with Qt Designer [1] and implemented in Python with the PyQt-Framework [2].
+The goal of this study was to compare two keyboard text input techniques regarding the speed with which a user can enter a given text (a standard “text copy task”). Therefore, a standard, unenhanced keyboard input was compared with our own input technique which enhanced the keyboard input with autocompletions shown as a dropdown list. Our alternative hypotheses was “Participants that use our enhanced keyboard input with autocompletion can enter text faster than with unenhanced keyboard input” while our null hypothesis stated that there was no difference between both conditions or using autocompletion would even lead to slower text input. The application was created with Qt Designer [1] and implemented in Python with the PyQt-Framework [2].
 
 ## Experiment Design
 
@@ -24,15 +24,13 @@ C3: input with autocompletion + text 1
 
 C4: input with autocompletion + text 2
 
-A control variable was the language the texts were written in, in this case German. Two different texts were chosen to migitate learning effects. A confounding variable might be the varying difficulty of these texts but these shouldn’t cause a problem because of the counterbalancing applied to every trial.
-
-
+Two different texts were chosen to migitate learning effects. A confounding variable might be the varying difficulty of these texts but these shouldn’t cause a problem because of the counterbalancing applied to every trial.
 
 ## Custom Input Technique
 
 We enhanced the the keyboard input with an autocomplete functionality provided by the *QCompleter* Class from Qt [3]. Possible autocompletions were shown as small dropdown list (limited to 3 entries each for clarity) after at least 3 characters had been entered. 
 
-We chose to let the user select one of these three options by pressing the 1, 2 or 3 on the keyboard (the topmost item would therefore be selectable by pressing ‘1’) instead of selecting them with arrow keys and the enter key so it will be faster as the arrow keys are generally farther away from the regular finger positions when entering text than the number keys at the top of the keyboard. To prevent users from using the enter key despite the instruction to use 1, 2 or 3 we blocked the key press event of the enter key in the PyQt application. This way we could control that every participant used the same techniques when interacting with the autocompletion. The stylesheet for the dropdown elements has also been adjusted so it won’t show any highlights which might tempt an user to select this element with the enter key even though this is not possible.
+We chose to let the user select one of these three options by pressing the 1, 2 or 3 on the keyboard (the topmost item would therefore be selectable by pressing ‘1’) instead of selecting them with arrow keys and the enter key so it will be faster as the arrow keys are generally further away from the regular finger positions when entering text than the number keys at the top of the keyboard. To prevent users from using the enter key despite the instruction to use 1, 2 or 3 we blocked the key press event of the enter key in the PyQt application. This way we could control that every participant used the same techniques when interacting with the autocompletion. The stylesheet for the dropdown elements has also been adjusted so it won’t show any highlights which might tempt an user to select this element with the enter key even though this is not possible.
 
 The QCompleter needs a corpus or any other model of strings to generate autocompletion results. As our texts were in German, a German corpus was needed as well. For this, we use the TIGER corpus hosted by the University of Stuttgart, which consists of words from the german newspaper “Frankfurter Rundschau” [4].
 
@@ -48,11 +46,11 @@ Another confounding variable in our design is the fact that participants were as
 
 Another limitation is the extremely low number of participants. To get meaningful and generalizable results the study should be conducted with a lot more participants (n > 30) that are more diverse regarding their knowledge level of text input techniques and their keyboard usage.
 
-Finally, the measurement of the input speed was not very good. Our definitions of when a word or sentence was finished works for simple sentences like the ones used in this study, but won’t for more diverse and complex sentences. Better ways to track input would definitively be needed for this issue, for example the current word and even the characters of the word could be traversed one by one while the user enters the text, which could be used to check if the last character of a word or the last word of a sentence has been entered. 
+Finally, the measurement of the input speed was not very good. Our definitions of when a word or sentence was finished works for simple sentences like the ones used in this study, but won’t for more diverse and complex sentences. Better ways to track input would definitively be needed for this issue, for example the current word and even the characters of the word could be traversed one by one while the user enters the text, which could be used to check if the last character of a word or the last word of a sentence has been entered.
 
 ## Results
 
-
+Unfortunately, logging the data for the autocompletion conditions didn’t work due to the implementation of the measuring logic and the way the autocompletion was implemented. In the ```insertText()``` method in the text_input_technique.py, where the replacing of the current word with the selected autocompletion option happens, the old input is deleted first which causes the measuring logic to fail as in the ```eventFilter()``` the keyboard input is checked key for key and the logic relies on the last entered char and the input history in general, which obviously isn’t the same after replacing the current input. Because of this only the two conditions without autocompletion provided useful results so we couldn’t compare our own input technique with them and can therefore neither reject nor accept our hypothesis.
 
 
 <br>
