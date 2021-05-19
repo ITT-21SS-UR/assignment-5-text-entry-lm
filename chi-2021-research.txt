@@ -3,31 +3,35 @@ The following summary was done by Johannes Lorper
 Design and Analysis of Intelligent Text Entry Systems with
 Function Structure Models and Envelope Analysis:
 
-Für diese Studie wurde ein Android-Keyboard implementiert, das viele Anpassungmöglichkeiten beinhaltet.
-Sowohl Darstellungsfarbe als auch eingebundene Emojis konnten vom Nutzer selbst gesetzt werden.
-Ausserdem bietet die Tastatur die Möglichkeit eigene Anpassungen mit anderen zu teilen.
-In einer Durchgeführten Studie kamen die Verfasser zu dem Ergebnis, dass die meisten Ihrer Testpersonen
-die Tastatur auch gerne ausserhalb der Studie verwenden würden, weil sie durch die gemeinsame Anpassung
-eine größere soziale Verbundenheit zum "Tastatur-Partner" spürten.
+For this study, an Android keyboard was implemented that included many customization options.
+E.g. the display color and the integrated emojis could be set by the user.
+Furthermore, the keyboard offered the possibility to share customizations with others.
+In a conducted study, the authors came to the conclusion that most of their participants,
+which shared a keyboard layout with another person, would also like to use the keyboard
+outside of the study, because they felt a greater social connection to the "keyboard partner",
+because of their shared layout adjustments.
 
 Hummer: Text Entry by Gaze and Hum
 
-In dieser Studie wurde mithilfe eines Eye-Trackers der Blick der Testperson auf einen Bildschirm aufgezeichnet.
-Auf dem Bildschirm war eine Tastatur zu sehen. Im Test wurde das Schreiben auf der Tastatur durch Fokusieren der
-Tasten mit den Augen auf 2 Arten erweitert. In einer Kennzeichnete die Testperson Anfang und Ende der Worte durch
-ein kurzes summen, in der anderen summte die Testperson die ganze Zeit während sie gerade ein Wort schrieb. 
-Durch die 2. Erweiterung verbesserte die Text eingabe Geschwindigkeit im Vergleich zu den anderen, und die Test-
-personen erreichten eine Eingabe geschwindikeit von Durchschnittlich 20,45 Wörtern pro Minute.
+In this study an eye tracker was used to record the users gaze on a screen.
+A keyboard was visible on the screen. The autors conducted a test, in which
+writing on the keyboard by focusing on the keys with the eyes got adavanced in 2 ways.
+Advancement 1: The participant marked the beginning and end of words by
+a short hum
+Advancement 2: The participant hummed as long as he was writing 1 word. 
+Advancement 2 improved the text input speed compared to the others, and the participants
+reached an input speed of 20.45 words per minute on average.
 
 FingerText: Exploring and Optimizing Performance for
 Wearable, Mobile and One-Handed Typing
 
-Diese Studie befasste sich mit der Texteingabe durch berühren des Daumens mit einem anderen Finger. Dies sollte
-die Texteingabe während des gehens oder anderen nicht statischen Beschäftigungen erleichtern. Dafür bauten die 
-Autoren ein Gerät, das beim Zusammendrücken des Daumens mit einem anderen Finger, in unterschiedlichen Bereichen
-unterschiedliche Buchstaben ausgibt. Es wurde versucht die Bereiche für die jeweiligen Buchstaben möglichst effizient
-zu verteilen. In einer Studie konnte im Vergleich zu einem QWERTY-artigen Layout eine 10,45% Verbesserung bei der Wort-
-pro-Minute Geschwindikeit, sowie eine 39,44% geringere Wort Fehler Rate feststellen.  
+This study was about creating text input by touching the thumb with another finger. This should
+simplify text input while walking or doing other non-static activities. For this purpose the 
+device put out different letters, when the thumb is pressed together with another finger.
+The letter was dependent on the finger and touching areas of the fingers. The authors tried
+to distribute the areas for the respective letters as efficiently as possible.
+In a study, compared to a QWERTY-style layout, there was a 10.45% improvement in word
+per minute speed, as well as a 39.44% lower word error rate with their design.  
  
 
 
