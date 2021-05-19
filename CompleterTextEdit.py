@@ -15,7 +15,6 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         super(CompleterTextEdit, self).__init__()
         self.corpus = nltk.corpus.ConllCorpusReader('.', 'tiger_release_aug07.corrected.16012013.conll09',
                                                     ['ignore', 'words', 'ignore', 'ignore', 'pos'], encoding='utf-8')
-        print(self.corpus.words())
         self.terms = list(dict.fromkeys(self.corpus.words()))
         self.completer = QCompleter(self.terms, self)
         self.completer.setWidget(self)
@@ -45,7 +44,6 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         return tc.selectedText()
 
     def keyPressEvent(self, event):
-        print(self.completer.currentRow())
         if self.current_popup is not None:
             if event.text() == "1":
                 self.completer.setCurrentRow(0)
@@ -63,13 +61,13 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
                 self.current_popup.hide()
                 return
             if event.key() == QtCore.Qt.Key_Space:
-                print("space")
                 self.current_popup.hide()
 
-        super().keyPressEvent(event)
-        print("keypress")
+        # we block the "enter" keys so people cant choose a completion with it (and its no necessary for the task)
+        if event.key() != QtCore.Qt.Key_Return and event.key() != QtCore.Qt.Key_Enter:
+            super().keyPressEvent(event)
+
         completion_prefix = self.textUnderCursor()
-        print(completion_prefix)
         if len(completion_prefix) > 2:
             if completion_prefix != self.completer.completionPrefix():
                 self.completer.setCompletionPrefix(completion_prefix)
@@ -77,10 +75,11 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
                 self.current_popup.setCurrentIndex(
                     self.completer.completionModel().index(0, 0))
             cr = self.cursorRect()
-            #if self.current_popup.currentIndex().row() > self.popup_entry_count:
-              #  self.current_popup.setCurrentIndex(self.popup_entry_count-1)
-            self.current_popup.setBatchSize(3)
-            self.current_popup.setStyleSheet("QScrollBar:vertical {width: 0px;margin: 45px 0 45px 0;}")
+
+            # setting stylesheet so you cant see scrollbar and highlighting in the popup
+            self.current_popup.setStyleSheet("QAbstractItemView{color:white; selection-color: white;"
+                                             " selection-background-color: transparent; background-color: transparent} "
+                                             "QScrollBar:vertical {width: 0px;margin: 45px 0 45px 0;}")
             cr.setWidth(self.completer.popup().sizeHintForColumn(0)
                         + self.completer.popup().verticalScrollBar().sizeHint().width())
             self.completer.complete(cr)

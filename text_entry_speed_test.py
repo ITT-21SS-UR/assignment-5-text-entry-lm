@@ -13,7 +13,7 @@ real experiment text. The first one was taken from "Er hörte leise" and the sec
 """
 
 import sys
-from PyQt5 import QtCore, QtWidgets, uic
+from PyQt5 import QtCore, QtWidgets, uic, QtGui
 from PyQt5.QtCore import QEvent, QElapsedTimer
 from PyQt5.QtWidgets import QMainWindow
 import re
@@ -24,6 +24,7 @@ import time
 import json
 from enum import Enum
 from CompleterTextEdit import CompleterTextEdit
+
 
 
 class EventTypes(Enum):
@@ -108,7 +109,8 @@ def get_balanced_condition_list(condition_list, participant_id):
 class TextEntryExperiment(QMainWindow):
 
     __TASK_DESCRIPTION_AUTOCOMPLETE = "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! " \
-                                      "Du kannst diese mit den Tasten 1, 2 oder 3 auswählen."
+                                      "Du kannst diese NUR mit den Tasten 1, 2 oder 3 auswählen. Eine Bestätigung mit" \
+                                      "der Entertaste wie in anderen Programmen funktioniert nicht"
     __TASK_DESCRIPTION_NO_AUTOCOMPLETE = "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. " \
                                          "Autokorrektur oder Autovervollständigung!"
 
@@ -128,7 +130,11 @@ class TextEntryExperiment(QMainWindow):
         self._setup_introduction()
         self.current_text_input_field = None
         self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
+        self.ui.task_finished_btn.clicked.connect(self._decide_next_task_page)
+
         self.completer_text_widget = CompleterTextEdit()
+
+
 
     def _init_trial_data(self):
         self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
@@ -272,7 +278,8 @@ class TextEntryExperiment(QMainWindow):
         # self.ui.task_input_field.textChanged.connect(self._text_content_changed)
 
         self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
-        self.ui.task_finished_btn.clicked.connect(self._decide_next_task_page)
+
+
 
     def _start_measuring_text_entry_speed(self):
         print("Starting to measure text entry...")
