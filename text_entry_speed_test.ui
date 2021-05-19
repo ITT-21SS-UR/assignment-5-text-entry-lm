@@ -22,8 +22,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>800</width>
-      <height>600</height>
+      <width>746</width>
+      <height>591</height>
      </rect>
     </property>
     <property name="locale">
@@ -33,14 +33,14 @@
      <widget class="QLabel" name="intro_text_1">
       <property name="geometry">
        <rect>
-        <x>9</x>
+        <x>19</x>
         <y>10</y>
-        <width>761</width>
-        <height>121</height>
+        <width>751</width>
+        <height>251</height>
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Danke, dass du an dieser Studie teilnimmst! &lt;/p&gt;&lt;p&gt;Deine Aufgabe ist es, die angezeigten Texte so &lt;span style=&quot; font-weight:600;&quot;&gt;schnell und fehlerfrei &lt;/span&gt;wie möglich einzugeben. Solltest du mal einen Fehler &lt;/p&gt;&lt;p&gt;machen, ignoriere ihn und tippe einfach weiter. &lt;span style=&quot; font-weight:600;&quot;&gt;Du brauchst Fehler nicht zu korrigieren!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Sobald du auf den &amp;quot;Experiment starten&amp;quot; - Button unten klickst, beginnt ein kurzer Testdurchlauf. Danach musst du insgesamt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Danke, dass du an dieser Studie teilnimmst! &lt;/p&gt;&lt;p&gt;Deine Aufgabe ist es, die angezeigten Texte so &lt;span style=&quot; font-weight:600;&quot;&gt;schnell und fehlerfrei &lt;/span&gt;wie möglich einzugeben. Solltest du mal einen &lt;/p&gt;&lt;p&gt;Fehler machen, ignoriere ihn und tippe einfach weiter. &lt;span style=&quot; font-weight:600;&quot;&gt;Du brauchst Fehler nicht zu korrigieren!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Sobald du auf den &amp;quot;Experiment starten&amp;quot; - Button unten klickst, beginnt ein kurzer Testdurchlauf, bevor du mit der &lt;/p&gt;&lt;p&gt;richtigen Aufgabe startest. Diese wird im Anschluss 3 mal wiederholt. Die genaue Aufgabenstellung variiert &lt;/p&gt;&lt;p&gt;dabei zwischen normaler Texteingabe und Texteingabe mit Autovervollständigung. Am Ende musst du noch &lt;/p&gt;&lt;p&gt;einen kurzen Fragebogen ausfüllen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="start_study_btn">
@@ -59,72 +59,17 @@
        <string>Experiment starten</string>
       </property>
      </widget>
-     <widget class="QLabel" name="trial_number_label">
+     <widget class="QLabel" name="intro_text_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>140</y>
-        <width>31</width>
-        <height>18</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>5</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="task_description_label">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>350</y>
-        <width>771</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. Autokorrektur oder Autocompletion!</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignHCenter|Qt::AlignTop</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="intro_text_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>180</y>
-        <width>741</width>
+        <x>20</x>
+        <y>300</y>
+        <width>751</width>
         <height>91</height>
        </rect>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bitte achte darauf, während der Dauer dieses Experiments ungestört und konzentriert zu bleiben.&lt;/p&gt;&lt;p&gt;Sobald du bereit bist, drücke bitte auf den &amp;quot;Experiment starten&amp;quot;-Button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="intro_text_2">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>140</y>
-        <width>731</width>
-        <height>18</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>mal die gezeigten Texte eingeben, bevor ein zweiter Durchlauf mit leicht veränderter Aufgabenstellung beginnt.
-</string>
       </property>
      </widget>
     </widget>
@@ -139,8 +84,8 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>318</width>
-            <height>20</height>
+            <width>258</width>
+            <height>68</height>
            </size>
           </property>
          </spacer>
@@ -148,7 +93,7 @@
         <item>
          <widget class="QLabel" name="example_label">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Beispiel:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Aufgabenstellung:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -159,25 +104,13 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>318</width>
-            <height>20</height>
+            <width>258</width>
+            <height>68</height>
            </size>
           </property>
          </spacer>
         </item>
        </layout>
-      </item>
-      <item>
-       <widget class="QLabel" name="note_label">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beachte:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
       </item>
       <item>
        <widget class="QLabel" name="example_task_description">
@@ -193,14 +126,27 @@
        </widget>
       </item>
       <item>
-       <spacer name="verticalSpacer_3">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Unten siehst du ein Beispiel, das du im Textfeld unten testen kannst. Sobald du bereit bist, klick auf den Button unten, um mit der richtigen Aufgabe zu beginnen.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>13</height>
+          <height>39</height>
          </size>
         </property>
        </spacer>
@@ -236,14 +182,14 @@
        </widget>
       </item>
       <item>
-       <spacer name="verticalSpacer">
+       <spacer name="verticalSpacer_7">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>18</height>
+          <height>39</height>
          </size>
         </property>
        </spacer>
@@ -408,6 +354,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="task_finished_btn">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(138, 207, 0);</string>
           </property>

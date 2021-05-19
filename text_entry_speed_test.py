@@ -104,7 +104,6 @@ def get_balanced_condition_list(condition_list, participant_id):
     return [condition_list[i] for i in order_for_participant]
 
 
-# FIXME: UI anpassen!!
 class TextEntryExperiment(QMainWindow):
 
     __TASK_DESCRIPTION_AUTOCOMPLETE = "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! " \
@@ -187,12 +186,6 @@ class TextEntryExperiment(QMainWindow):
         self.ui.stackedWidget.setCurrentIndex(0)
         # self.ui.trial_number_label.setText(str(self.__num_trials))
 
-        # change task text based on condition!
-        if self.__autocompletion_active:
-            self.ui.task_description_label.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
-        else:
-            self.ui.task_description_label.setText(TextEntryExperiment.__TASK_DESCRIPTION_NO_AUTOCOMPLETE)
-
         self.ui.start_study_btn.setFocusPolicy(QtCore.Qt.NoFocus)  # prevent auto-focus of the start button
         self.ui.start_study_btn.clicked.connect(lambda: self._go_to_page(1))
 
@@ -223,6 +216,7 @@ class TextEntryExperiment(QMainWindow):
             self._setup_finish_page()
 
     def _show_example(self):
+        # change task text based on condition!
         if self.__autocompletion_active:
             self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
         else:
