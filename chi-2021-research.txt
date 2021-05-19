@@ -1,3 +1,5 @@
+The following summary was done by Johannes Lorper
+
 Design and Analysis of Intelligent Text Entry Systems with
 Function Structure Models and Envelope Analysis:
 
