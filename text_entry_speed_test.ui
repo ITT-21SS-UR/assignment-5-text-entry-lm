@@ -195,7 +195,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QTextEdit" name="example_input_field"/>
+       <layout class="QVBoxLayout" name="example_text_box_container"/>
       </item>
       <item>
        <spacer name="verticalSpacer_2">
@@ -322,7 +322,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QTextEdit" name="task_input_field"/>
+       <layout class="QVBoxLayout" name="task_text_box_container"/>
       </item>
       <item>
        <spacer name="verticalSpacer_6">

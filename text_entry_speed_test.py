@@ -23,6 +23,7 @@ import pandas as pd
 import time
 import json
 from enum import Enum
+from CompleterTextEdit import CompleterTextEdit
 
 
 class EventTypes(Enum):
@@ -125,6 +126,7 @@ class TextEntryExperiment(QMainWindow):
         self.__logger = TextEntryLogger()
         self.ui = uic.loadUi("text_entry_speed_test.ui", self)
         self._setup_introduction()
+        self.current_text_input_field = None
 
     def _init_trial_data(self):
         self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
@@ -215,6 +217,13 @@ class TextEntryExperiment(QMainWindow):
         elif current_widget is self.fifthPage:
             self._setup_finish_page()
 
+    def new_text_box_widget(self, autocomplete):
+        if autocomplete:
+            widget = CompleterTextEdit()
+        else:
+            widget = QtWidgets.QTextEdit(self)
+        return widget
+
     def _show_example(self):
         # change task text based on condition!
         if self.__autocompletion_active:
@@ -222,20 +231,37 @@ class TextEntryExperiment(QMainWindow):
         else:
             self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_NO_AUTOCOMPLETE)
 
+        container_layout = self.ui.example_text_box_container.layout()
+
+        for i in reversed(range(container_layout.count())):
+            container_layout.itemAt(i).widget().setParent(None)
+
+        text_box = self.new_text_box_widget(self.__autocompletion_active)
+        self.current_text_input_field = text_box
+        self.ui.example_text_box_container.layout().addWidget(text_box)
+
         self.ui.example_text.setText(self.__current_example_text)
         # clear the text field to prevent leftovers from the last trial
-        self.ui.example_input_field.clear()
+        #  input_field.clear()
         # focus the text field automatically so user doesn't have to click it first!
-        self.ui.example_input_field.setFocus()
+        text_box.setFocus()
         self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
 
     def _start_study(self):
         self.ui.task_text_label.setText(self.__current_task_text)
-        self.ui.task_input_field.clear()
-        self.ui.task_input_field.setFocus()
+        container_layout = self.ui.task_text_box_container.layout()
+        for i in reversed(range(container_layout.count())):
+            container_layout.itemAt(i).widget().setParent(None)
+
+        text_box = self.new_text_box_widget(self.__autocompletion_active)
+        self.current_text_input_field = text_box
+        container_layout.addWidget(text_box)
+
+        #input_field.clear()
+        text_box.setFocus()
         # install event filter to only listen to keypress events on this text edit field,
         # see https://stackoverflow.com/questions/46505769/pyqt-keypress-event-in-lineedit
-        self.ui.task_input_field.installEventFilter(self)
+        text_box.installEventFilter(self)
         # self.ui.task_input_field.textChanged.connect(self._text_content_changed)
 
         self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
@@ -253,7 +279,7 @@ class TextEntryExperiment(QMainWindow):
     #     # print("Current Input Field Content: ", self.__current_input)
 
     def eventFilter(self, source, event):
-        if event.type() == QEvent.KeyPress and source is self.ui.task_input_field:
+        if event.type() == QEvent.KeyPress and source is self.current_text_input_field:
             if not self.__task_started:
                 self.__task_started = True
                 self._start_measuring_text_entry_speed()

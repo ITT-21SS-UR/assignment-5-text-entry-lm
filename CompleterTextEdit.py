@@ -30,7 +30,7 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         self.numbers = []
         self.template_doc = ""
         self.prev_content = ""
-        self.initUI()
+        #self.initUI()
         self.completer.activated.connect(self.insertCompletion)
 
     # https://www.qtcentre.org/threads/23518-How-to-change-completion-rule-of-QCompleter?highlight=qcompleter
@@ -46,7 +46,7 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         tc.select(QtGui.QTextCursor.WordUnderCursor)
         return tc.selectedText()
 
-    def keyPressEvent(self, event):  
+    def keyPressEvent(self, event):
         print(self.completer.currentRow())
         if self.current_popup is not None:
             if event.text() == "1":
