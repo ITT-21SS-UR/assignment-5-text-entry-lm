@@ -19,8 +19,6 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         self.terms = list(dict.fromkeys(self.corpus.words()))
         self.completer = QCompleter(self.terms, self)
         self.completer.setWidget(self)
-        self.completer_model = BasicCompleterModel(terms=self.terms, parent=self)
-        #self.completer.setModel(self.completer_model)
         self.completer.setCompletionMode(QCompleter.PopupCompletion)
         self.completer.setFilterMode(QtCore.Qt.MatchStartsWith)
         self.popup_entry_count = 3
@@ -86,30 +84,6 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
             cr.setWidth(self.completer.popup().sizeHintForColumn(0)
                         + self.completer.popup().verticalScrollBar().sizeHint().width())
             self.completer.complete(cr)
-
-    def initUI(self):
-        self.setGeometry(0, 0, 400, 400)
-        self.setWindowTitle('SuperText')
-        self.setFocusPolicy(QtCore.Qt.StrongFocus)
-        self.setMouseTracking(True)
-        self.show()
-
-
-class BasicCompleterModel(QtCore.QAbstractListModel):
-    def __init__(self, terms=None, parent=None):
-        super(BasicCompleterModel, self).__init__(parent)
-        self.terms = terms
-        self.num_terms = len(terms)
-        self.line_edit = parent
-
-    def rowCount(self, something):
-        return self.num_terms
-
-    def data(self, index=None, role=None):
-        if role in [QtCore.Qt.DisplayRole, QtCore.Qt.EditRole]:
-            return self.terms[index.row()]
-        return None
-
 
 
 def main():
