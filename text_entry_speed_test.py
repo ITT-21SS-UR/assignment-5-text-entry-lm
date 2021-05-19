@@ -127,6 +127,8 @@ class TextEntryExperiment(QMainWindow):
         self.ui = uic.loadUi("text_entry_speed_test.ui", self)
         self._setup_introduction()
         self.current_text_input_field = None
+        self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
+        self.completer_text_widget = CompleterTextEdit()
 
     def _init_trial_data(self):
         self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
@@ -200,6 +202,7 @@ class TextEntryExperiment(QMainWindow):
         self.fifthPage = self.ui.finish_page
 
     def _go_to_page(self, index=None):
+        print(f"go to page index: {index}")
         if index is None:
             # if no index is given, simply move to the next page
             index = self.ui.stackedWidget.currentIndex() + 1
@@ -219,13 +222,15 @@ class TextEntryExperiment(QMainWindow):
 
     def new_text_box_widget(self, autocomplete):
         if autocomplete:
-            widget = CompleterTextEdit()
+            widget = self.completer_text_widget
+            widget.clear()
         else:
             widget = QtWidgets.QTextEdit(self)
         return widget
 
     def _show_example(self):
         # change task text based on condition!
+
         if self.__autocompletion_active:
             self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
         else:
@@ -245,9 +250,11 @@ class TextEntryExperiment(QMainWindow):
         #  input_field.clear()
         # focus the text field automatically so user doesn't have to click it first!
         text_box.setFocus()
-        self.ui.start_actual_study_btn.clicked.connect(lambda: self._go_to_page(2))
+
+
 
     def _start_study(self):
+
         self.ui.task_text_label.setText(self.__current_task_text)
         container_layout = self.ui.task_text_box_container.layout()
         for i in reversed(range(container_layout.count())):
@@ -371,11 +378,13 @@ class TextEntryExperiment(QMainWindow):
         self.__curr_trial_index += 1
         if self._was_last_trial():
             # go to next page when finished with the last trial
+
             self._go_to_page(3)
         else:
             # start next trial
             # self.__start_time_word = None
             # self.__start_time_sentence = None
+
             self._init_trial_data()
             self._go_to_page(1)  # TODO right now the example is always shown (maybe show only once per autocomplete/not-autocomplete condition?)
 
