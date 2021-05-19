@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+"""
+The text input technique was completely implemented by Johannes Lorper.
+"""
+
 import sys
 from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtWidgets import QCompleter
@@ -27,7 +31,6 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         self.numbers = []
         self.template_doc = ""
         self.prev_content = ""
-        #self.initUI()
         self.completer.activated.connect(self.insertCompletion)
 
     # https://www.qtcentre.org/threads/23518-How-to-change-completion-rule-of-QCompleter?highlight=qcompleter
@@ -45,6 +48,7 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
 
     def keyPressEvent(self, event):
         if self.current_popup is not None:
+            # the three words shown in the popup can be selected by pressing 1, 2 or 3 on the keyboard.
             if event.text() == "1":
                 self.completer.setCurrentRow(0)
                 self.insertCompletion(self.completer.currentCompletion())
@@ -63,7 +67,7 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
             if event.key() == QtCore.Qt.Key_Space:
                 self.current_popup.hide()
 
-        # we block the "enter" keys so people cant choose a completion with it (and its no necessary for the task)
+        # we block the "enter" keys so people cant choose a completion with it (and its not necessary for the task)
         if event.key() != QtCore.Qt.Key_Return and event.key() != QtCore.Qt.Key_Enter:
             super().keyPressEvent(event)
 
@@ -87,7 +91,7 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    super_text = CompleterTextEdit()
+    autocomplete_text_edit = CompleterTextEdit()
     sys.exit(app.exec_())
 
 
