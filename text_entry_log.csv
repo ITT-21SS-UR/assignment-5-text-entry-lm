@@ -1,4 +1,4 @@
-event_type timestamp participant_id condition with_autocompletion entered_content start_time_in_s end_time_in_s duration_in_s
+event_type, timestamp, participant_id, condition, with_autocompletion, entered_content, start_time_in_s, end_time_in_s, duration_in_s
 EventTypes.KEY_PRESSED,1621444232.1596098,1,with_autocompletion_text_2,True,,1621444232.1596117,1621444232.1596124,0
 EventTypes.KEY_PRESSED,1621444232.3180377,1,with_autocompletion_text_2,True,I,1621444232.3180397,1621444232.3180404,0
 EventTypes.KEY_PRESSED,1621444232.4678025,1,with_autocompletion_text_2,True,c,1621444232.4678044,1621444232.4678047,0
@@ -15,7 +15,7 @@ EventTypes.KEY_PRESSED,1621444235.6226504,1,with_autocompletion_text_2,True,c,16
 EventTypes.KEY_PRESSED,1621444236.4950392,1,with_autocompletion_text_2,True,z,1621444236.4950407,1621444236.4950411,0
 EventTypes.KEY_PRESSED,1621444236.5730479,1,with_autocompletion_text_2,True,e,1621444236.5730495,1621444236.5730498,0
 EventTypes.KEY_PRESSED,1621444236.7496817,1,with_autocompletion_text_2,True,i,1621444236.7496843,1621444236.7496848,0
-EventTypes.KEY_PRESSED,1621444239.4175284,1,with_autocompletion_text_2,True,,,1621444239.4175305,1621444239.4175308,0
+EventTypes.KEY_PRESSED,1621444239.4175284,1,with_autocompletion_text_2,True,",",1621444239.4175305,1621444239.4175308,0
 EventTypes.WORD_TYPED,1621444239.417627,1,with_autocompletion_text_2,True,Ich,1621444239.4176228,1621444232.3181484,7.0994744300842285
 EventTypes.KEY_PRESSED,1621444239.602911,1,with_autocompletion_text_2,True, ,1621444239.6029136,1621444239.602914,0
 EventTypes.KEY_PRESSED,1621444239.7735214,1,with_autocompletion_text_2,True,n,1621444239.7735238,1621444239.7735245,0
@@ -288,7 +288,7 @@ EventTypes.KEY_PRESSED,1621444345.2676811,1,no_autocompletion_text_1,False,m,162
 EventTypes.KEY_PRESSED,1621444345.4196048,1,no_autocompletion_text_1,False,m,1621444345.4196064,1621444345.4196064,0
 EventTypes.KEY_PRESSED,1621444345.5045304,1,no_autocompletion_text_1,False,e,1621444345.5045326,1621444345.5045328,0
 EventTypes.KEY_PRESSED,1621444345.6480029,1,no_autocompletion_text_1,False,n,1621444345.6480048,1621444345.648005,0
-EventTypes.KEY_PRESSED,1621444346.2115219,1,no_autocompletion_text_1,False,,,1621444346.2115235,1621444346.2115238,0
+EventTypes.KEY_PRESSED,1621444346.2115219,1,no_autocompletion_text_1,False,",",1621444346.2115235,1621444346.2115238,0
 EventTypes.WORD_TYPED,1621444346.2115965,1,no_autocompletion_text_1,False,gleich,1621444346.2115946,1621444344.1045053,2.1070892810821533
 EventTypes.KEY_PRESSED,1621444346.2783263,1,no_autocompletion_text_1,False, ,1621444346.2783282,1621444346.2783284,0
 EventTypes.KEY_PRESSED,1621444346.6326416,1,no_autocompletion_text_1,False,l,1621444346.6326432,1621444346.6326437,0
@@ -331,7 +331,7 @@ EventTypes.KEY_PRESSED,1621444353.8369927,1,no_autocompletion_text_1,False,r,162
 EventTypes.KEY_PRESSED,1621444354.2205014,1,no_autocompletion_text_1,False,g,1621444354.220503,1621444354.220503,0
 EventTypes.KEY_PRESSED,1621444354.3845,1,no_autocompletion_text_1,False,e,1621444354.384502,1621444354.3845022,0
 EventTypes.KEY_PRESSED,1621444354.543528,1,no_autocompletion_text_1,False,n,1621444354.5435302,1621444354.5435302,0
-EventTypes.KEY_PRESSED,1621444355.8504803,1,no_autocompletion_text_1,False,,,1621444355.850482,1621444355.8504825,0
+EventTypes.KEY_PRESSED,1621444355.8504803,1,no_autocompletion_text_1,False,",",1621444355.850482,1621444355.8504825,0
 EventTypes.WORD_TYPED,1621444355.8505552,1,no_autocompletion_text_1,False,die,1621444355.8505533,1621444351.581893,4.268660306930542
 EventTypes.KEY_PRESSED,1621444355.992344,1,no_autocompletion_text_1,False, ,1621444355.9923453,1621444355.9923456,0
 EventTypes.KEY_PRESSED,1621444356.2126818,1,no_autocompletion_text_1,False,d,1621444356.2126834,1621444356.2126837,0
@@ -375,7 +375,7 @@ EventTypes.KEY_PRESSED,1621444362.965509,1,no_autocompletion_text_1,False,ß,162
 EventTypes.KEY_PRESSED,1621444363.1691062,1,no_autocompletion_text_1,False,e,1621444363.1691077,1621444363.169108,0
 EventTypes.KEY_PRESSED,1621444363.7080855,1,no_autocompletion_text_1,False,.,1621444363.7080872,1621444363.7080874,0
 EventTypes.WORD_TYPED,1621444363.708163,1,no_autocompletion_text_1,False,None,1621444363.708161,1621444361.062158,2.646003007888794
-EventTypes.SENTENCE_TYPED,1621444363.7081878,1,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621444363.7081864,1621444333.7034009,30.004785537719727
+EventTypes.SENTENCE_TYPED,1621444363.7081878,1,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621444363.7081864,1621444333.7034009,30.004785537719727
 EventTypes.KEY_PRESSED,1621444363.8015287,1,no_autocompletion_text_1,False, ,1621444363.8015301,1621444363.8015304,0
 EventTypes.KEY_PRESSED,1621444364.6529472,1,no_autocompletion_text_1,False,,1621444364.6529486,1621444364.652949,0
 EventTypes.KEY_PRESSED,1621444365.1554272,1,no_autocompletion_text_1,False,I,1621444365.15543,1621444365.1554306,0
@@ -452,7 +452,7 @@ EventTypes.KEY_PRESSED,1621444377.145873,1,no_autocompletion_text_1,False,g,1621
 EventTypes.KEY_PRESSED,1621444377.3090508,1,no_autocompletion_text_1,False,e,1621444377.3090527,1621444377.3090532,0
 EventTypes.KEY_PRESSED,1621444377.6119335,1,no_autocompletion_text_1,False,n,1621444377.611936,1621444377.6119368,0
 EventTypes.KEY_PRESSED,1621444377.819215,1,no_autocompletion_text_1,False,d,1621444377.819217,1621444377.8192174,0
-EventTypes.KEY_PRESSED,1621444378.5362177,1,no_autocompletion_text_1,False,,,1621444378.5362196,1621444378.53622,0
+EventTypes.KEY_PRESSED,1621444378.5362177,1,no_autocompletion_text_1,False,",",1621444378.5362196,1621444378.53622,0
 EventTypes.WORD_TYPED,1621444378.5363593,1,no_autocompletion_text_1,False,Gegend,1621444378.5363564,1621444376.9944568,1.5418996810913086
 EventTypes.KEY_PRESSED,1621444378.601053,1,no_autocompletion_text_1,False, ,1621444378.6010554,1621444378.6010563,0
 EventTypes.KEY_PRESSED,1621444378.7755635,1,no_autocompletion_text_1,False,d,1621444378.7755654,1621444378.7755656,0
@@ -524,7 +524,7 @@ EventTypes.KEY_PRESSED,1621444389.4347663,1,no_autocompletion_text_1,False,n,162
 EventTypes.KEY_PRESSED,1621444390.0776186,1,no_autocompletion_text_1,False,e,1621444390.0776207,1621444390.0776212,0
 EventTypes.KEY_PRESSED,1621444390.5784757,1,no_autocompletion_text_1,False,.,1621444390.578478,1621444390.5784788,0
 EventTypes.WORD_TYPED,1621444390.5785575,1,no_autocompletion_text_1,False,meine,1621444390.5785553,1621444388.8794117,1.699143648147583
-EventTypes.SENTENCE_TYPED,1621444390.5785794,1,no_autocompletion_text_1,False,Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.,1621444390.5785785,1621444363.70821,26.870368480682373
+EventTypes.SENTENCE_TYPED,1621444390.5785794,1,no_autocompletion_text_1,False,"Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.",1621444390.5785785,1621444363.70821,26.870368480682373
 EventTypes.KEY_PRESSED,1621444390.659331,1,no_autocompletion_text_1,False, ,1621444390.6593332,1621444390.6593337,0
 EventTypes.KEY_PRESSED,1621444391.4758081,1,no_autocompletion_text_1,False,,1621444391.4758098,1621444391.4758103,0
 EventTypes.KEY_PRESSED,1621444391.692557,1,no_autocompletion_text_1,False,I,1621444391.6925588,1621444391.6925592,0
@@ -552,7 +552,7 @@ EventTypes.KEY_PRESSED,1621444395.0336158,1,no_autocompletion_text_1,False,l,162
 EventTypes.KEY_PRESSED,1621444395.1878538,1,no_autocompletion_text_1,False,i,1621444395.187856,1621444395.1878564,0
 EventTypes.KEY_PRESSED,1621444395.3149204,1,no_autocompletion_text_1,False,c,1621444395.3149226,1621444395.3149228,0
 EventTypes.KEY_PRESSED,1621444395.3927934,1,no_autocompletion_text_1,False,h,1621444395.3927956,1621444395.3927958,0
-EventTypes.KEY_PRESSED,1621444396.0376246,1,no_autocompletion_text_1,False,,,1621444396.0376265,1621444396.0376272,0
+EventTypes.KEY_PRESSED,1621444396.0376246,1,no_autocompletion_text_1,False,",",1621444396.0376265,1621444396.0376272,0
 EventTypes.WORD_TYPED,1621444396.038,1,no_autocompletion_text_1,False,glücklich,1621444396.0379975,1621444394.29356,1.7444374561309814
 EventTypes.KEY_PRESSED,1621444396.1515274,1,no_autocompletion_text_1,False, ,1621444396.15153,1621444396.1515307,0
 EventTypes.KEY_PRESSED,1621444396.6592302,1,no_autocompletion_text_1,False,m,1621444396.659232,1621444396.6592326,0
@@ -570,7 +570,7 @@ EventTypes.KEY_PRESSED,1621444398.354214,1,no_autocompletion_text_1,False,r,1621
 EventTypes.KEY_PRESSED,1621444398.7844381,1,no_autocompletion_text_1,False,,1621444398.7844396,1621444398.7844398,0
 EventTypes.KEY_PRESSED,1621444398.8201995,1,no_autocompletion_text_1,False,e,1621444398.820201,1621444398.8202012,0
 EventTypes.KEY_PRESSED,1621444398.9092774,1,no_autocompletion_text_1,False,r,1621444398.9092798,1621444398.9092805,0
-EventTypes.KEY_PRESSED,1621444399.3485472,1,no_autocompletion_text_1,False,,,1621444399.348549,1621444399.3485491,0
+EventTypes.KEY_PRESSED,1621444399.3485472,1,no_autocompletion_text_1,False,",",1621444399.348549,1621444399.3485491,0
 EventTypes.WORD_TYPED,1621444399.3486218,1,no_autocompletion_text_1,False,Bester,1621444399.3486197,1621444398.8202882,0.5283315181732178
 EventTypes.KEY_PRESSED,1621444399.5359595,1,no_autocompletion_text_1,False, ,1621444399.5359614,1621444399.535962,0
 EventTypes.KEY_PRESSED,1621444400.0136774,1,no_autocompletion_text_1,False,s,1621444400.0136788,1621444400.0136793,0
@@ -643,7 +643,7 @@ EventTypes.KEY_PRESSED,1621444412.856764,1,no_autocompletion_text_1,False,n,1621
 EventTypes.KEY_PRESSED,1621444412.9765437,1,no_autocompletion_text_1,False,k,1621444412.9765456,1621444412.976546,0
 EventTypes.KEY_PRESSED,1621444413.0394301,1,no_autocompletion_text_1,False,e,1621444413.0394323,1621444413.0394328,0
 EventTypes.KEY_PRESSED,1621444413.2168002,1,no_autocompletion_text_1,False,n,1621444413.2168024,1621444413.2168028,0
-EventTypes.KEY_PRESSED,1621444413.6542244,1,no_autocompletion_text_1,False,,,1621444413.6542265,1621444413.6542273,0
+EventTypes.KEY_PRESSED,1621444413.6542244,1,no_autocompletion_text_1,False,",",1621444413.6542265,1621444413.6542273,0
 EventTypes.WORD_TYPED,1621444413.654427,1,no_autocompletion_text_1,False,daß,1621444413.6544225,1621444412.1037886,1.5506339073181152
 EventTypes.KEY_PRESSED,1621444413.7140353,1,no_autocompletion_text_1,False, ,1621444413.714037,1621444413.7140372,0
 EventTypes.KEY_PRESSED,1621444413.9198608,1,no_autocompletion_text_1,False,d,1621444413.9198623,1621444413.9198627,0
@@ -684,8 +684,8 @@ EventTypes.KEY_PRESSED,1621444420.4083056,1,no_autocompletion_text_1,False,e,162
 EventTypes.KEY_PRESSED,1621444420.6383827,1,no_autocompletion_text_1,False,t,1621444420.6383846,1621444420.6383846,0
 EventTypes.KEY_PRESSED,1621444421.9812737,1,no_autocompletion_text_1,False,.,1621444421.9812758,1621444421.9812765,0
 EventTypes.WORD_TYPED,1621444421.9813862,1,no_autocompletion_text_1,False,None,1621444421.9813828,1621444419.8247724,2.1566104888916016
-EventTypes.SENTENCE_TYPED,1621444421.9814317,1,no_autocompletion_text_1,False,Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621444421.98143,1621444390.5786006,31.40282940864563
-EventTypes.TEST_FINISHED,1621444421.9815376,1,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621444421.9815342,1621444333.7034009,88.27813339233398
+EventTypes.SENTENCE_TYPED,1621444421.9814317,1,no_autocompletion_text_1,False,"Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621444421.98143,1621444390.5786006,31.40282940864563
+EventTypes.TEST_FINISHED,1621444421.9815376,1,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621444421.9815342,1621444333.7034009,88.27813339233398
 EventTypes.KEY_PRESSED,1621444427.0134678,1,with_autocompletion_text_1,True,,1621444427.0134697,1621444427.01347,0
 EventTypes.KEY_PRESSED,1621444427.0662293,1,with_autocompletion_text_1,True,E,1621444427.0662315,1621444427.066232,0
 EventTypes.KEY_PRESSED,1621444427.3543153,1,with_autocompletion_text_1,True,i,1621444427.3543174,1621444427.3543174,0
@@ -719,7 +719,7 @@ EventTypes.WORD_TYPED,1621444438.2552533,1,with_autocompletion_text_1,True,Heite
 EventTypes.KEY_PRESSED,1621444438.485096,1,with_autocompletion_text_1,True,e,1621444438.4850974,1621444438.4850976,0
 EventTypes.KEY_PRESSED,1621444438.5966303,1,with_autocompletion_text_1,True,i,1621444438.5966327,1621444438.5966334,0
 EventTypes.KEY_PRESSED,1621444438.7383766,1,with_autocompletion_text_1,True,n,1621444438.7383783,1621444438.7383785,0
-EventTypes.KEY_PRESSED,1621444440.9794376,1,with_autocompletion_text_1,True,,,1621444440.979439,1621444440.979439,0
+EventTypes.KEY_PRESSED,1621444440.9794376,1,with_autocompletion_text_1,True,",",1621444440.979439,1621444440.979439,0
 EventTypes.WORD_TYPED,1621444440.979716,1,with_autocompletion_text_1,True,hat,1621444440.9797137,1621444438.485195,2.494518756866455
 EventTypes.KEY_PRESSED,1621444441.050369,1,with_autocompletion_text_1,True, ,1621444441.0503712,1621444441.0503712,0
 EventTypes.KEY_PRESSED,1621444441.4933357,1,with_autocompletion_text_1,True,g,1621444441.4933374,1621444441.4933379,0
@@ -744,7 +744,7 @@ EventTypes.KEY_PRESSED,1621444449.118895,1,with_autocompletion_text_1,True,,162
 EventTypes.KEY_PRESSED,1621444449.2612123,1,with_autocompletion_text_1,True,,1621444449.2612143,1621444449.2612145,0
 EventTypes.KEY_PRESSED,1621444449.3233352,1,with_autocompletion_text_1,True,e,1621444449.3233376,1621444449.3233378,0
 EventTypes.KEY_PRESSED,1621444449.476239,1,with_autocompletion_text_1,True,n,1621444449.4762409,1621444449.476241,0
-EventTypes.KEY_PRESSED,1621444450.608093,1,with_autocompletion_text_1,True,,,1621444450.6080952,1621444450.6080956,0
+EventTypes.KEY_PRESSED,1621444450.608093,1,with_autocompletion_text_1,True,",",1621444450.6080952,1621444450.6080956,0
 EventTypes.WORD_TYPED,1621444450.6082206,1,with_autocompletion_text_1,True,meine,1621444450.608216,1621444449.3234892,1.284726858139038
 EventTypes.KEY_PRESSED,1621444450.6971,1,with_autocompletion_text_1,True, ,1621444450.6971014,1621444450.6971016,0
 EventTypes.KEY_PRESSED,1621444450.9384289,1,with_autocompletion_text_1,True,d,1621444450.9384308,1621444450.938431,0
@@ -912,7 +912,7 @@ EventTypes.KEY_PRESSED,1621444517.0290246,1,with_autocompletion_text_1,True,i,16
 EventTypes.KEY_PRESSED,1621444517.517687,1,with_autocompletion_text_1,True,e,1621444517.5176885,1621444517.5176888,0
 EventTypes.KEY_PRESSED,1621444518.6126692,1,with_autocompletion_text_1,True,.,1621444518.6126707,1621444518.612671,0
 EventTypes.WORD_TYPED,1621444518.612745,1,with_autocompletion_text_1,True,die,1621444518.6127431,1621444513.104863,5.507880210876465
-EventTypes.SENTENCE_TYPED,1621444518.6127672,1,with_autocompletion_text_1,True,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621444518.612766,1621444427.0134523,91.59931373596191
+EventTypes.SENTENCE_TYPED,1621444518.6127672,1,with_autocompletion_text_1,True,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621444518.612766,1621444427.0134523,91.59931373596191
 EventTypes.KEY_PRESSED,1621444525.5421414,1,no_autocompletion_text_2,False,,1621444525.5421424,1621444525.5421424,0
 EventTypes.KEY_PRESSED,1621444525.7034109,1,no_autocompletion_text_2,False,I,1621444525.7034128,1621444525.7034128,0
 EventTypes.KEY_PRESSED,1621444525.8113494,1,no_autocompletion_text_2,False,c,1621444525.8113508,1621444525.8113513,0
@@ -951,7 +951,7 @@ EventTypes.KEY_PRESSED,1621444530.6589031,1,no_autocompletion_text_2,False,h,162
 EventTypes.KEY_PRESSED,1621444530.8694184,1,no_autocompletion_text_2,False,n,1621444530.8694196,1621444530.86942,0
 EventTypes.KEY_PRESSED,1621444530.9499953,1,no_autocompletion_text_2,False,e,1621444530.9499965,1621444530.9499974,0
 EventTypes.KEY_PRESSED,1621444531.1045368,1,no_autocompletion_text_2,False,n,1621444531.1045384,1621444531.104539,0
-EventTypes.KEY_PRESSED,1621444531.8767562,1,no_autocompletion_text_2,False,,,1621444531.876758,1621444531.8767583,0
+EventTypes.KEY_PRESSED,1621444531.8767562,1,no_autocompletion_text_2,False,",",1621444531.876758,1621444531.8767583,0
 EventTypes.WORD_TYPED,1621444531.87683,1,no_autocompletion_text_2,False,zeichnen,1621444531.8768284,1621444530.1681664,1.7086620330810547
 EventTypes.KEY_PRESSED,1621444531.9758046,1,no_autocompletion_text_2,False, ,1621444531.975807,1621444531.9758072,0
 EventTypes.KEY_PRESSED,1621444532.1296253,1,no_autocompletion_text_2,False,n,1621444532.1296275,1621444532.1296277,0
@@ -1055,7 +1055,7 @@ EventTypes.KEY_PRESSED,1621444549.5533986,1,no_autocompletion_text_2,False,e,162
 EventTypes.KEY_PRESSED,1621444549.6546907,1,no_autocompletion_text_2,False,n,1621444549.6546924,1621444549.6546926,0
 EventTypes.KEY_PRESSED,1621444550.4516144,1,no_autocompletion_text_2,False,.,1621444550.451616,1621444550.4516163,0
 EventTypes.WORD_TYPED,1621444550.451687,1,no_autocompletion_text_2,False,Augenblicken,1621444550.4516852,1621444547.5683742,2.8833110332489014
-EventTypes.SENTENCE_TYPED,1621444550.4517107,1,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621444550.45171,1621444525.5421312,24.909578800201416
+EventTypes.SENTENCE_TYPED,1621444550.4517107,1,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621444550.45171,1621444525.5421312,24.909578800201416
 EventTypes.KEY_PRESSED,1621444550.532191,1,no_autocompletion_text_2,False, ,1621444550.5321932,1621444550.532194,0
 EventTypes.KEY_PRESSED,1621444550.7107897,1,no_autocompletion_text_2,False,,1621444550.710791,1621444550.7107913,0
 EventTypes.KEY_PRESSED,1621444550.7557423,1,no_autocompletion_text_2,False,W,1621444550.7557435,1621444550.755744,0
@@ -1103,7 +1103,7 @@ EventTypes.KEY_PRESSED,1621444556.9831986,1,no_autocompletion_text_2,False,m,162
 EventTypes.KEY_PRESSED,1621444557.1775026,1,no_autocompletion_text_2,False,p,1621444557.177504,1621444557.177504,0
 EventTypes.KEY_PRESSED,1621444557.6280787,1,no_autocompletion_text_2,False,f,1621444557.6280801,1621444557.6280801,0
 EventTypes.KEY_PRESSED,1621444557.8483975,1,no_autocompletion_text_2,False,t,1621444557.8483992,1621444557.8483994,0
-EventTypes.KEY_PRESSED,1621444558.6210322,1,no_autocompletion_text_2,False,,,1621444558.6210344,1621444558.621035,0
+EventTypes.KEY_PRESSED,1621444558.6210322,1,no_autocompletion_text_2,False,",",1621444558.6210344,1621444558.621035,0
 EventTypes.WORD_TYPED,1621444558.621155,1,no_autocompletion_text_2,False,und,1621444558.621151,1621444556.741729,1.8794219493865967
 EventTypes.KEY_PRESSED,1621444558.7431166,1,no_autocompletion_text_2,False, ,1621444558.7431188,1621444558.7431195,0
 EventTypes.KEY_PRESSED,1621444558.8690703,1,no_autocompletion_text_2,False,u,1621444558.869072,1621444558.869072,0
@@ -1209,7 +1209,7 @@ EventTypes.KEY_PRESSED,1621444580.5288882,1,no_autocompletion_text_2,False,r,162
 EventTypes.KEY_PRESSED,1621444580.6922348,1,no_autocompletion_text_2,False,u,1621444580.6922374,1621444580.6922376,0
 EventTypes.KEY_PRESSED,1621444581.1632113,1,no_autocompletion_text_2,False,h,1621444581.1632133,1621444581.1632135,0
 EventTypes.KEY_PRESSED,1621444581.3262951,1,no_autocompletion_text_2,False,t,1621444581.3262973,1621444581.3262978,0
-EventTypes.KEY_PRESSED,1621444582.5227919,1,no_autocompletion_text_2,False,,,1621444582.522794,1621444582.5227942,0
+EventTypes.KEY_PRESSED,1621444582.5227919,1,no_autocompletion_text_2,False,",",1621444582.522794,1621444582.5227942,0
 EventTypes.WORD_TYPED,1621444582.5228822,1,no_autocompletion_text_2,False,und,1621444582.5228803,1621444580.5290694,1.9938108921051025
 EventTypes.KEY_PRESSED,1621444582.5735586,1,no_autocompletion_text_2,False, ,1621444582.5735602,1621444582.5735605,0
 EventTypes.KEY_PRESSED,1621444582.7838044,1,no_autocompletion_text_2,False,u,1621444582.7838056,1621444582.7838063,0
@@ -1289,7 +1289,7 @@ EventTypes.KEY_PRESSED,1621444597.3298602,1,no_autocompletion_text_2,False,h,162
 EventTypes.KEY_PRESSED,1621444597.5118089,1,no_autocompletion_text_2,False,l,1621444597.5118113,1621444597.5118115,0
 EventTypes.KEY_PRESSED,1621444597.6863832,1,no_autocompletion_text_2,False,e,1621444597.6863847,1621444597.686385,0
 EventTypes.KEY_PRESSED,1621444597.7874408,1,no_autocompletion_text_2,False,n,1621444597.787443,1621444597.787443,0
-EventTypes.KEY_PRESSED,1621444598.2993462,1,no_autocompletion_text_2,False,,,1621444598.2993474,1621444598.2993474,0
+EventTypes.KEY_PRESSED,1621444598.2993462,1,no_autocompletion_text_2,False,",",1621444598.2993474,1621444598.2993474,0
 EventTypes.WORD_TYPED,1621444598.2994199,1,no_autocompletion_text_2,False,ich,1621444598.299418,1621444596.5410542,1.7583637237548828
 EventTypes.KEY_PRESSED,1621444598.3983076,1,no_autocompletion_text_2,False, ,1621444598.3983092,1621444598.3983095,0
 EventTypes.KEY_PRESSED,1621444598.5770726,1,no_autocompletion_text_2,False,i,1621444598.5770743,1621444598.5770748,0
@@ -1356,8 +1356,8 @@ EventTypes.KEY_PRESSED,1621444607.908097,1,no_autocompletion_text_2,False,e,1621
 EventTypes.KEY_PRESSED,1621444608.0503535,1,no_autocompletion_text_2,False,n,1621444608.0503554,1621444608.0503557,0
 EventTypes.KEY_PRESSED,1621444608.8065984,1,no_autocompletion_text_2,False,.,1621444608.8065999,1621444608.8066,0
 EventTypes.WORD_TYPED,1621444608.806672,1,no_autocompletion_text_2,False,None,1621444608.8066702,1621444607.4219294,1.3847408294677734
-EventTypes.SENTENCE_TYPED,1621444608.8066945,1,no_autocompletion_text_2,False,Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621444608.8066933,1621444550.4517329,58.354960441589355
-EventTypes.TEST_FINISHED,1621444608.8067176,1,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621444608.8067164,1621444525.5421312,83.26458525657654
+EventTypes.SENTENCE_TYPED,1621444608.8066945,1,no_autocompletion_text_2,False,"Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621444608.8066933,1621444550.4517329,58.354960441589355
+EventTypes.TEST_FINISHED,1621444608.8067176,1,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621444608.8067164,1621444525.5421312,83.26458525657654
 EventTypes.KEY_PRESSED,1621444680.269509,2,no_autocompletion_text_1,False,,1621444680.2695107,1621444680.2695112,0
 EventTypes.KEY_PRESSED,1621444680.3472288,2,no_autocompletion_text_1,False,E,1621444680.34723,1621444680.3472304,0
 EventTypes.KEY_PRESSED,1621444680.5651584,2,no_autocompletion_text_1,False,i,1621444680.5651603,1621444680.5651608,0
@@ -1428,7 +1428,7 @@ EventTypes.KEY_PRESSED,1621444690.4906466,2,no_autocompletion_text_1,False,m,162
 EventTypes.KEY_PRESSED,1621444690.633197,2,no_autocompletion_text_1,False,m,1621444690.6331985,1621444690.6331992,0
 EventTypes.KEY_PRESSED,1621444690.7833154,2,no_autocompletion_text_1,False,e,1621444690.7833178,1621444690.7833185,0
 EventTypes.KEY_PRESSED,1621444690.883155,2,no_autocompletion_text_1,False,n,1621444690.883158,1621444690.8831587,0
-EventTypes.KEY_PRESSED,1621444691.4306679,2,no_autocompletion_text_1,False,,,1621444691.4306695,1621444691.43067,0
+EventTypes.KEY_PRESSED,1621444691.4306679,2,no_autocompletion_text_1,False,",",1621444691.4306695,1621444691.43067,0
 EventTypes.WORD_TYPED,1621444691.4308407,2,no_autocompletion_text_1,False,eingenommen,1621444691.4308388,1621444689.6095824,1.821256399154663
 EventTypes.KEY_PRESSED,1621444691.490506,2,no_autocompletion_text_1,False, ,1621444691.4905088,1621444691.4905093,0
 EventTypes.KEY_PRESSED,1621444691.7031841,2,no_autocompletion_text_1,False,g,1621444691.7031856,1621444691.703186,0
@@ -1467,7 +1467,7 @@ EventTypes.KEY_PRESSED,1621444698.284457,2,no_autocompletion_text_1,False,r,1621
 EventTypes.KEY_PRESSED,1621444698.4910038,2,no_autocompletion_text_1,False,g,1621444698.4910061,1621444698.4910066,0
 EventTypes.KEY_PRESSED,1621444698.6231163,2,no_autocompletion_text_1,False,e,1621444698.623118,1621444698.6231182,0
 EventTypes.KEY_PRESSED,1621444698.7592034,2,no_autocompletion_text_1,False,n,1621444698.7592053,1621444698.7592058,0
-EventTypes.KEY_PRESSED,1621444699.628244,2,no_autocompletion_text_1,False,,,1621444699.628246,1621444699.6282465,0
+EventTypes.KEY_PRESSED,1621444699.628244,2,no_autocompletion_text_1,False,",",1621444699.628246,1621444699.6282465,0
 EventTypes.WORD_TYPED,1621444699.628315,2,no_autocompletion_text_1,False,Frühlingsmorgen,1621444699.6283133,1621444696.553206,3.0751073360443115
 EventTypes.KEY_PRESSED,1621444699.7184458,2,no_autocompletion_text_1,False, ,1621444699.7184486,1621444699.7184494,0
 EventTypes.KEY_PRESSED,1621444699.9147522,2,no_autocompletion_text_1,False,d,1621444699.9147537,1621444699.9147542,0
@@ -1511,7 +1511,7 @@ EventTypes.KEY_PRESSED,1621444707.6561778,2,no_autocompletion_text_1,False,ß,16
 EventTypes.KEY_PRESSED,1621444707.765568,2,no_autocompletion_text_1,False,e,1621444707.7655702,1621444707.7655704,0
 EventTypes.KEY_PRESSED,1621444708.6435957,2,no_autocompletion_text_1,False,.,1621444708.6435983,1621444708.6435988,0
 EventTypes.WORD_TYPED,1621444708.6436784,2,no_autocompletion_text_1,False,genieße,1621444708.6436765,1621444706.6077857,2.035890817642212
-EventTypes.SENTENCE_TYPED,1621444708.643701,2,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621444708.6436996,1621444680.2694876,28.37421202659607
+EventTypes.SENTENCE_TYPED,1621444708.643701,2,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621444708.6436996,1621444680.2694876,28.37421202659607
 EventTypes.KEY_PRESSED,1621444708.7356808,2,no_autocompletion_text_1,False, ,1621444708.7356834,1621444708.7356842,0
 EventTypes.KEY_PRESSED,1621444708.9258506,2,no_autocompletion_text_1,False,,1621444708.9258518,1621444708.9258523,0
 EventTypes.KEY_PRESSED,1621444709.1667898,2,no_autocompletion_text_1,False,I,1621444709.1667922,1621444709.1667929,0
@@ -1588,7 +1588,7 @@ EventTypes.KEY_PRESSED,1621444719.9735317,2,no_autocompletion_text_1,False,g,162
 EventTypes.KEY_PRESSED,1621444720.0837045,2,no_autocompletion_text_1,False,e,1621444720.0837061,1621444720.0837064,0
 EventTypes.KEY_PRESSED,1621444720.2502744,2,no_autocompletion_text_1,False,n,1621444720.250276,1621444720.2502766,0
 EventTypes.KEY_PRESSED,1621444720.4307187,2,no_autocompletion_text_1,False,d,1621444720.4307206,1621444720.430721,0
-EventTypes.KEY_PRESSED,1621444721.532917,2,no_autocompletion_text_1,False,,,1621444721.5329185,1621444721.5329194,0
+EventTypes.KEY_PRESSED,1621444721.532917,2,no_autocompletion_text_1,False,",",1621444721.5329185,1621444721.5329194,0
 EventTypes.WORD_TYPED,1621444721.532988,2,no_autocompletion_text_1,False,Gegend,1621444721.532986,1621444719.4652,2.0677859783172607
 EventTypes.KEY_PRESSED,1621444721.5929596,2,no_autocompletion_text_1,False, ,1621444721.5929615,1621444721.5929623,0
 EventTypes.KEY_PRESSED,1621444721.7612116,2,no_autocompletion_text_1,False,d,1621444721.761214,1621444721.7612147,0
@@ -1658,7 +1658,7 @@ EventTypes.KEY_PRESSED,1621444732.327209,2,no_autocompletion_text_1,False,n,1621
 EventTypes.KEY_PRESSED,1621444732.475397,2,no_autocompletion_text_1,False,e,1621444732.4753985,1621444732.4753993,0
 EventTypes.KEY_PRESSED,1621444733.4337096,2,no_autocompletion_text_1,False,.,1621444733.4337113,1621444733.4337118,0
 EventTypes.WORD_TYPED,1621444733.4341574,2,no_autocompletion_text_1,False,meine,1621444733.4341533,1621444731.8533158,1.5808374881744385
-EventTypes.SENTENCE_TYPED,1621444733.4341896,2,no_autocompletion_text_1,False,Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.,1621444733.4341886,1621444708.6437223,24.79046630859375
+EventTypes.SENTENCE_TYPED,1621444733.4341896,2,no_autocompletion_text_1,False,"Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.",1621444733.4341886,1621444708.6437223,24.79046630859375
 EventTypes.KEY_PRESSED,1621444733.5198717,2,no_autocompletion_text_1,False, ,1621444733.5198753,1621444733.519876,0
 EventTypes.KEY_PRESSED,1621444733.6772413,2,no_autocompletion_text_1,False,,1621444733.677243,1621444733.6772432,0
 EventTypes.KEY_PRESSED,1621444733.7806044,2,no_autocompletion_text_1,False,I,1621444733.780607,1621444733.7806077,0
@@ -1686,7 +1686,7 @@ EventTypes.KEY_PRESSED,1621444737.747779,2,no_autocompletion_text_1,False,l,1621
 EventTypes.KEY_PRESSED,1621444737.8693268,2,no_autocompletion_text_1,False,i,1621444737.869329,1621444737.8693297,0
 EventTypes.KEY_PRESSED,1621444737.932578,2,no_autocompletion_text_1,False,c,1621444737.9325812,1621444737.932582,0
 EventTypes.KEY_PRESSED,1621444738.0766711,2,no_autocompletion_text_1,False,h,1621444738.0766733,1621444738.0766737,0
-EventTypes.KEY_PRESSED,1621444738.9706151,2,no_autocompletion_text_1,False,,,1621444738.9706175,1621444738.9706187,0
+EventTypes.KEY_PRESSED,1621444738.9706151,2,no_autocompletion_text_1,False,",",1621444738.9706175,1621444738.9706187,0
 EventTypes.WORD_TYPED,1621444738.9711375,2,no_autocompletion_text_1,False,glücklich,1621444738.9711337,1621444737.0173087,1.9538249969482422
 EventTypes.KEY_PRESSED,1621444739.052311,2,no_autocompletion_text_1,False, ,1621444739.0523129,1621444739.052313,0
 EventTypes.KEY_PRESSED,1621444739.6242926,2,no_autocompletion_text_1,False,m,1621444739.6242948,1621444739.6242952,0
@@ -1702,7 +1702,7 @@ EventTypes.KEY_PRESSED,1621444740.6675494,2,no_autocompletion_text_1,False,s,162
 EventTypes.KEY_PRESSED,1621444740.8327336,2,no_autocompletion_text_1,False,t,1621444740.8327358,1621444740.832736,0
 EventTypes.KEY_PRESSED,1621444740.960743,2,no_autocompletion_text_1,False,e,1621444740.9607453,1621444740.9607456,0
 EventTypes.KEY_PRESSED,1621444741.0767624,2,no_autocompletion_text_1,False,r,1621444741.0767655,1621444741.076766,0
-EventTypes.KEY_PRESSED,1621444741.8684502,2,no_autocompletion_text_1,False,,,1621444741.8684518,1621444741.8684523,0
+EventTypes.KEY_PRESSED,1621444741.8684502,2,no_autocompletion_text_1,False,",",1621444741.8684518,1621444741.8684523,0
 EventTypes.WORD_TYPED,1621444741.868522,2,no_autocompletion_text_1,False,Bester,1621444741.8685205,1621444740.4708593,1.3976612091064453
 EventTypes.KEY_PRESSED,1621444741.9275277,2,no_autocompletion_text_1,False, ,1621444741.9275293,1621444741.9275298,0
 EventTypes.KEY_PRESSED,1621444742.189132,2,no_autocompletion_text_1,False,d,1621444742.1891341,1621444742.1891348,0
@@ -1774,7 +1774,7 @@ EventTypes.KEY_PRESSED,1621444755.430292,2,no_autocompletion_text_1,False,n,1621
 EventTypes.KEY_PRESSED,1621444755.6913261,2,no_autocompletion_text_1,False,k,1621444755.691329,1621444755.6913295,0
 EventTypes.KEY_PRESSED,1621444755.759708,2,no_autocompletion_text_1,False,e,1621444755.7597103,1621444755.7597108,0
 EventTypes.KEY_PRESSED,1621444755.889184,2,no_autocompletion_text_1,False,n,1621444755.8891907,1621444755.8891912,0
-EventTypes.KEY_PRESSED,1621444756.3633008,2,no_autocompletion_text_1,False,,,1621444756.3633032,1621444756.3633037,0
+EventTypes.KEY_PRESSED,1621444756.3633008,2,no_autocompletion_text_1,False,",",1621444756.3633032,1621444756.3633037,0
 EventTypes.WORD_TYPED,1621444756.3633962,2,no_autocompletion_text_1,False,versunken,1621444756.3633933,1621444754.6240363,1.7393569946289062
 EventTypes.KEY_PRESSED,1621444756.4010472,2,no_autocompletion_text_1,False, ,1621444756.40105,1621444756.4010508,0
 EventTypes.KEY_PRESSED,1621444756.5770268,2,no_autocompletion_text_1,False,d,1621444756.5770292,1621444756.57703,0
@@ -1815,8 +1815,8 @@ EventTypes.KEY_PRESSED,1621444761.447859,2,no_autocompletion_text_1,False,e,1621
 EventTypes.KEY_PRESSED,1621444761.6312695,2,no_autocompletion_text_1,False,t,1621444761.6312711,1621444761.6312716,0
 EventTypes.KEY_PRESSED,1621444763.4844732,2,no_autocompletion_text_1,False,.,1621444763.4844751,1621444763.4844759,0
 EventTypes.WORD_TYPED,1621444763.4846067,2,no_autocompletion_text_1,False,leidet,1621444763.4846036,1621444760.975689,2.5089147090911865
-EventTypes.SENTENCE_TYPED,1621444763.4846458,2,no_autocompletion_text_1,False,Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621444763.4846442,1621444733.43421,30.050434112548828
-EventTypes.TEST_FINISHED,1621444763.4846826,2,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621444763.4846797,1621444680.2694876,83.21519207954407
+EventTypes.SENTENCE_TYPED,1621444763.4846458,2,no_autocompletion_text_1,False,"Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621444763.4846442,1621444733.43421,30.050434112548828
+EventTypes.TEST_FINISHED,1621444763.4846826,2,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621444763.4846797,1621444680.2694876,83.21519207954407
 EventTypes.KEY_PRESSED,1621444768.3756938,2,no_autocompletion_text_2,False,,1621444768.375695,1621444768.375695,0
 EventTypes.KEY_PRESSED,1621444768.5443692,2,no_autocompletion_text_2,False,I,1621444768.5443707,1621444768.5443711,0
 EventTypes.KEY_PRESSED,1621444768.9635766,2,no_autocompletion_text_2,False,c,1621444768.9635782,1621444768.9635787,0
@@ -1852,7 +1852,7 @@ EventTypes.KEY_PRESSED,1621444772.1737309,2,no_autocompletion_text_2,False,c,162
 EventTypes.KEY_PRESSED,1621444772.2881203,2,no_autocompletion_text_2,False,h,1621444772.2881227,1621444772.2881231,0
 EventTypes.KEY_PRESSED,1621444772.4053338,2,no_autocompletion_text_2,False,e,1621444772.4053357,1621444772.4053361,0
 EventTypes.KEY_PRESSED,1621444772.4831204,2,no_autocompletion_text_2,False,n,1621444772.4831219,1621444772.4831226,0
-EventTypes.KEY_PRESSED,1621444773.09905,2,no_autocompletion_text_2,False,,,1621444773.0990515,1621444773.099052,0
+EventTypes.KEY_PRESSED,1621444773.09905,2,no_autocompletion_text_2,False,",",1621444773.0990515,1621444773.099052,0
 EventTypes.WORD_TYPED,1621444773.0991414,2,no_autocompletion_text_2,False,zeichnen,1621444773.09914,1621444771.743632,1.3555078506469727
 EventTypes.KEY_PRESSED,1621444773.2634702,2,no_autocompletion_text_2,False, ,1621444773.263472,1621444773.2634726,0
 EventTypes.KEY_PRESSED,1621444773.6074357,2,no_autocompletion_text_2,False,n,1621444773.6074374,1621444773.607438,0
@@ -1875,7 +1875,7 @@ EventTypes.KEY_PRESSED,1621444776.020126,2,no_autocompletion_text_2,False,r,1621
 EventTypes.KEY_PRESSED,1621444776.1726298,2,no_autocompletion_text_2,False,i,1621444776.1726317,1621444776.1726327,0
 EventTypes.KEY_PRESSED,1621444776.3188055,2,no_autocompletion_text_2,False,c,1621444776.3188071,1621444776.3188078,0
 EventTypes.KEY_PRESSED,1621444776.4011538,2,no_autocompletion_text_2,False,h,1621444776.4011552,1621444776.401156,0
-EventTypes.KEY_PRESSED,1621444776.9390447,2,no_autocompletion_text_2,False,,,1621444776.939046,1621444776.9390464,0
+EventTypes.KEY_PRESSED,1621444776.9390447,2,no_autocompletion_text_2,False,",",1621444776.939046,1621444776.9390464,0
 EventTypes.WORD_TYPED,1621444776.9393766,2,no_autocompletion_text_2,False,Strich,1621444776.9393744,1621444775.7284577,1.2109167575836182
 EventTypes.KEY_PRESSED,1621444777.0071418,2,no_autocompletion_text_2,False, ,1621444777.007145,1621444777.0071456,0
 EventTypes.KEY_PRESSED,1621444777.1998963,2,no_autocompletion_text_2,False,u,1621444777.1998985,1621444777.1998987,0
@@ -1962,7 +1962,7 @@ EventTypes.KEY_PRESSED,1621444791.3538563,2,no_autocompletion_text_2,False,e,162
 EventTypes.KEY_PRESSED,1621444791.4655352,2,no_autocompletion_text_2,False,n,1621444791.465537,1621444791.4655373,0
 EventTypes.KEY_PRESSED,1621444792.7246244,2,no_autocompletion_text_2,False,.,1621444792.7246268,1621444792.7246275,0
 EventTypes.WORD_TYPED,1621444792.7247531,2,no_autocompletion_text_2,False,None,1621444792.72475,1621444790.3285544,2.396195650100708
-EventTypes.SENTENCE_TYPED,1621444792.7247944,2,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621444792.7247925,1621444768.3756835,24.349108934402466
+EventTypes.SENTENCE_TYPED,1621444792.7247944,2,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621444792.7247925,1621444768.3756835,24.349108934402466
 EventTypes.KEY_PRESSED,1621444792.8291678,2,no_autocompletion_text_2,False, ,1621444792.8291695,1621444792.82917,0
 EventTypes.KEY_PRESSED,1621444793.3053236,2,no_autocompletion_text_2,False,,1621444793.305325,1621444793.3053253,0
 EventTypes.KEY_PRESSED,1621444793.4967132,2,no_autocompletion_text_2,False,W,1621444793.4967155,1621444793.4967163,0
@@ -2118,7 +2118,7 @@ EventTypes.KEY_PRESSED,1621444822.236754,2,no_autocompletion_text_2,False,r,1621
 EventTypes.KEY_PRESSED,1621444822.3462245,2,no_autocompletion_text_2,False,u,1621444822.3462267,1621444822.3462274,0
 EventTypes.KEY_PRESSED,1621444822.4764469,2,no_autocompletion_text_2,False,f,1621444822.476449,1621444822.4764495,0
 EventTypes.KEY_PRESSED,1621444822.7834651,2,no_autocompletion_text_2,False,t,1621444822.783468,1621444822.7834685,0
-EventTypes.KEY_PRESSED,1621444823.7854369,2,no_autocompletion_text_2,False,,,1621444823.7854388,1621444823.7854393,0
+EventTypes.KEY_PRESSED,1621444823.7854369,2,no_autocompletion_text_2,False,",",1621444823.7854388,1621444823.7854393,0
 EventTypes.WORD_TYPED,1621444823.7855086,2,no_autocompletion_text_2,False,ruht,1621444823.7855067,1621444822.2368503,1.5486564636230469
 EventTypes.KEY_PRESSED,1621444823.8686314,2,no_autocompletion_text_2,False, ,1621444823.8686326,1621444823.8686333,0
 EventTypes.KEY_PRESSED,1621444824.1785042,2,no_autocompletion_text_2,False,u,1621444824.178506,1621444824.1785061,0
@@ -2199,7 +2199,7 @@ EventTypes.KEY_PRESSED,1621444835.8269992,2,no_autocompletion_text_2,False,e,162
 EventTypes.KEY_PRESSED,1621444836.0770493,2,no_autocompletion_text_2,False,l,1621444836.0770507,1621444836.0770512,0
 EventTypes.KEY_PRESSED,1621444836.2626708,2,no_autocompletion_text_2,False,n,1621444836.2626727,1621444836.2626731,0
 EventTypes.KEY_PRESSED,1621444836.355228,2,no_autocompletion_text_2,False,e,1621444836.3552296,1621444836.35523,0
-EventTypes.KEY_PRESSED,1621444837.199483,2,no_autocompletion_text_2,False,,,1621444837.1994843,1621444837.1994846,0
+EventTypes.KEY_PRESSED,1621444837.199483,2,no_autocompletion_text_2,False,",",1621444837.1994843,1621444837.1994846,0
 EventTypes.WORD_TYPED,1621444837.199555,2,no_autocompletion_text_2,False,stehlen,1621444837.1995528,1621444835.1347454,2.064807415008545
 EventTypes.KEY_PRESSED,1621444837.249575,2,no_autocompletion_text_2,False, ,1621444837.2495763,1621444837.2495768,0
 EventTypes.KEY_PRESSED,1621444837.4521518,2,no_autocompletion_text_2,False,i,1621444837.4521537,1621444837.4521537,0
@@ -2264,8 +2264,8 @@ EventTypes.KEY_PRESSED,1621444846.4294877,2,no_autocompletion_text_2,False,g,162
 EventTypes.KEY_PRESSED,1621444846.545902,2,no_autocompletion_text_2,False,e,1621444846.5459042,1621444846.5459046,0
 EventTypes.KEY_PRESSED,1621444847.0284274,2,no_autocompletion_text_2,False,.,1621444847.028429,1621444847.0284293,0
 EventTypes.WORD_TYPED,1621444847.028498,2,no_autocompletion_text_2,False,liege,1621444847.0284963,1621444846.0025027,1.0259935855865479
-EventTypes.SENTENCE_TYPED,1621444847.028519,2,no_autocompletion_text_2,False,Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621444847.0285175,1621444792.7248302,54.30368733406067
-EventTypes.TEST_FINISHED,1621444847.0285408,2,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621444847.02854,1621444768.3756835,78.65285634994507
+EventTypes.SENTENCE_TYPED,1621444847.028519,2,no_autocompletion_text_2,False,"Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621444847.0285175,1621444792.7248302,54.30368733406067
+EventTypes.TEST_FINISHED,1621444847.0285408,2,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621444847.02854,1621444768.3756835,78.65285634994507
 EventTypes.KEY_PRESSED,1621444853.8050704,2,with_autocompletion_text_2,True,,1621444853.805072,1621444853.8050725,0
 EventTypes.KEY_PRESSED,1621444854.0052085,2,with_autocompletion_text_2,True,I,1621444854.0052102,1621444854.0052106,0
 EventTypes.KEY_PRESSED,1621444854.085402,2,with_autocompletion_text_2,True,C,1621444854.0854044,1621444854.0854046,0
@@ -2344,7 +2344,7 @@ EventTypes.KEY_PRESSED,1621444876.6521652,2,with_autocompletion_text_2,True,e,16
 EventTypes.KEY_PRESSED,1621444876.7548347,2,with_autocompletion_text_2,True,n,1621444876.7548363,1621444876.7548363,0
 EventTypes.KEY_PRESSED,1621444877.4201918,2,with_autocompletion_text_2,True,.,1621444877.4201941,1621444877.4201941,0
 EventTypes.WORD_TYPED,1621444877.4203484,2,with_autocompletion_text_2,True,nicht,1621444877.4203467,1621444873.718465,3.7018816471099854
-EventTypes.SENTENCE_TYPED,1621444877.4203718,2,with_autocompletion_text_2,True,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621444877.420371,1621444853.8050544,23.61531662940979
+EventTypes.SENTENCE_TYPED,1621444877.4203718,2,with_autocompletion_text_2,True,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621444877.420371,1621444853.8050544,23.61531662940979
 EventTypes.KEY_PRESSED,1621444877.501439,2,with_autocompletion_text_2,True, ,1621444877.5014408,1621444877.5014412,0
 EventTypes.KEY_PRESSED,1621444877.7490134,2,with_autocompletion_text_2,True,,1621444877.7490158,1621444877.7490165,0
 EventTypes.KEY_PRESSED,1621444877.7655475,2,with_autocompletion_text_2,True,W,1621444877.765549,1621444877.7655497,0
@@ -2528,7 +2528,7 @@ EventTypes.KEY_PRESSED,1621444939.8185816,2,with_autocompletion_text_1,True,e,16
 EventTypes.KEY_PRESSED,1621444940.7259243,2,with_autocompletion_text_1,True,e,1621444940.7259262,1621444940.7259262,0
 EventTypes.KEY_PRESSED,1621444940.8457432,2,with_autocompletion_text_1,True,i,1621444940.8457448,1621444940.845745,0
 EventTypes.KEY_PRESSED,1621444940.980212,2,with_autocompletion_text_1,True,n,1621444940.9802134,1621444940.9802136,0
-EventTypes.KEY_PRESSED,1621444943.3618052,2,with_autocompletion_text_1,True,,,1621444943.3618076,1621444943.3618078,0
+EventTypes.KEY_PRESSED,1621444943.3618052,2,with_autocompletion_text_1,True,",",1621444943.3618076,1621444943.3618078,0
 EventTypes.WORD_TYPED,1621444943.3619099,2,with_autocompletion_text_1,True,Eine,1621444943.361907,1621444939.5098686,3.8520383834838867
 EventTypes.KEY_PRESSED,1621444943.4307427,2,with_autocompletion_text_1,True, ,1621444943.4307451,1621444943.4307454,0
 EventTypes.KEY_PRESSED,1621444943.6298265,2,with_autocompletion_text_1,True,g,1621444943.6298287,1621444943.629829,0
@@ -2549,7 +2549,7 @@ EventTypes.KEY_PRESSED,1621444948.7665343,2,with_autocompletion_text_1,True,r,16
 EventTypes.KEY_PRESSED,1621444948.9754412,2,with_autocompletion_text_1,True,g,1621444948.9754431,1621444948.9754434,0
 EventTypes.KEY_PRESSED,1621444949.1092627,2,with_autocompletion_text_1,True,e,1621444949.109264,1621444949.1092641,0
 EventTypes.KEY_PRESSED,1621444949.1597164,2,with_autocompletion_text_1,True,n,1621444949.159718,1621444949.1597185,0
-EventTypes.KEY_PRESSED,1621444950.0144198,2,with_autocompletion_text_1,True,,,1621444950.0144212,1621444950.0144212,0
+EventTypes.KEY_PRESSED,1621444950.0144198,2,with_autocompletion_text_1,True,",",1621444950.0144212,1621444950.0144212,0
 EventTypes.WORD_TYPED,1621444950.0144925,2,with_autocompletion_text_1,True,wunderbare,1621444950.0144908,1621444946.6960418,3.318449020385742
 EventTypes.KEY_PRESSED,1621444950.0592072,2,with_autocompletion_text_1,True, ,1621444950.0592086,1621444950.0592086,0
 EventTypes.KEY_PRESSED,1621444950.2495255,2,with_autocompletion_text_1,True,d,1621444950.2495277,1621444950.2495282,0
@@ -2578,7 +2578,7 @@ EventTypes.KEY_PRESSED,1621444956.931166,2,with_autocompletion_text_1,True,ß,16
 EventTypes.KEY_PRESSED,1621444957.0492227,2,with_autocompletion_text_1,True,e,1621444957.0492244,1621444957.0492244,0
 EventTypes.KEY_PRESSED,1621444957.4976325,2,with_autocompletion_text_1,True,.,1621444957.497634,1621444957.4976344,0
 EventTypes.WORD_TYPED,1621444957.4977062,2,with_autocompletion_text_1,True,Heiterkeit,1621444957.497704,1621444953.747945,3.7497589588165283
-EventTypes.SENTENCE_TYPED,1621444957.497728,2,with_autocompletion_text_1,True,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621444957.4977267,1621444930.1033983,27.394328355789185
+EventTypes.SENTENCE_TYPED,1621444957.497728,2,with_autocompletion_text_1,True,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621444957.4977267,1621444930.1033983,27.394328355789185
 EventTypes.KEY_PRESSED,1621444957.5680156,2,with_autocompletion_text_1,True, ,1621444957.568017,1621444957.5680172,0
 EventTypes.KEY_PRESSED,1621444958.2583256,2,with_autocompletion_text_1,True,,1621444958.258327,1621444958.2583454,0
 EventTypes.KEY_PRESSED,1621444958.313525,2,with_autocompletion_text_1,True,E,1621444958.313527,1621444958.313527,0
@@ -2791,7 +2791,7 @@ EventTypes.KEY_PRESSED,1621445878.1941066,3,no_autocompletion_text_2,False,h,162
 EventTypes.KEY_PRESSED,1621445878.374064,3,no_autocompletion_text_2,False,n,1621445878.3740647,1621445878.374065,0
 EventTypes.KEY_PRESSED,1621445878.474325,3,no_autocompletion_text_2,False,e,1621445878.4743261,1621445878.4743264,0
 EventTypes.KEY_PRESSED,1621445878.5500705,3,no_autocompletion_text_2,False,n,1621445878.5500712,1621445878.5500715,0
-EventTypes.KEY_PRESSED,1621445878.8944042,3,no_autocompletion_text_2,False,,,1621445878.894405,1621445878.8944051,0
+EventTypes.KEY_PRESSED,1621445878.8944042,3,no_autocompletion_text_2,False,",",1621445878.894405,1621445878.8944051,0
 EventTypes.WORD_TYPED,1621445878.894451,3,no_autocompletion_text_2,False,zeichnen,1621445878.8944495,1621445877.982163,0.9122865200042725
 EventTypes.KEY_PRESSED,1621445879.066068,3,no_autocompletion_text_2,False, ,1621445879.0660694,1621445879.0660696,0
 EventTypes.KEY_PRESSED,1621445879.2099974,3,no_autocompletion_text_2,False,n,1621445879.2099984,1621445879.2099986,0
@@ -2817,7 +2817,7 @@ EventTypes.KEY_PRESSED,1621445881.374328,3,no_autocompletion_text_2,False,r,1621
 EventTypes.KEY_PRESSED,1621445881.4819784,3,no_autocompletion_text_2,False,i,1621445881.4819796,1621445881.4819798,0
 EventTypes.KEY_PRESSED,1621445881.6380193,3,no_autocompletion_text_2,False,c,1621445881.6380203,1621445881.6380203,0
 EventTypes.KEY_PRESSED,1621445881.7300258,3,no_autocompletion_text_2,False,h,1621445881.7300265,1621445881.7300267,0
-EventTypes.KEY_PRESSED,1621445882.2620745,3,no_autocompletion_text_2,False,,,1621445882.2620754,1621445882.2620757,0
+EventTypes.KEY_PRESSED,1621445882.2620745,3,no_autocompletion_text_2,False,",",1621445882.2620754,1621445882.2620757,0
 EventTypes.WORD_TYPED,1621445882.2621565,3,no_autocompletion_text_2,False,Strich,1621445882.262155,1621445881.0941176,1.1680374145507812
 EventTypes.KEY_PRESSED,1621445882.7140994,3,no_autocompletion_text_2,False, ,1621445882.7141001,1621445882.7141004,0
 EventTypes.KEY_PRESSED,1621445882.853989,3,no_autocompletion_text_2,False,u,1621445882.8539896,1621445882.8539898,0
@@ -2938,7 +2938,7 @@ EventTypes.KEY_PRESSED,1621445902.8520153,3,no_autocompletion_text_2,False,e,162
 EventTypes.KEY_PRESSED,1621445902.952261,3,no_autocompletion_text_2,False,n,1621445902.9522617,1621445902.952262,0
 EventTypes.KEY_PRESSED,1621445903.2680748,3,no_autocompletion_text_2,False,.,1621445903.2680755,1621445903.2680757,0
 EventTypes.WORD_TYPED,1621445903.2681267,3,no_autocompletion_text_2,False,None,1621445903.2681255,1621445900.4730926,2.7950329780578613
-EventTypes.SENTENCE_TYPED,1621445903.2681444,3,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621445903.2681434,1621445873.2584944,30.00964903831482
+EventTypes.SENTENCE_TYPED,1621445903.2681444,3,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621445903.2681434,1621445873.2584944,30.00964903831482
 EventTypes.KEY_PRESSED,1621445903.6040382,3,no_autocompletion_text_2,False, ,1621445903.604039,1621445903.6040392,0
 EventTypes.KEY_PRESSED,1621445903.8241386,3,no_autocompletion_text_2,False,,1621445903.8241396,1621445903.8241398,0
 EventTypes.KEY_PRESSED,1621445903.9000704,3,no_autocompletion_text_2,False,W,1621445903.9000714,1621445903.9000716,0
@@ -2983,7 +2983,7 @@ EventTypes.KEY_PRESSED,1621445909.8600316,3,no_autocompletion_text_2,False,m,162
 EventTypes.KEY_PRESSED,1621445910.1120164,3,no_autocompletion_text_2,False,p,1621445910.1120172,1621445910.1120174,0
 EventTypes.KEY_PRESSED,1621445910.2239373,3,no_autocompletion_text_2,False,f,1621445910.2239382,1621445910.2239385,0
 EventTypes.KEY_PRESSED,1621445910.5880342,3,no_autocompletion_text_2,False,t,1621445910.588035,1621445910.5880353,0
-EventTypes.KEY_PRESSED,1621445911.3800344,3,no_autocompletion_text_2,False,,,1621445911.3800354,1621445911.3800356,0
+EventTypes.KEY_PRESSED,1621445911.3800344,3,no_autocompletion_text_2,False,",",1621445911.3800354,1621445911.3800356,0
 EventTypes.WORD_TYPED,1621445911.3800802,3,no_autocompletion_text_2,False,dampft,1621445911.380079,1621445909.7321053,1.6479737758636475
 EventTypes.KEY_PRESSED,1621445911.5360653,3,no_autocompletion_text_2,False, ,1621445911.5360665,1621445911.5360665,0
 EventTypes.KEY_PRESSED,1621445911.7081742,3,no_autocompletion_text_2,False,u,1621445911.7081752,1621445911.7081754,0
@@ -3098,7 +3098,7 @@ EventTypes.KEY_PRESSED,1621445926.8190875,3,no_autocompletion_text_2,False,,162
 EventTypes.KEY_PRESSED,1621445926.939131,3,no_autocompletion_text_2,False,,1621445926.9391322,1621445926.9391325,0
 EventTypes.KEY_PRESSED,1621445927.1350505,3,no_autocompletion_text_2,False,h,1621445927.1350515,1621445927.1350515,0
 EventTypes.KEY_PRESSED,1621445927.2007172,3,no_autocompletion_text_2,False,t,1621445927.2007182,1621445927.2007184,0
-EventTypes.KEY_PRESSED,1621445927.5990412,3,no_autocompletion_text_2,False,,,1621445927.599042,1621445927.5990424,0
+EventTypes.KEY_PRESSED,1621445927.5990412,3,no_autocompletion_text_2,False,",",1621445927.599042,1621445927.5990424,0
 EventTypes.WORD_TYPED,1621445927.599086,3,no_autocompletion_text_2,False,ruht,1621445927.5990849,1621445927.1351054,0.46397948265075684
 EventTypes.KEY_PRESSED,1621445927.7790515,3,no_autocompletion_text_2,False, ,1621445927.7790527,1621445927.779053,0
 EventTypes.KEY_PRESSED,1621445927.9990358,3,no_autocompletion_text_2,False,u,1621445927.9990368,1621445927.999037,0
@@ -3176,7 +3176,7 @@ EventTypes.KEY_PRESSED,1621445939.730047,3,no_autocompletion_text_2,False,h,1621
 EventTypes.KEY_PRESSED,1621445940.0062425,3,no_autocompletion_text_2,False,l,1621445940.0062435,1621445940.006244,0
 EventTypes.KEY_PRESSED,1621445940.9020314,3,no_autocompletion_text_2,False,e,1621445940.9020324,1621445940.9020324,0
 EventTypes.KEY_PRESSED,1621445941.0063539,3,no_autocompletion_text_2,False,n,1621445941.0063555,1621445941.0063555,0
-EventTypes.KEY_PRESSED,1621445941.4301405,3,no_autocompletion_text_2,False,,,1621445941.4301414,1621445941.4301417,0
+EventTypes.KEY_PRESSED,1621445941.4301405,3,no_autocompletion_text_2,False,",",1621445941.4301414,1621445941.4301417,0
 EventTypes.WORD_TYPED,1621445941.430195,3,no_autocompletion_text_2,False,stehlen,1621445941.430194,1621445939.382038,2.0481557846069336
 EventTypes.KEY_PRESSED,1621445941.6100507,3,no_autocompletion_text_2,False, ,1621445941.6100516,1621445941.6100519,0
 EventTypes.KEY_PRESSED,1621445941.7340255,3,no_autocompletion_text_2,False,i,1621445941.7340264,1621445941.7340267,0
@@ -3239,8 +3239,8 @@ EventTypes.KEY_PRESSED,1621445948.6810799,3,no_autocompletion_text_2,False,g,162
 EventTypes.KEY_PRESSED,1621445948.7691722,3,no_autocompletion_text_2,False,e,1621445948.7691731,1621445948.7691731,0
 EventTypes.KEY_PRESSED,1621445949.6850874,3,no_autocompletion_text_2,False,.,1621445949.6850882,1621445949.6850884,0
 EventTypes.WORD_TYPED,1621445949.6851327,3,no_autocompletion_text_2,False,liege,1621445949.6851315,1621445948.240998,1.4441335201263428
-EventTypes.SENTENCE_TYPED,1621445949.6851492,3,no_autocompletion_text_2,False,Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621445949.6851485,1621445903.26816,46.416988372802734
-EventTypes.TEST_FINISHED,1621445949.6851654,3,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621445949.6851642,1621445873.2584944,76.42666983604431
+EventTypes.SENTENCE_TYPED,1621445949.6851492,3,no_autocompletion_text_2,False,"Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621445949.6851485,1621445903.26816,46.416988372802734
+EventTypes.TEST_FINISHED,1621445949.6851654,3,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621445949.6851642,1621445873.2584944,76.42666983604431
 EventTypes.KEY_PRESSED,1621446023.540217,3,with_autocompletion_text_1,True,,1621446023.5402174,1621446023.5402174,0
 EventTypes.KEY_PRESSED,1621446023.6735208,3,with_autocompletion_text_1,True,E,1621446023.673522,1621446023.673522,0
 EventTypes.KEY_PRESSED,1621446023.864162,3,with_autocompletion_text_1,True,i,1621446023.8641632,1621446023.8641632,0
@@ -3275,7 +3275,7 @@ EventTypes.WORD_TYPED,1621446039.399129,3,with_autocompletion_text_1,True,Heiter
 EventTypes.KEY_PRESSED,1621446039.5910964,3,with_autocompletion_text_1,True,e,1621446039.5910974,1621446039.5910976,0
 EventTypes.KEY_PRESSED,1621446039.7070565,3,with_autocompletion_text_1,True,i,1621446039.707058,1621446039.7070582,0
 EventTypes.KEY_PRESSED,1621446039.9150915,3,with_autocompletion_text_1,True,n,1621446039.9150922,1621446039.9150925,0
-EventTypes.KEY_PRESSED,1621446042.0030615,3,with_autocompletion_text_1,True,,,1621446042.0030622,1621446042.0030625,0
+EventTypes.KEY_PRESSED,1621446042.0030615,3,with_autocompletion_text_1,True,",",1621446042.0030622,1621446042.0030625,0
 EventTypes.WORD_TYPED,1621446042.0031095,3,with_autocompletion_text_1,True,hat,1621446042.0031078,1621446039.5911517,2.4119560718536377
 EventTypes.KEY_PRESSED,1621446042.1710374,3,with_autocompletion_text_1,True, ,1621446042.1710382,1621446042.1710384,0
 EventTypes.KEY_PRESSED,1621446042.3669698,3,with_autocompletion_text_1,True,g,1621446042.3669708,1621446042.3669713,0
@@ -3298,7 +3298,7 @@ EventTypes.KEY_PRESSED,1621446053.7380626,3,with_autocompletion_text_1,True,r,16
 EventTypes.KEY_PRESSED,1621446054.0140114,3,with_autocompletion_text_1,True,g,1621446054.014012,1621446054.0140123,0
 EventTypes.KEY_PRESSED,1621446054.0781689,3,with_autocompletion_text_1,True,e,1621446054.0781698,1621446054.0781698,0
 EventTypes.KEY_PRESSED,1621446054.2261956,3,with_autocompletion_text_1,True,n,1621446054.2261968,1621446054.226197,0
-EventTypes.KEY_PRESSED,1621446054.8702111,3,with_autocompletion_text_1,True,,,1621446054.8702118,1621446054.8702118,0
+EventTypes.KEY_PRESSED,1621446054.8702111,3,with_autocompletion_text_1,True,",",1621446054.8702118,1621446054.8702118,0
 EventTypes.WORD_TYPED,1621446054.8702583,3,with_autocompletion_text_1,True,meine,1621446054.8702571,1621446049.7352762,5.134980916976929
 EventTypes.KEY_PRESSED,1621446055.0780637,3,with_autocompletion_text_1,True, ,1621446055.0780644,1621446055.0780647,0
 EventTypes.KEY_PRESSED,1621446055.2380645,3,with_autocompletion_text_1,True,d,1621446055.2380655,1621446055.2380657,0
@@ -3454,7 +3454,7 @@ EventTypes.WORD_TYPED,1621446131.3255267,3,with_autocompletion_text_1,True,ganze
 EventTypes.KEY_PRESSED,1621446131.7530212,3,with_autocompletion_text_1,True,v,1621446131.7530222,1621446131.7530224,0
 EventTypes.KEY_PRESSED,1621446131.9050615,3,with_autocompletion_text_1,True,e,1621446131.9050627,1621446131.9050627,0
 EventTypes.KEY_PRESSED,1621446131.9851015,3,with_autocompletion_text_1,True,r,1621446131.9851024,1621446131.9851027,0
-EventTypes.KEY_PRESSED,1621446135.529074,3,with_autocompletion_text_1,True,,,1621446135.529075,1621446135.529075,0
+EventTypes.KEY_PRESSED,1621446135.529074,3,with_autocompletion_text_1,True,",",1621446135.529075,1621446135.529075,0
 EventTypes.WORD_TYPED,1621446135.529122,3,with_autocompletion_text_1,True,Herzen,1621446135.529121,1621446131.753075,3.77604603767395
 EventTypes.KEY_PRESSED,1621446135.7290523,3,with_autocompletion_text_1,True, ,1621446135.7290533,1621446135.7290535,0
 EventTypes.KEY_PRESSED,1621446135.9089801,3,with_autocompletion_text_1,True,d,1621446135.908981,1621446135.9089813,0
@@ -3483,7 +3483,7 @@ EventTypes.KEY_PRESSED,1621446148.2481987,3,with_autocompletion_text_1,True,e,16
 EventTypes.KEY_PRESSED,1621446148.4561195,3,with_autocompletion_text_1,True,i,1621446148.4561205,1621446148.4561207,0
 EventTypes.KEY_PRESSED,1621446150.592104,3,with_autocompletion_text_1,True,.,1621446150.5921052,1621446150.5921054,0
 EventTypes.WORD_TYPED,1621446150.5921645,3,with_autocompletion_text_1,True,None,1621446150.5921633,1621446148.1561549,2.4360084533691406
-EventTypes.SENTENCE_TYPED,1621446150.5921817,3,with_autocompletion_text_1,True,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621446150.592181,1621446023.5402102,127.05197072029114
+EventTypes.SENTENCE_TYPED,1621446150.5921817,3,with_autocompletion_text_1,True,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621446150.592181,1621446023.5402102,127.05197072029114
 EventTypes.KEY_PRESSED,1621446157.5272229,3,no_autocompletion_text_1,False,,1621446157.527223,1621446157.5272233,0
 EventTypes.KEY_PRESSED,1621446158.0436275,3,no_autocompletion_text_1,False,E,1621446158.0436282,1621446158.0436285,0
 EventTypes.KEY_PRESSED,1621446158.2230394,3,no_autocompletion_text_1,False,i,1621446158.2230403,1621446158.2230406,0
@@ -3554,7 +3554,7 @@ EventTypes.KEY_PRESSED,1621446169.9980416,3,no_autocompletion_text_1,False,m,162
 EventTypes.KEY_PRESSED,1621446170.134021,3,no_autocompletion_text_1,False,m,1621446170.134022,1621446170.134022,0
 EventTypes.KEY_PRESSED,1621446170.2860506,3,no_autocompletion_text_1,False,e,1621446170.2860518,1621446170.2860518,0
 EventTypes.KEY_PRESSED,1621446170.4259663,3,no_autocompletion_text_1,False,n,1621446170.4259675,1621446170.4259677,0
-EventTypes.KEY_PRESSED,1621446170.9500418,3,no_autocompletion_text_1,False,,,1621446170.9500432,1621446170.9500432,0
+EventTypes.KEY_PRESSED,1621446170.9500418,3,no_autocompletion_text_1,False,",",1621446170.9500432,1621446170.9500432,0
 EventTypes.WORD_TYPED,1621446170.9501088,3,no_autocompletion_text_1,False,eingenommen,1621446170.9501073,1621446167.5030065,3.447100877761841
 EventTypes.KEY_PRESSED,1621446171.142093,3,no_autocompletion_text_1,False, ,1621446171.1420941,1621446171.1420941,0
 EventTypes.KEY_PRESSED,1621446171.281959,3,no_autocompletion_text_1,False,g,1621446171.2819602,1621446171.2819605,0
@@ -3603,7 +3603,7 @@ EventTypes.KEY_PRESSED,1621446179.9540284,3,no_autocompletion_text_1,False,r,162
 EventTypes.KEY_PRESSED,1621446180.1580586,3,no_autocompletion_text_1,False,g,1621446180.1580596,1621446180.1580598,0
 EventTypes.KEY_PRESSED,1621446180.2540348,3,no_autocompletion_text_1,False,e,1621446180.2540355,1621446180.2540355,0
 EventTypes.KEY_PRESSED,1621446180.3260088,3,no_autocompletion_text_1,False,n,1621446180.3260095,1621446180.3260098,0
-EventTypes.KEY_PRESSED,1621446180.6547334,3,no_autocompletion_text_1,False,,,1621446180.6547344,1621446180.6547344,0
+EventTypes.KEY_PRESSED,1621446180.6547334,3,no_autocompletion_text_1,False,",",1621446180.6547344,1621446180.6547344,0
 EventTypes.WORD_TYPED,1621446180.654781,3,no_autocompletion_text_1,False,Frühlingsmorgen,1621446180.65478,1621446177.5621872,3.092592716217041
 EventTypes.KEY_PRESSED,1621446180.9340546,3,no_autocompletion_text_1,False, ,1621446180.9340556,1621446180.9340556,0
 EventTypes.KEY_PRESSED,1621446181.2740126,3,no_autocompletion_text_1,False,d,1621446181.2740138,1621446181.2740138,0
@@ -3648,7 +3648,7 @@ EventTypes.KEY_PRESSED,1621446190.737095,3,no_autocompletion_text_1,False,ß,162
 EventTypes.KEY_PRESSED,1621446190.86902,3,no_autocompletion_text_1,False,e,1621446190.869021,1621446190.869021,0
 EventTypes.KEY_PRESSED,1621446191.553168,3,no_autocompletion_text_1,False,.,1621446191.553169,1621446191.5531693,0
 EventTypes.WORD_TYPED,1621446191.553216,3,no_autocompletion_text_1,False,genieße,1621446191.5532148,1621446186.6171522,4.936062574386597
-EventTypes.SENTENCE_TYPED,1621446191.5532336,3,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621446191.553233,1621446157.5272162,34.02601671218872
+EventTypes.SENTENCE_TYPED,1621446191.5532336,3,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621446191.553233,1621446157.5272162,34.02601671218872
 EventTypes.KEY_PRESSED,1621446191.8050227,3,no_autocompletion_text_1,False, ,1621446191.805024,1621446191.8050241,0
 EventTypes.KEY_PRESSED,1621446191.9732397,3,no_autocompletion_text_1,False,,1621446191.9732404,1621446191.9732406,0
 EventTypes.KEY_PRESSED,1621446192.0650458,3,no_autocompletion_text_1,False,I,1621446192.0650465,1621446192.0650468,0
@@ -3723,7 +3723,7 @@ EventTypes.KEY_PRESSED,1621446202.1760437,3,no_autocompletion_text_1,False,g,162
 EventTypes.KEY_PRESSED,1621446202.2680128,3,no_autocompletion_text_1,False,e,1621446202.2680135,1621446202.2680137,0
 EventTypes.KEY_PRESSED,1621446202.4560263,3,no_autocompletion_text_1,False,n,1621446202.4560277,1621446202.456028,0
 EventTypes.KEY_PRESSED,1621446202.796071,3,no_autocompletion_text_1,False,d,1621446202.7960722,1621446202.7960725,0
-EventTypes.KEY_PRESSED,1621446203.0400834,3,no_autocompletion_text_1,False,,,1621446203.0400844,1621446203.0400848,0
+EventTypes.KEY_PRESSED,1621446203.0400834,3,no_autocompletion_text_1,False,",",1621446203.0400844,1621446203.0400848,0
 EventTypes.WORD_TYPED,1621446203.0401294,3,no_autocompletion_text_1,False,Gegend,1621446203.0401282,1621446201.896177,1.143951177597046
 EventTypes.KEY_PRESSED,1621446203.2560046,3,no_autocompletion_text_1,False, ,1621446203.2560055,1621446203.2560055,0
 EventTypes.KEY_PRESSED,1621446203.4320161,3,no_autocompletion_text_1,False,d,1621446203.432017,1621446203.4320173,0
@@ -3785,7 +3785,7 @@ EventTypes.KEY_PRESSED,1621446211.3680153,3,no_autocompletion_text_1,False,e,162
 EventTypes.KEY_PRESSED,1621446211.4680843,3,no_autocompletion_text_1,False,i,1621446211.468085,1621446211.4680853,0
 EventTypes.KEY_PRESSED,1621446211.692145,3,no_autocompletion_text_1,False,n,1621446211.6921458,1621446211.692146,0
 EventTypes.KEY_PRESSED,1621446211.8719318,3,no_autocompletion_text_1,False,e,1621446211.871933,1621446211.8719332,0
-EventTypes.KEY_PRESSED,1621446212.3440871,3,no_autocompletion_text_1,False,,,1621446212.3440878,1621446212.344088,0
+EventTypes.KEY_PRESSED,1621446212.3440871,3,no_autocompletion_text_1,False,",",1621446212.3440878,1621446212.344088,0
 EventTypes.WORD_TYPED,1621446212.3441396,3,no_autocompletion_text_1,False,meine,1621446212.3441381,1621446211.2359915,1.1081466674804688
 EventTypes.KEY_PRESSED,1621446212.5562027,3,no_autocompletion_text_1,False, ,1621446212.5562036,1621446212.5562036,0
 EventTypes.KEY_PRESSED,1621446213.020357,3,no_autocompletion_text_1,False,,1621446213.0203578,1621446213.0203578,0
@@ -3812,7 +3812,7 @@ EventTypes.KEY_PRESSED,1621446216.69906,3,no_autocompletion_text_1,False,l,16214
 EventTypes.KEY_PRESSED,1621446216.9150457,3,no_autocompletion_text_1,False,i,1621446216.9150467,1621446216.915047,0
 EventTypes.KEY_PRESSED,1621446217.0670924,3,no_autocompletion_text_1,False,c,1621446217.0670931,1621446217.0670931,0
 EventTypes.KEY_PRESSED,1621446217.151065,3,no_autocompletion_text_1,False,h,1621446217.1510658,1621446217.151066,0
-EventTypes.KEY_PRESSED,1621446217.4912188,3,no_autocompletion_text_1,False,,,1621446217.4912195,1621446217.4912198,0
+EventTypes.KEY_PRESSED,1621446217.4912188,3,no_autocompletion_text_1,False,",",1621446217.4912195,1621446217.4912198,0
 EventTypes.WORD_TYPED,1621446217.4912648,3,no_autocompletion_text_1,False,None,1621446217.4912634,1621446215.0631106,2.4281527996063232
 EventTypes.KEY_PRESSED,1621446217.667121,3,no_autocompletion_text_1,False, ,1621446217.667122,1621446217.667122,0
 EventTypes.KEY_PRESSED,1621446217.7709992,3,no_autocompletion_text_1,False,m,1621446217.7710004,1621446217.7710004,0
@@ -3828,7 +3828,7 @@ EventTypes.KEY_PRESSED,1621446219.195097,3,no_autocompletion_text_1,False,s,1621
 EventTypes.KEY_PRESSED,1621446219.2870533,3,no_autocompletion_text_1,False,t,1621446219.287054,1621446219.2870543,0
 EventTypes.KEY_PRESSED,1621446219.387124,3,no_autocompletion_text_1,False,e,1621446219.3871253,1621446219.3871255,0
 EventTypes.KEY_PRESSED,1621446220.0751362,3,no_autocompletion_text_1,False,r,1621446220.0751371,1621446220.0751371,0
-EventTypes.KEY_PRESSED,1621446220.6350892,3,no_autocompletion_text_1,False,,,1621446220.6350899,1621446220.63509,0
+EventTypes.KEY_PRESSED,1621446220.6350892,3,no_autocompletion_text_1,False,",",1621446220.6350899,1621446220.63509,0
 EventTypes.WORD_TYPED,1621446220.6351345,3,no_autocompletion_text_1,False,None,1621446220.635133,1621446218.8791857,1.7559473514556885
 EventTypes.KEY_PRESSED,1621446220.7870815,3,no_autocompletion_text_1,False, ,1621446220.7870822,1621446220.7870822,0
 EventTypes.KEY_PRESSED,1621446220.8923976,3,no_autocompletion_text_1,False,s,1621446220.8923986,1621446220.8923986,0
@@ -3892,7 +3892,7 @@ EventTypes.KEY_PRESSED,1621446230.8820632,3,no_autocompletion_text_1,False,n,162
 EventTypes.KEY_PRESSED,1621446231.0740726,3,no_autocompletion_text_1,False,k,1621446231.0740733,1621446231.0740736,0
 EventTypes.KEY_PRESSED,1621446231.1820488,3,no_autocompletion_text_1,False,e,1621446231.1820498,1621446231.18205,0
 EventTypes.KEY_PRESSED,1621446231.2862082,3,no_autocompletion_text_1,False,n,1621446231.2862096,1621446231.2862096,0
-EventTypes.KEY_PRESSED,1621446231.5900736,3,no_autocompletion_text_1,False,,,1621446231.5900743,1621446231.5900745,0
+EventTypes.KEY_PRESSED,1621446231.5900736,3,no_autocompletion_text_1,False,",",1621446231.5900743,1621446231.5900745,0
 EventTypes.WORD_TYPED,1621446231.5901682,3,no_autocompletion_text_1,False,None,1621446231.5901666,1621446230.201978,1.3881886005401611
 EventTypes.KEY_PRESSED,1621446231.7740295,3,no_autocompletion_text_1,False, ,1621446231.7740304,1621446231.7740304,0
 EventTypes.KEY_PRESSED,1621446231.950508,3,no_autocompletion_text_1,False,d,1621446231.9505088,1621446231.9505088,0
@@ -3935,7 +3935,7 @@ EventTypes.KEY_PRESSED,1621446237.0980184,3,no_autocompletion_text_1,False,e,162
 EventTypes.KEY_PRESSED,1621446237.2460046,3,no_autocompletion_text_1,False,t,1621446237.2460053,1621446237.2460055,0
 EventTypes.KEY_PRESSED,1621446238.5905745,3,no_autocompletion_text_1,False,.,1621446238.5905752,1621446238.5905755,0
 EventTypes.WORD_TYPED,1621446238.5906227,3,no_autocompletion_text_1,False,None,1621446238.5906212,1621446236.647893,1.9427282810211182
-EventTypes.SENTENCE_TYPED,1621446238.59064,3,no_autocompletion_text_1,False,Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.,1621446238.5906394,1621446191.553249,47.03739047050476
+EventTypes.SENTENCE_TYPED,1621446238.59064,3,no_autocompletion_text_1,False,"Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.",1621446238.5906394,1621446191.553249,47.03739047050476
 EventTypes.KEY_PRESSED,1621446242.442288,3,with_autocompletion_text_2,True,,1621446242.4422884,1621446242.4422884,0
 EventTypes.KEY_PRESSED,1621446242.5780485,3,with_autocompletion_text_2,True,I,1621446242.5780492,1621446242.5780494,0
 EventTypes.KEY_PRESSED,1621446242.9019866,3,with_autocompletion_text_2,True,c,1621446242.9019873,1621446242.9019873,0
@@ -3959,7 +3959,7 @@ EventTypes.KEY_PRESSED,1621446249.2451122,3,with_autocompletion_text_2,True,z,16
 EventTypes.KEY_PRESSED,1621446249.425094,3,with_autocompletion_text_2,True,e,1621446249.4250946,1621446249.4250946,0
 EventTypes.KEY_PRESSED,1621446249.572993,3,with_autocompletion_text_2,True,c,1621446249.5729938,1621446249.572994,0
 EventTypes.KEY_PRESSED,1621446250.1770267,3,with_autocompletion_text_2,True,,1621446250.1770277,1621446250.1770277,0
-EventTypes.KEY_PRESSED,1621446252.0050778,3,with_autocompletion_text_2,True,,,1621446252.0050786,1621446252.0050788,0
+EventTypes.KEY_PRESSED,1621446252.0050778,3,with_autocompletion_text_2,True,",",1621446252.0050786,1621446252.0050788,0
 EventTypes.WORD_TYPED,1621446252.0051248,3,with_autocompletion_text_2,True,nicht,1621446252.0051239,1621446249.2451682,2.759955644607544
 EventTypes.KEY_PRESSED,1621446252.208983,3,with_autocompletion_text_2,True, ,1621446252.2089841,1621446252.2089841,0
 EventTypes.KEY_PRESSED,1621446252.389007,3,with_autocompletion_text_2,True,n,1621446252.389008,1621446252.389008,0
@@ -3976,7 +3976,7 @@ EventTypes.KEY_PRESSED,1621446255.933202,3,with_autocompletion_text_2,True,,1621
 EventTypes.KEY_PRESSED,1621446256.0210693,3,with_autocompletion_text_2,True,S,1621446256.0210705,1621446256.0210705,0
 EventTypes.KEY_PRESSED,1621446256.2132053,3,with_autocompletion_text_2,True,t,1621446256.2132063,1621446256.2132065,0
 EventTypes.KEY_PRESSED,1621446256.3010502,3,with_autocompletion_text_2,True,r,1621446256.301051,1621446256.301051,0
-EventTypes.KEY_PRESSED,1621446258.4330509,3,with_autocompletion_text_2,True,,,1621446258.4330516,1621446258.4330518,0
+EventTypes.KEY_PRESSED,1621446258.4330509,3,with_autocompletion_text_2,True,",",1621446258.4330516,1621446258.4330518,0
 EventTypes.WORD_TYPED,1621446258.4330962,3,with_autocompletion_text_2,True,einen,1621446258.433095,1621446256.0211234,2.4119715690612793
 EventTypes.KEY_PRESSED,1621446258.6170394,3,with_autocompletion_text_2,True, ,1621446258.6170402,1621446258.6170404,0
 EventTypes.KEY_PRESSED,1621446258.8130324,3,with_autocompletion_text_2,True,u,1621446258.813033,1621446258.8130336,0
@@ -4151,7 +4151,7 @@ EventTypes.WORD_TYPED,1621446343.0912082,3,with_autocompletion_text_2,True,None,
 EventTypes.KEY_PRESSED,1621446343.5471501,3,with_autocompletion_text_2,True,s,1621446343.547151,1621446343.547151,0
 EventTypes.KEY_PRESSED,1621446343.67119,3,with_autocompletion_text_2,True,t,1621446343.671191,1621446343.671191,0
 EventTypes.KEY_PRESSED,1621446343.763072,3,with_autocompletion_text_2,True,e,1621446343.763073,1621446343.763073,0
-EventTypes.KEY_PRESSED,1621446346.6872954,3,with_autocompletion_text_2,True,,,1621446346.6872966,1621446346.6872966,0
+EventTypes.KEY_PRESSED,1621446346.6872954,3,with_autocompletion_text_2,True,",",1621446346.6872966,1621446346.6872966,0
 EventTypes.WORD_TYPED,1621446346.6873422,3,with_autocompletion_text_2,True,None,1621446346.6873405,1621446343.5472274,3.140113115310669
 EventTypes.KEY_PRESSED,1621446346.9270332,3,with_autocompletion_text_2,True, ,1621446346.9270341,1621446346.9270341,0
 EventTypes.KEY_PRESSED,1621446347.3550224,3,with_autocompletion_text_2,True,i,1621446347.3550234,1621446347.3550234,0
@@ -4228,7 +4228,7 @@ EventTypes.WORD_TYPED,1621446946.7182028,4,with_autocompletion_text_1,True,Heite
 EventTypes.KEY_PRESSED,1621446947.1343963,4,with_autocompletion_text_1,True,e,1621446947.1343975,1621446947.1343975,0
 EventTypes.KEY_PRESSED,1621446947.2670798,4,with_autocompletion_text_1,True,i,1621446947.267081,1621446947.2670813,0
 EventTypes.KEY_PRESSED,1621446947.474058,4,with_autocompletion_text_1,True,n,1621446947.4740589,1621446947.4740589,0
-EventTypes.KEY_PRESSED,1621446950.1382923,4,with_autocompletion_text_1,True,,,1621446950.138293,1621446950.1382933,0
+EventTypes.KEY_PRESSED,1621446950.1382923,4,with_autocompletion_text_1,True,",",1621446950.138293,1621446950.1382933,0
 EventTypes.WORD_TYPED,1621446950.1383414,4,with_autocompletion_text_1,True,hat,1621446950.13834,1621446947.1344512,3.0038888454437256
 EventTypes.KEY_PRESSED,1621446950.7500687,4,with_autocompletion_text_1,True, ,1621446950.7500699,1621446950.75007,0
 EventTypes.KEY_PRESSED,1621446950.926058,4,with_autocompletion_text_1,True,g,1621446950.9260592,1621446950.9260595,0
@@ -4250,7 +4250,7 @@ EventTypes.KEY_PRESSED,1621446960.9860253,4,with_autocompletion_text_1,True,r,16
 EventTypes.KEY_PRESSED,1621446961.2303843,4,with_autocompletion_text_1,True,g,1621446961.230385,1621446961.2303853,0
 EventTypes.KEY_PRESSED,1621446961.3224137,4,with_autocompletion_text_1,True,e,1621446961.3224144,1621446961.3224146,0
 EventTypes.KEY_PRESSED,1621446961.3619995,4,with_autocompletion_text_1,True,n,1621446961.3620005,1621446961.362001,0
-EventTypes.KEY_PRESSED,1621446961.7450833,4,with_autocompletion_text_1,True,,,1621446961.7450838,1621446961.745084,0
+EventTypes.KEY_PRESSED,1621446961.7450833,4,with_autocompletion_text_1,True,",",1621446961.7450838,1621446961.745084,0
 EventTypes.WORD_TYPED,1621446961.7451286,4,with_autocompletion_text_1,True,meine,1621446961.7451277,1621446957.4821749,4.26295280456543
 EventTypes.KEY_PRESSED,1621446962.08108,4,with_autocompletion_text_1,True, ,1621446962.0810814,1621446962.0810816,0
 EventTypes.KEY_PRESSED,1621446962.5372784,4,with_autocompletion_text_1,True,d,1621446962.5372798,1621446962.5372798,0
@@ -4432,7 +4432,7 @@ EventTypes.KEY_PRESSED,1621447041.0999994,4,with_autocompletion_text_1,True,e,16
 EventTypes.KEY_PRESSED,1621447041.2720423,4,with_autocompletion_text_1,True,i,1621447041.272043,1621447041.2720432,0
 EventTypes.KEY_PRESSED,1621447043.0881164,4,with_autocompletion_text_1,True,.,1621447043.0881174,1621447043.0881176,0
 EventTypes.WORD_TYPED,1621447043.0881646,4,with_autocompletion_text_1,True,None,1621447043.0881634,1621447040.9921567,2.0960066318511963
-EventTypes.SENTENCE_TYPED,1621447043.088184,4,with_autocompletion_text_1,True,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621447043.0881827,1621446929.916297,113.17188572883606
+EventTypes.SENTENCE_TYPED,1621447043.088184,4,with_autocompletion_text_1,True,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621447043.0881827,1621446929.916297,113.17188572883606
 EventTypes.KEY_PRESSED,1621447050.080476,4,with_autocompletion_text_2,True,,1621447050.0804768,1621447050.0804768,0
 EventTypes.KEY_PRESSED,1621447050.2360907,4,with_autocompletion_text_2,True,I,1621447050.2360919,1621447050.236092,0
 EventTypes.KEY_PRESSED,1621447050.4240582,4,with_autocompletion_text_2,True,c,1621447050.4240592,1621447050.4240594,0
@@ -4456,7 +4456,7 @@ EventTypes.WORD_TYPED,1621447059.7711747,4,with_autocompletion_text_2,True,jetzt
 EventTypes.KEY_PRESSED,1621447060.247304,4,with_autocompletion_text_2,True,z,1621447060.2473047,1621447060.247305,0
 EventTypes.KEY_PRESSED,1621447060.446985,4,with_autocompletion_text_2,True,e,1621447060.4469857,1621447060.446986,0
 EventTypes.KEY_PRESSED,1621447060.574744,4,with_autocompletion_text_2,True,i,1621447060.574745,1621447060.5747452,0
-EventTypes.KEY_PRESSED,1621447062.3631184,4,with_autocompletion_text_2,True,,,1621447062.3631194,1621447062.3631196,0
+EventTypes.KEY_PRESSED,1621447062.3631184,4,with_autocompletion_text_2,True,",",1621447062.3631194,1621447062.3631196,0
 EventTypes.WORD_TYPED,1621447062.363166,4,with_autocompletion_text_2,True,nicht,1621447062.363165,1621447060.2473593,2.1158056259155273
 EventTypes.KEY_PRESSED,1621447062.699149,4,with_autocompletion_text_2,True, ,1621447062.6991496,1621447062.6991496,0
 EventTypes.KEY_PRESSED,1621447062.9190958,4,with_autocompletion_text_2,True,n,1621447062.919097,1621447062.919097,0
@@ -4471,7 +4471,7 @@ EventTypes.KEY_PRESSED,1621447065.9015286,4,with_autocompletion_text_2,True,,162
 EventTypes.KEY_PRESSED,1621447066.0271173,4,with_autocompletion_text_2,True,S,1621447066.0271184,1621447066.0271187,0
 EventTypes.KEY_PRESSED,1621447066.274098,4,with_autocompletion_text_2,True,t,1621447066.2740989,1621447066.274099,0
 EventTypes.KEY_PRESSED,1621447066.3507066,4,with_autocompletion_text_2,True,r,1621447066.3507073,1621447066.3507075,0
-EventTypes.KEY_PRESSED,1621447068.554083,4,with_autocompletion_text_2,True,,,1621447068.554084,1621447068.5540845,0
+EventTypes.KEY_PRESSED,1621447068.554083,4,with_autocompletion_text_2,True,",",1621447068.554084,1621447068.5540845,0
 EventTypes.WORD_TYPED,1621447068.554129,4,with_autocompletion_text_2,True,nicht,1621447068.5541277,1621447066.0271726,2.5269551277160645
 EventTypes.KEY_PRESSED,1621447068.6863813,4,with_autocompletion_text_2,True, ,1621447068.6863825,1621447068.6863828,0
 EventTypes.KEY_PRESSED,1621447068.8303976,4,with_autocompletion_text_2,True,u,1621447068.8303986,1621447068.8303988,0
@@ -4595,7 +4595,7 @@ EventTypes.KEY_PRESSED,1621447126.7861073,4,with_autocompletion_text_2,True,r,16
 EventTypes.KEY_PRESSED,1621447126.878445,4,with_autocompletion_text_2,True,u,1621447126.8784459,1621447126.878446,0
 EventTypes.KEY_PRESSED,1621447127.0500724,4,with_autocompletion_text_2,True,g,1621447127.0500731,1621447127.0500734,0
 EventTypes.KEY_PRESSED,1621447128.1021008,4,with_autocompletion_text_2,True,,1621447128.1021018,1621447128.1021018,0
-EventTypes.KEY_PRESSED,1621447130.110309,4,with_autocompletion_text_2,True,,,1621447130.1103096,1621447130.1103098,0
+EventTypes.KEY_PRESSED,1621447130.110309,4,with_autocompletion_text_2,True,",",1621447130.1103096,1621447130.1103098,0
 EventTypes.WORD_TYPED,1621447130.110359,4,with_autocompletion_text_2,True,gewesen,1621447130.1103575,1621447126.7862065,3.324151039123535
 EventTypes.KEY_PRESSED,1621447130.314046,4,with_autocompletion_text_2,True, ,1621447130.3140466,1621447130.3140469,0
 EventTypes.KEY_PRESSED,1621447130.4380825,4,with_autocompletion_text_2,True,u,1621447130.438084,1621447130.4380841,0
@@ -4683,7 +4683,7 @@ EventTypes.KEY_PRESSED,1621447163.6681623,4,with_autocompletion_text_2,True,i,16
 EventTypes.KEY_PRESSED,1621447163.8841631,4,with_autocompletion_text_2,True,e,1621447163.8841639,1621447163.884164,0
 EventTypes.KEY_PRESSED,1621447166.3773727,4,with_autocompletion_text_2,True,.,1621447166.3773735,1621447166.3773735,0
 EventTypes.WORD_TYPED,1621447166.3774202,4,with_autocompletion_text_2,True,None,1621447166.377419,1621447160.996167,5.38125205039978
-EventTypes.SENTENCE_TYPED,1621447166.377445,4,with_autocompletion_text_2,True,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621447166.3774436,1621447050.0804703,116.29697322845459
+EventTypes.SENTENCE_TYPED,1621447166.377445,4,with_autocompletion_text_2,True,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621447166.3774436,1621447050.0804703,116.29697322845459
 EventTypes.KEY_PRESSED,1621447173.911184,4,no_autocompletion_text_2,False,,1621447173.9111845,1621447173.9111848,0
 EventTypes.KEY_PRESSED,1621447174.0550506,4,no_autocompletion_text_2,False,I,1621447174.0550516,1621447174.0550516,0
 EventTypes.KEY_PRESSED,1621447174.2870712,4,no_autocompletion_text_2,False,c,1621447174.2870724,1621447174.2870727,0
@@ -4735,7 +4735,7 @@ EventTypes.KEY_PRESSED,1621447181.91948,4,no_autocompletion_text_2,False,h,16214
 EventTypes.KEY_PRESSED,1621447182.1991339,4,no_autocompletion_text_2,False,n,1621447182.1991348,1621447182.1991348,0
 EventTypes.KEY_PRESSED,1621447182.335032,4,no_autocompletion_text_2,False,e,1621447182.335033,1621447182.335033,0
 EventTypes.KEY_PRESSED,1621447182.5032122,4,no_autocompletion_text_2,False,n,1621447182.5032132,1621447182.5032134,0
-EventTypes.KEY_PRESSED,1621447182.8871405,4,no_autocompletion_text_2,False,,,1621447182.8871415,1621447182.8871415,0
+EventTypes.KEY_PRESSED,1621447182.8871405,4,no_autocompletion_text_2,False,",",1621447182.8871415,1621447182.8871415,0
 EventTypes.WORD_TYPED,1621447182.8871875,4,no_autocompletion_text_2,False,nicht,1621447182.8871858,1621447180.771315,2.115870714187622
 EventTypes.KEY_PRESSED,1621447183.095101,4,no_autocompletion_text_2,False, ,1621447183.0951018,1621447183.0951023,0
 EventTypes.KEY_PRESSED,1621447183.275018,4,no_autocompletion_text_2,False,n,1621447183.275019,1621447183.275019,0
@@ -4759,7 +4759,7 @@ EventTypes.KEY_PRESSED,1621447185.4630547,4,no_autocompletion_text_2,False,r,162
 EventTypes.KEY_PRESSED,1621447185.67513,4,no_autocompletion_text_2,False,i,1621447185.6751308,1621447185.675131,0
 EventTypes.KEY_PRESSED,1621447185.8740273,4,no_autocompletion_text_2,False,c,1621447185.874028,1621447185.874028,0
 EventTypes.KEY_PRESSED,1621447186.1620684,4,no_autocompletion_text_2,False,h,1621447186.1620696,1621447186.1620698,0
-EventTypes.KEY_PRESSED,1621447187.422198,4,no_autocompletion_text_2,False,,,1621447187.422199,1621447187.422199,0
+EventTypes.KEY_PRESSED,1621447187.422198,4,no_autocompletion_text_2,False,",",1621447187.422199,1621447187.422199,0
 EventTypes.WORD_TYPED,1621447187.4222474,4,no_autocompletion_text_2,False,und,1621447187.4222465,1621447185.147154,2.275092363357544
 EventTypes.KEY_PRESSED,1621447187.654043,4,no_autocompletion_text_2,False, ,1621447187.6540442,1621447187.6540442,0
 EventTypes.KEY_PRESSED,1621447187.7982717,4,no_autocompletion_text_2,False,u,1621447187.7982726,1621447187.7982726,0
@@ -4841,7 +4841,7 @@ EventTypes.KEY_PRESSED,1621447202.3810642,4,no_autocompletion_text_2,False,e,162
 EventTypes.KEY_PRESSED,1621447202.4908898,4,no_autocompletion_text_2,False,n,1621447202.4908905,1621447202.4908907,0
 EventTypes.KEY_PRESSED,1621447202.9930909,4,no_autocompletion_text_2,False,.,1621447202.9930916,1621447202.9930918,0
 EventTypes.WORD_TYPED,1621447202.9931598,4,no_autocompletion_text_2,False,None,1621447202.993158,1621447200.206029,2.7871291637420654
-EventTypes.SENTENCE_TYPED,1621447202.9931781,4,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.,1621447202.993177,1621447173.9111779,29.08199906349182
+EventTypes.SENTENCE_TYPED,1621447202.9931781,4,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.",1621447202.993177,1621447173.9111779,29.08199906349182
 EventTypes.KEY_PRESSED,1621447203.3051145,4,no_autocompletion_text_2,False, ,1621447203.3051155,1621447203.3051155,0
 EventTypes.KEY_PRESSED,1621447203.5254607,4,no_autocompletion_text_2,False,,1621447203.5254614,1621447203.5254617,0
 EventTypes.KEY_PRESSED,1621447203.6531312,4,no_autocompletion_text_2,False,W,1621447203.6531322,1621447203.6531322,0
@@ -4884,7 +4884,7 @@ EventTypes.KEY_PRESSED,1621447208.885049,4,no_autocompletion_text_2,False,m,1621
 EventTypes.KEY_PRESSED,1621447209.1731071,4,no_autocompletion_text_2,False,p,1621447209.1731079,1621447209.1731079,0
 EventTypes.KEY_PRESSED,1621447209.2810621,4,no_autocompletion_text_2,False,f,1621447209.2810628,1621447209.281063,0
 EventTypes.KEY_PRESSED,1621447209.5131142,4,no_autocompletion_text_2,False,t,1621447209.513115,1621447209.513115,0
-EventTypes.KEY_PRESSED,1621447209.7932434,4,no_autocompletion_text_2,False,,,1621447209.7932441,1621447209.7932441,0
+EventTypes.KEY_PRESSED,1621447209.7932434,4,no_autocompletion_text_2,False,",",1621447209.7932441,1621447209.7932441,0
 EventTypes.WORD_TYPED,1621447209.793289,4,no_autocompletion_text_2,False,dampft,1621447209.7932878,1621447208.693185,1.1001026630401611
 EventTypes.KEY_PRESSED,1621447209.9970374,4,no_autocompletion_text_2,False, ,1621447209.9970384,1621447209.9970386,0
 EventTypes.KEY_PRESSED,1621447210.1770456,4,no_autocompletion_text_2,False,u,1621447210.1770463,1621447210.1770465,0
@@ -4994,7 +4994,7 @@ EventTypes.KEY_PRESSED,1621447226.2498162,4,no_autocompletion_text_2,False,u,162
 EventTypes.KEY_PRESSED,1621447226.4002764,4,no_autocompletion_text_2,False,g,1621447226.4002776,1621447226.4002779,0
 EventTypes.KEY_PRESSED,1621447226.5121047,4,no_autocompletion_text_2,False,h,1621447226.5121055,1621447226.5121055,0
 EventTypes.KEY_PRESSED,1621447226.6240573,4,no_autocompletion_text_2,False,t,1621447226.6240585,1621447226.6240587,0
-EventTypes.KEY_PRESSED,1621447226.816024,4,no_autocompletion_text_2,False,,,1621447226.8160253,1621447226.8160253,0
+EventTypes.KEY_PRESSED,1621447226.816024,4,no_autocompletion_text_2,False,",",1621447226.8160253,1621447226.8160253,0
 EventTypes.WORD_TYPED,1621447226.8160782,4,no_autocompletion_text_2,False,ruht,1621447226.8160765,1621447226.140133,0.6759436130523682
 EventTypes.KEY_PRESSED,1621447226.9961681,4,no_autocompletion_text_2,False, ,1621447226.9961693,1621447226.9961693,0
 EventTypes.KEY_PRESSED,1621447227.1320653,4,no_autocompletion_text_2,False,u,1621447227.132066,1621447227.1320662,0
@@ -5073,7 +5073,7 @@ EventTypes.KEY_PRESSED,1621447237.599217,4,no_autocompletion_text_2,False,h,1621
 EventTypes.KEY_PRESSED,1621447237.8231618,4,no_autocompletion_text_2,False,l,1621447237.8231626,1621447237.8231628,0
 EventTypes.KEY_PRESSED,1621447237.9230947,4,no_autocompletion_text_2,False,e,1621447237.9230955,1621447237.9230957,0
 EventTypes.KEY_PRESSED,1621447238.0631938,4,no_autocompletion_text_2,False,n,1621447238.0631945,1621447238.063195,0
-EventTypes.KEY_PRESSED,1621447238.367137,4,no_autocompletion_text_2,False,,,1621447238.3671381,1621447238.3671381,0
+EventTypes.KEY_PRESSED,1621447238.367137,4,no_autocompletion_text_2,False,",",1621447238.3671381,1621447238.3671381,0
 EventTypes.WORD_TYPED,1621447238.367184,4,no_autocompletion_text_2,False,stehlen,1621447238.3671825,1621447237.3070881,1.0600943565368652
 EventTypes.KEY_PRESSED,1621447238.575151,4,no_autocompletion_text_2,False, ,1621447238.575152,1621447238.5751522,0
 EventTypes.KEY_PRESSED,1621447238.7070174,4,no_autocompletion_text_2,False,i,1621447238.7070181,1621447238.7070186,0
@@ -5147,8 +5147,8 @@ EventTypes.KEY_PRESSED,1621447249.366112,4,no_autocompletion_text_2,False,g,1621
 EventTypes.KEY_PRESSED,1621447249.4582686,4,no_autocompletion_text_2,False,e,1621447249.4582696,1621447249.4582696,0
 EventTypes.KEY_PRESSED,1621447250.730377,4,no_autocompletion_text_2,False,.,1621447250.730378,1621447250.730378,0
 EventTypes.WORD_TYPED,1621447250.7304256,4,no_autocompletion_text_2,False,liege,1621447250.7304244,1621447249.2181973,1.5122270584106445
-EventTypes.SENTENCE_TYPED,1621447250.730443,4,no_autocompletion_text_2,False,Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621447250.7304423,1621447202.993205,47.737237215042114
-EventTypes.TEST_FINISHED,1621447250.7304606,4,no_autocompletion_text_2,False,Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.,1621447250.730459,1621447173.9111779,76.8192811012268
+EventTypes.SENTENCE_TYPED,1621447250.730443,4,no_autocompletion_text_2,False,"Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621447250.7304423,1621447202.993205,47.737237215042114
+EventTypes.TEST_FINISHED,1621447250.7304606,4,no_autocompletion_text_2,False,"Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege.",1621447250.730459,1621447173.9111779,76.8192811012268
 EventTypes.KEY_PRESSED,1621447254.8065894,4,no_autocompletion_text_1,False,,1621447254.8065898,1621447254.8065898,0
 EventTypes.KEY_PRESSED,1621447254.918145,4,no_autocompletion_text_1,False,E,1621447254.918146,1621447254.9181461,0
 EventTypes.KEY_PRESSED,1621447255.0420048,4,no_autocompletion_text_1,False,i,1621447255.042006,1621447255.0420063,0
@@ -5220,7 +5220,7 @@ EventTypes.KEY_PRESSED,1621447264.8811238,4,no_autocompletion_text_1,False,m,162
 EventTypes.KEY_PRESSED,1621447265.0371747,4,no_autocompletion_text_1,False,m,1621447265.0371757,1621447265.0371757,0
 EventTypes.KEY_PRESSED,1621447265.1850412,4,no_autocompletion_text_1,False,e,1621447265.185042,1621447265.1850421,0
 EventTypes.KEY_PRESSED,1621447265.288679,4,no_autocompletion_text_1,False,n,1621447265.2886798,1621447265.28868,0
-EventTypes.KEY_PRESSED,1621447265.5491168,4,no_autocompletion_text_1,False,,,1621447265.549118,1621447265.549118,0
+EventTypes.KEY_PRESSED,1621447265.5491168,4,no_autocompletion_text_1,False,",",1621447265.549118,1621447265.549118,0
 EventTypes.WORD_TYPED,1621447265.5491781,4,no_autocompletion_text_1,False,eingenommen,1621447265.5491767,1621447263.5062885,2.0428881645202637
 EventTypes.KEY_PRESSED,1621447265.7131379,4,no_autocompletion_text_1,False, ,1621447265.7131386,1621447265.713139,0
 EventTypes.KEY_PRESSED,1621447265.86915,4,no_autocompletion_text_1,False,g,1621447265.8691509,1621447265.8691509,0
@@ -5259,7 +5259,7 @@ EventTypes.KEY_PRESSED,1621447271.0828052,4,no_autocompletion_text_1,False,r,162
 EventTypes.KEY_PRESSED,1621447271.3131144,4,no_autocompletion_text_1,False,g,1621447271.3131156,1621447271.3131156,0
 EventTypes.KEY_PRESSED,1621447271.4051428,4,no_autocompletion_text_1,False,e,1621447271.4051435,1621447271.4051435,0
 EventTypes.KEY_PRESSED,1621447271.5646942,4,no_autocompletion_text_1,False,n,1621447271.5646954,1621447271.5646954,0
-EventTypes.KEY_PRESSED,1621447272.9573498,4,no_autocompletion_text_1,False,,,1621447272.957351,1621447272.9573514,0
+EventTypes.KEY_PRESSED,1621447272.9573498,4,no_autocompletion_text_1,False,",",1621447272.957351,1621447272.9573514,0
 EventTypes.WORD_TYPED,1621447272.9574308,4,no_autocompletion_text_1,False,Frühlingsmorgen,1621447272.9574292,1621447269.0371814,3.920247793197632
 EventTypes.KEY_PRESSED,1621447273.121069,4,no_autocompletion_text_1,False, ,1621447273.1210701,1621447273.1210704,0
 EventTypes.KEY_PRESSED,1621447273.2490373,4,no_autocompletion_text_1,False,d,1621447273.2490382,1621447273.2490387,0
@@ -5305,7 +5305,7 @@ EventTypes.KEY_PRESSED,1621447280.1841104,4,no_autocompletion_text_1,False,ß,16
 EventTypes.KEY_PRESSED,1621447280.2968864,4,no_autocompletion_text_1,False,e,1621447280.2968879,1621447280.2968879,0
 EventTypes.KEY_PRESSED,1621447280.7321403,4,no_autocompletion_text_1,False,.,1621447280.732141,1621447280.7321413,0
 EventTypes.WORD_TYPED,1621447280.7321887,4,no_autocompletion_text_1,False,genieße,1621447280.7321875,1621447278.4418178,2.290369749069214
-EventTypes.SENTENCE_TYPED,1621447280.7322066,4,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.,1621447280.7322056,1621447254.8065593,25.92564630508423
+EventTypes.SENTENCE_TYPED,1621447280.7322066,4,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße.",1621447280.7322056,1621447254.8065593,25.92564630508423
 EventTypes.KEY_PRESSED,1621447281.0120406,4,no_autocompletion_text_1,False, ,1621447281.0120416,1621447281.0120418,0
 EventTypes.KEY_PRESSED,1621447281.224222,4,no_autocompletion_text_1,False,,1621447281.2242227,1621447281.224223,0
 EventTypes.KEY_PRESSED,1621447281.428121,4,no_autocompletion_text_1,False,I,1621447281.4281218,1621447281.428122,0
@@ -5380,7 +5380,7 @@ EventTypes.KEY_PRESSED,1621447289.8971968,4,no_autocompletion_text_1,False,g,162
 EventTypes.KEY_PRESSED,1621447289.9880366,4,no_autocompletion_text_1,False,e,1621447289.9880373,1621447289.9880376,0
 EventTypes.KEY_PRESSED,1621447290.1040785,4,no_autocompletion_text_1,False,n,1621447290.1040792,1621447290.1040797,0
 EventTypes.KEY_PRESSED,1621447290.3202734,4,no_autocompletion_text_1,False,d,1621447290.320274,1621447290.320274,0
-EventTypes.KEY_PRESSED,1621447290.6750946,4,no_autocompletion_text_1,False,,,1621447290.6750956,1621447290.6750958,0
+EventTypes.KEY_PRESSED,1621447290.6750946,4,no_autocompletion_text_1,False,",",1621447290.6750956,1621447290.6750958,0
 EventTypes.WORD_TYPED,1621447290.6751394,4,no_autocompletion_text_1,False,Gegend,1621447290.6751378,1621447289.6882067,0.9869310855865479
 EventTypes.KEY_PRESSED,1621447290.9110765,4,no_autocompletion_text_1,False, ,1621447290.9110773,1621447290.9110773,0
 EventTypes.KEY_PRESSED,1621447291.0032527,4,no_autocompletion_text_1,False,d,1621447291.0032535,1621447291.0032537,0
@@ -5444,7 +5444,7 @@ EventTypes.KEY_PRESSED,1621447298.179199,4,no_autocompletion_text_1,False,n,1621
 EventTypes.KEY_PRESSED,1621447298.2913039,4,no_autocompletion_text_1,False,e,1621447298.2913046,1621447298.291305,0
 EventTypes.KEY_PRESSED,1621447298.7431521,4,no_autocompletion_text_1,False,.,1621447298.7431529,1621447298.7431529,0
 EventTypes.WORD_TYPED,1621447298.7431998,4,no_autocompletion_text_1,False,meine,1621447298.7431984,1621447297.73522,1.0079784393310547
-EventTypes.SENTENCE_TYPED,1621447298.7432163,4,no_autocompletion_text_1,False,Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.,1621447298.7432156,1621447280.7322218,18.010993719100952
+EventTypes.SENTENCE_TYPED,1621447298.7432163,4,no_autocompletion_text_1,False,"Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.",1621447298.7432156,1621447280.7322218,18.010993719100952
 EventTypes.KEY_PRESSED,1621447298.999095,4,no_autocompletion_text_1,False, ,1621447298.9990962,1621447298.9990962,0
 EventTypes.KEY_PRESSED,1621447299.1471827,4,no_autocompletion_text_1,False,,1621447299.147184,1621447299.1471841,0
 EventTypes.KEY_PRESSED,1621447299.3191102,4,no_autocompletion_text_1,False,I,1621447299.3191109,1621447299.319111,0
@@ -5476,7 +5476,7 @@ EventTypes.KEY_PRESSED,1621447306.0150964,4,no_autocompletion_text_1,False,l,162
 EventTypes.KEY_PRESSED,1621447306.2101233,4,no_autocompletion_text_1,False,i,1621447306.210124,1621447306.2101243,0
 EventTypes.KEY_PRESSED,1621447306.3340716,4,no_autocompletion_text_1,False,c,1621447306.3340724,1621447306.3340726,0
 EventTypes.KEY_PRESSED,1621447306.44201,4,no_autocompletion_text_1,False,h,1621447306.4420109,1621447306.442011,0
-EventTypes.KEY_PRESSED,1621447307.3861527,4,no_autocompletion_text_1,False,,,1621447307.3861535,1621447307.3861537,0
+EventTypes.KEY_PRESSED,1621447307.3861527,4,no_autocompletion_text_1,False,",",1621447307.3861535,1621447307.3861537,0
 EventTypes.WORD_TYPED,1621447307.386206,4,no_autocompletion_text_1,False,glücklich,1621447307.3862047,1621447305.5382,1.8480048179626465
 EventTypes.KEY_PRESSED,1621447307.6101346,4,no_autocompletion_text_1,False, ,1621447307.6101358,1621447307.6101358,0
 EventTypes.KEY_PRESSED,1621447307.7317853,4,no_autocompletion_text_1,False,m,1621447307.731786,1621447307.731786,0
@@ -5492,7 +5492,7 @@ EventTypes.KEY_PRESSED,1621447308.882343,4,no_autocompletion_text_1,False,s,1621
 EventTypes.KEY_PRESSED,1621447308.986044,4,no_autocompletion_text_1,False,t,1621447308.986045,1621447308.986045,0
 EventTypes.KEY_PRESSED,1621447309.1900914,4,no_autocompletion_text_1,False,e,1621447309.190092,1621447309.190092,0
 EventTypes.KEY_PRESSED,1621447309.2660787,4,no_autocompletion_text_1,False,r,1621447309.2660794,1621447309.2660797,0
-EventTypes.KEY_PRESSED,1621447310.5821457,4,no_autocompletion_text_1,False,,,1621447310.582147,1621447310.582147,0
+EventTypes.KEY_PRESSED,1621447310.5821457,4,no_autocompletion_text_1,False,",",1621447310.582147,1621447310.582147,0
 EventTypes.WORD_TYPED,1621447310.5821927,4,no_autocompletion_text_1,False,Bester,1621447310.5821915,1621447308.5862918,1.9958996772766113
 EventTypes.KEY_PRESSED,1621447310.8220556,4,no_autocompletion_text_1,False, ,1621447310.8220568,1621447310.822057,0
 EventTypes.KEY_PRESSED,1621447310.9620488,4,no_autocompletion_text_1,False,s,1621447310.9620495,1621447310.9620497,0
@@ -5556,7 +5556,7 @@ EventTypes.KEY_PRESSED,1621447320.0254118,4,no_autocompletion_text_1,False,n,162
 EventTypes.KEY_PRESSED,1621447320.2383766,4,no_autocompletion_text_1,False,k,1621447320.2383776,1621447320.2383776,0
 EventTypes.KEY_PRESSED,1621447320.3810472,4,no_autocompletion_text_1,False,e,1621447320.381048,1621447320.381048,0
 EventTypes.KEY_PRESSED,1621447320.485043,4,no_autocompletion_text_1,False,n,1621447320.4850435,1621447320.4850438,0
-EventTypes.KEY_PRESSED,1621447320.7691483,4,no_autocompletion_text_1,False,,,1621447320.769149,1621447320.7691495,0
+EventTypes.KEY_PRESSED,1621447320.7691483,4,no_autocompletion_text_1,False,",",1621447320.769149,1621447320.7691495,0
 EventTypes.WORD_TYPED,1621447320.769194,4,no_autocompletion_text_1,False,versunken,1621447320.7691927,1621447319.314218,1.45497465133667
 EventTypes.KEY_PRESSED,1621447320.9330997,4,no_autocompletion_text_1,False, ,1621447320.9331005,1621447320.9331007,0
 EventTypes.KEY_PRESSED,1621447321.0010686,4,no_autocompletion_text_1,False,d,1621447321.0010693,1621447321.0010695,0
@@ -5603,5 +5603,5 @@ EventTypes.KEY_PRESSED,1621447326.6930683,4,no_autocompletion_text_1,False,e,162
 EventTypes.KEY_PRESSED,1621447326.8491616,4,no_autocompletion_text_1,False,t,1621447326.8491628,1621447326.849163,0
 EventTypes.KEY_PRESSED,1621447326.969012,4,no_autocompletion_text_1,False,.,1621447326.9690127,1621447326.9690132,0
 EventTypes.WORD_TYPED,1621447326.9690745,4,no_autocompletion_text_1,False,leidet,1621447326.9690728,1621447326.2411044,0.7279684543609619
-EventTypes.SENTENCE_TYPED,1621447326.9690905,4,no_autocompletion_text_1,False,Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621447326.96909,1621447298.7432313,28.225858688354492
-EventTypes.TEST_FINISHED,1621447326.9691126,4,no_autocompletion_text_1,False,Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.,1621447326.9691122,1621447254.8065593,72.16255283355713
+EventTypes.SENTENCE_TYPED,1621447326.9690905,4,no_autocompletion_text_1,False,"Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621447326.96909,1621447298.7432313,28.225858688354492
+EventTypes.TEST_FINISHED,1621447326.9691126,4,no_autocompletion_text_1,False,"Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.",1621447326.9691122,1621447254.8065593,72.16255283355713

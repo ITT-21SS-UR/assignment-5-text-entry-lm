@@ -300,6 +300,8 @@ class TextEntryExperiment(QMainWindow):
             if self.__debug:
                 print('key press:', (event.key(), event.text()))
             pressed_key = event.text()
+            if pressed_key == ",":
+                pressed_key = '","'
 
             self.__logger.log_event(EventTypes.KEY_PRESSED, get_current_time(), self.__participant_id,
                                     self.__current_condition, self.__autocompletion_active, pressed_key, time.time(),
@@ -361,7 +363,7 @@ class TextEntryExperiment(QMainWindow):
         end_time_sentence = get_current_time()
         sentence_duration = end_time_sentence - self.__start_time_sentence
         self.__logger.log_event(EventTypes.SENTENCE_TYPED, get_current_time(), self.__participant_id,
-                                self.__current_condition, self.__autocompletion_active, self.__current_sentence,
+                                self.__current_condition, self.__autocompletion_active, '"'+self.__current_sentence+'"',
                                 end_time_sentence, self.__start_time_sentence, sentence_duration)
 
         self.__curr_word_index = 0  # reset word index to start with the first word of the new sentence again
@@ -383,7 +385,7 @@ class TextEntryExperiment(QMainWindow):
             end_time = get_current_time()
             task_duration = end_time - self.__start_time_task
             self.__logger.log_event(EventTypes.TEST_FINISHED, get_current_time(), self.__participant_id,
-                                    self.__current_condition, self.__autocompletion_active, self.__current_task_text,
+                                    self.__current_condition, self.__autocompletion_active, '"'+self.__current_task_text+'"',
                                     end_time, self.__start_time_task, task_duration)
 
             # now enable the button at the bottom
@@ -428,8 +430,8 @@ class TextEntryLogger:
     def _init_logger(self) -> None:
         if os.stat(self.__log_file_name).st_size == 0:
             # log file is empty, add the csv headers
-            print('event_type', 'timestamp', 'participant_id', 'condition', 'with_autocompletion', 'entered_content',
-                  'start_time_in_s', 'end_time_in_s', 'duration_in_s')
+            print('event_type, timestamp, participant_id, condition, with_autocompletion, entered_content,'
+                  'start_time_in_s, end_time_in_s, duration_in_s')
 
         if os.path.isfile(self.__questionnaire_log_file_name):
             self.__questionnaire_data = pd.read_csv(self.__questionnaire_log_file_name)
