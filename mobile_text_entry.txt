@@ -1,0 +1,32 @@
+The following summary was written by Michael Meckl:
+
+MacKenzie and Soukoreff provide an overview of state-of-the-art mobile text
+input techniques (as of 2002) while also giving a short summary of relevant
+historic events in this domain and presenting different ways to evaluate such
+techniques as well as providing a survey of different key- and stylus-based
+input techniques [1].
+They identify several important factors and trade-offs that should be considered
+when designing studies for evaluating mobile text input techniques. One factor
+is whether to use a text creation or a text copy task. In a text creation
+task participants have to generate text by themselves or remember text that was
+shown to them beforehand while in a text copy task the text is simply presented
+and has to entered with the desired input technique that should be tested.
+Other factors to be aware of are the knowledge level of the participant (novice or expert),
+and even the type of study itself: quantitative or qualitative.
+The two main quantitative metrics that should always be measured are the speed and
+the accuracy with which the participant enters the text. Speed is usually measured
+in words per minute (WPM) while the accuracy can be measured as the ratio of error
+characters compared to all characters. As there is a trade-off between speed and
+accuracy, both metrics have to be measured, otherwise the results may be skewed or
+entirely wrong: if only the speed is measured one could simply enter the
+text as fast as possible without paying attention to correctness.
+Besides these, however, a qualitative assessment of the input technique is also
+necessary (e.g. via a questionnaire) to make sure the technique has a high usability
+and that users feel comfortable using it. The importance of this becomes even
+clearer when looking at the history of input techniques:
+The 1996 introduced Palm became a huge success compared to Apple's Newton because
+of users' acceptance of Graffiti as a text input technology compared to Newton's
+handwriting recognition [1].
+
+
+[1] MacKenzie, I. S., & Soukoreff, R. W. (2002). Text entry for mobile computing: Models and methods, theory and practice. Human–Computer Interaction, 17(2-3), 147-198.
