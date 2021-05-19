@@ -277,7 +277,7 @@ class TextEntryExperiment(QMainWindow):
         text_box.installEventFilter(self)
         # self.ui.task_input_field.textChanged.connect(self._text_content_changed)
 
-        self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
+        # self.ui.task_finished_btn.setEnabled(False)  # disable 'next'-button at first!
 
     def _start_measuring_text_entry_speed(self):
         if self.__debug:
@@ -387,7 +387,7 @@ class TextEntryExperiment(QMainWindow):
                                     end_time, self.__start_time_task, task_duration)
 
             # now enable the button at the bottom
-            self.ui.task_finished_btn.setEnabled(True)
+            # self.ui.task_finished_btn.setEnabled(True)
 
     def _decide_next_task_page(self):
         self.__curr_trial_index += 1

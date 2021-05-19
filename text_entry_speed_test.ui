@@ -355,7 +355,7 @@
         <item>
          <widget class="QPushButton" name="task_finished_btn">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(138, 207, 0);</string>
