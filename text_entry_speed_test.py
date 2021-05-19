@@ -22,6 +22,14 @@ import os
 import pandas as pd
 import time
 import json
+from enum import Enum
+
+
+class EventTypes(Enum):
+    KEY_PRESSED = "key_pressed"
+    WORD_TYPED = "word_typed"
+    SENTENCE_TYPED = "sentence_typed"
+    TEST_FINISHED = "test_finished"
 
 
 def _test_timers():
@@ -44,7 +52,6 @@ def _test_timers():
 
 
 def get_current_time() -> float:
-    # return time.perf_counter()
     return time.time()
 
 
@@ -97,7 +104,13 @@ def get_balanced_condition_list(condition_list, participant_id):
     return [condition_list[i] for i in order_for_participant]
 
 
+# FIXME: UI anpassen!!
 class TextEntryExperiment(QMainWindow):
+
+    __TASK_DESCRIPTION_AUTOCOMPLETE = "Beim Eingeben der Texte werden mögliche Autovervollständigungen angezeigt! " \
+                                      "Du kannst diese mit den Tasten 1, 2 oder 3 auswählen."
+    __TASK_DESCRIPTION_NO_AUTOCOMPLETE = "Beim Eingeben der Texte gibt es KEINE Hilfestellungen, wie z.B. " \
+                                         "Autokorrektur oder Autovervollständigung!"
 
     def __init__(self, participant_id, setup_file):
         super(TextEntryExperiment, self).__init__()
@@ -118,8 +131,9 @@ class TextEntryExperiment(QMainWindow):
         self.__current_condition = self.__balanced_condition_list[self.__curr_trial_index]
         print("Current Condition: ", self.__current_condition)
         self.__current_example_text = self.__condition_dict[self.__current_condition]['example_text']
-        self.__current_task_description = self.__condition_dict[self.__current_condition]['task_description']
         self.__current_task_text = self.__condition_dict[self.__current_condition]['task_text']
+
+        self.__autocompletion_active = self.__condition_dict[self.__current_condition]['autocompletion']
 
         self.__task_started = False
         self.__text_dict = split_text(self.__current_task_text)
@@ -139,7 +153,7 @@ class TextEntryExperiment(QMainWindow):
     def _get_sentence(self, index):
         sentences = list(self.__text_dict.keys())
         sent_count = len(sentences)
-        print(f"\n-------------------- get sentence: sentence_count:{sent_count}; sentenced index: {index} -------------------------\n")
+        print(f"\n------------- get sentence: sentence_count:{sent_count}; sentenced index: {index} --------------\n")
         if index >= sent_count:
             sys.stderr.write(f"Attempted to get sentence at position {index} even though there are only {sent_count}")
             return None
@@ -148,7 +162,7 @@ class TextEntryExperiment(QMainWindow):
         return sentences[index]
 
     def _get_current_word(self):
-        current_sentence = self.__current_sentence  # if self.__current_sentence is not None else self._get_current_sentence()
+        current_sentence = self.__current_sentence
         if current_sentence is not None:
             return self._get_word(current_sentence, self.__curr_word_index)
 
@@ -161,7 +175,7 @@ class TextEntryExperiment(QMainWindow):
     def _get_word(self, sentence, index):
         words = self.__text_dict.get(sentence)
         word_count = len(words)
-        print(f"\n-------------------- get word: word_count:{word_count}; word index: {index} -------------------------\n")
+        print(f"\n-------------------- get word: word_count:{word_count}; word index: {index} --------------------\n")
         if index >= word_count:
             sys.stderr.write(f"Attempted to get word at position {index} even though there are only {word_count}\n")
             return None
@@ -174,7 +188,10 @@ class TextEntryExperiment(QMainWindow):
         # self.ui.trial_number_label.setText(str(self.__num_trials))
 
         # change task text based on condition!
-        self.ui.task_description_label.setText(self.__current_task_description)
+        if self.__autocompletion_active:
+            self.ui.task_description_label.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
+        else:
+            self.ui.task_description_label.setText(TextEntryExperiment.__TASK_DESCRIPTION_NO_AUTOCOMPLETE)
 
         self.ui.start_study_btn.setFocusPolicy(QtCore.Qt.NoFocus)  # prevent auto-focus of the start button
         self.ui.start_study_btn.clicked.connect(lambda: self._go_to_page(1))
@@ -206,7 +223,11 @@ class TextEntryExperiment(QMainWindow):
             self._setup_finish_page()
 
     def _show_example(self):
-        self.ui.example_task_description.setText(self.__current_task_description)
+        if self.__autocompletion_active:
+            self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_AUTOCOMPLETE)
+        else:
+            self.ui.example_task_description.setText(TextEntryExperiment.__TASK_DESCRIPTION_NO_AUTOCOMPLETE)
+
         self.ui.example_text.setText(self.__current_example_text)
         # clear the text field to prevent leftovers from the last trial
         self.ui.example_input_field.clear()
@@ -229,6 +250,7 @@ class TextEntryExperiment(QMainWindow):
     def _start_measuring_text_entry_speed(self):
         print("Starting to measure text entry...")
         current_time = get_current_time()
+        self.__start_time_task = current_time
         self.__start_time_word = current_time
         self.__start_time_sentence = current_time
 
@@ -244,7 +266,12 @@ class TextEntryExperiment(QMainWindow):
 
             print('key press:', (event.key(), event.text()))
             pressed_key = event.text()
-            self.__logger.log_keypress()
+
+            # TODO logging duration doesn't really make much sense for keypresses ...
+            self.__logger.log_event(EventTypes.KEY_PRESSED, get_current_time(), self.__participant_id,
+                                    self.__current_condition, self.__autocompletion_active, pressed_key, time.time(),
+                                    time.time(), 0)
+
             # check if the pressed key was one of the defined ending characters;
             # if yes, either a word or a word and a sentence have been finished! (naive implementation)
             if pressed_key in [' ', ',', ';', ':', '.', '!', '?']:  # '\n', '\r',
@@ -274,8 +301,11 @@ class TextEntryExperiment(QMainWindow):
         print("word finished")
         current_time = get_current_time()
         end_time_word = current_time
-        print(f"Took {end_time_word - self.__start_time_word} seconds to enter this word.")
-        self.__logger.log_word_finished()
+        word_duration = end_time_word - self.__start_time_word
+        print(f"Took {word_duration} seconds to enter this word.")
+        self.__logger.log_event(EventTypes.WORD_TYPED, get_current_time(), self.__participant_id,
+                                self.__current_condition, self.__autocompletion_active, self.__current_word,
+                                end_time_word, self.__start_time_word, word_duration)
 
         self.__curr_word_index += 1
         self.__current_word = self._get_current_word()
@@ -288,8 +318,11 @@ class TextEntryExperiment(QMainWindow):
     def _handle_sentence_finished(self):
         print("sentence finished")
         end_time_sentence = get_current_time()
-        print(f"Took {end_time_sentence - self.__start_time_sentence} seconds to enter this sentence.")
-        self.__logger.log_sentence_finished()
+        sentence_duration = end_time_sentence - self.__start_time_sentence
+        print(f"Took {sentence_duration} seconds to enter this sentence.")
+        self.__logger.log_event(EventTypes.SENTENCE_TYPED, get_current_time(), self.__participant_id,
+                                self.__current_condition, self.__autocompletion_active, self.__current_sentence,
+                                end_time_sentence, self.__start_time_sentence, sentence_duration)
 
         self.__curr_word_index = 0  # reset word index to start with the first word of the new sentence again
 
@@ -303,8 +336,14 @@ class TextEntryExperiment(QMainWindow):
         else:
             print("\n###############################\nFinished entering text!")
             # TODO check for number of errors and discard this participant if too many errors were made??
+
             # text has been completely entered
-            self.__logger.log_text_finished()
+            end_time = get_current_time()
+            task_duration = end_time - self.__start_time_task
+            self.__logger.log_event(EventTypes.TEST_FINISHED, get_current_time(), self.__participant_id,
+                                    self.__current_condition, self.__autocompletion_active, self.__current_task_text,
+                                    end_time, self.__start_time_task, task_duration)
+
             # now enable the button at the bottom
             self.ui.task_finished_btn.setEnabled(True)
 
@@ -324,24 +363,14 @@ class TextEntryExperiment(QMainWindow):
         self.ui.send_questionnaire_btn.clicked.connect(self._save_questionnaire_answers)
 
     def _save_questionnaire_answers(self):
-        participant_age = str(self.ui.age_selection.value())
-        participant_gender = str(self.ui.gender_selection.currentText())
-        participant_occupation = str(self.ui.occupation_input.text())
+        age = str(self.ui.age_selection.value())
+        gender = str(self.ui.gender_selection.currentText())
+        occupation = str(self.ui.occupation_input.text())
         keyboard_affinity = str(self.ui.keyboard_affinity_slider.value())
         entry_speed = str(self.ui.speed_estimation_slider.value())
+        self.__logger.log_questionnaire(self.__participant_id, age, gender, occupation, keyboard_affinity, entry_speed)
 
-        # TODO this part should be extracted to the logger below!
-        # self.__questionnaire_data = self.__questionnaire_data.append({'timestampInMs': get_current_time(),
-        #                                                               'participantID': self._participant_id,
-        #                                                               'age': participant_age,
-        #                                                               'gender': participant_gender,
-        #                                                               'occupation': participant_occupation,
-        #                                                               'keyboardUsage': keyboard_affinity,
-        #                                                               'entrySpeed': entry_speed
-        #                                                               }, ignore_index=True)
-        # self.__questionnaire_data.to_csv(self.__QUESTIONNAIRE_DATA_CSV_NAME, index=False)
-
-        self._go_to_page()  # go to the next page
+        self._go_to_page()  # if no index is specified, simply go to the next page
 
     def _setup_finish_page(self):
         self.ui.exit_btn.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -353,52 +382,40 @@ class TextEntryLogger:
 
     def __init__(self):
         self.__log_file_name = "text_entry_log.csv"
-        # self.__study_data = self._init_study_log()  # TODO implement logging
+        self.__questionnaire_log_file_name = "questionnaire_log.csv"
+        self._init_logger()
 
-    def _init_study_log(self):
-        # check if the file already exists
-        if os.path.isfile(self.__log_file_name):
-            study_data = pd.read_csv(self.__log_file_name)
+    def _init_logger(self) -> None:
+        if not os.path.isfile(self.__log_file_name):
+            # file does not yet exist, create with the csv headers
+            print('event_type', 'timestamp', 'participant_id', 'condition', 'with_autocompletion', 'entered_content',
+                  'start_time_in_s', 'end_time_in_s', 'duration_in_s')
+
+        if os.path.isfile(self.__questionnaire_log_file_name):
+            self.__questionnaire_data = pd.read_csv(self.__questionnaire_log_file_name)
         else:
-            study_data = pd.DataFrame(
-                columns=['timestamp', 'participantID', 'condition', 'pointerPositionsPerTarget', 'timesPerTargetInS',
-                         'startTimeAsUnix', 'endTimeAsUnix', 'timeTillFinishedInS', 'missedClickCount',
-                         'bubblePointingTechnique'])
-        return study_data
+            self.__questionnaire_data = pd.DataFrame(
+                columns=['timestamp', 'participantID', 'age', 'gender', 'occupation', 'usedHand', 'keyboardType',
+                         'keyboardUsage', 'hasEyeImpairment', 'eyeImpairment'])
 
-    def _log_data(self):
-        print(f"'id', 'trial', 'time'")
-        print(f"{0}, {2}, {589749594}")
-        # TODO mit os aus der setup python file das hier ausführen? oder lieber direkt über cmd?
-        #  python3 testsetup.py >> log.csv
+    def log_event(self, event: EventTypes, timestamp: float, participant_id: int, condition: str, autocompletion: bool,
+                  entered_content: str, start_time_in_s: float, end_time_in_s: float, duration_in_s: float) -> None:
 
-    def log_keypress(self):
-        pass
+        print(f"{event},{timestamp},{participant_id},{condition},{autocompletion},{entered_content},{start_time_in_s},"
+              f"{end_time_in_s},{duration_in_s}")
 
-    def log_word_finished(self):
-        pass
+    def log_questionnaire(self, participant_id: int, age: str, gender: str, occupation: str, keyboard_usage: str,
+                          entry_speed: str) -> None:
 
-    def log_sentence_finished(self):
-        pass
-
-    def log_text_finished(self):
-        pass
-
-    def add_new_log_data(self, participant_id, condition, pointer_position_list, time_per_target_list, start_time,
-                         end_time, missed_clicks, bubble_pointing_active):
-
-        self.__study_data = self.__study_data.append({'timestampInMs': get_current_time(), 'participantID': participant_id,
-                                                      'condition': condition,
-                                                      'pointerPositionsPerTarget': pointer_position_list,
-                                                      'timesPerTargetInS':
-                                                          time_per_target_list, 'startTimeAsUnix':
-                                                          start_time, 'endTimeAsUnix': end_time, 'timeTillFinishedInS':
-                                                          end_time - start_time, 'missedClickCount': missed_clicks,
-                                                      'bubblePointingTechnique': bubble_pointing_active},
-                                                     ignore_index=True)
-        self.__study_data.to_csv(self.__log_file_name, index=False)
-        with open(self.__log_file_name) as file:
-            print(file.readlines()[-1])
+        # log questionnaire answers to a csv file to keep log data separated
+        self.__questionnaire_data = self.__questionnaire_data.append({'participant_id': participant_id,
+                                                                      'age': age,
+                                                                      'gender': gender,
+                                                                      'occupation': occupation,
+                                                                      'keyboard_usage': keyboard_usage,
+                                                                      'entry_speed': entry_speed
+                                                                      }, ignore_index=True)
+        self.__questionnaire_data.to_csv(self.__questionnaire_log_file_name, index=False)
 
 
 def main():
