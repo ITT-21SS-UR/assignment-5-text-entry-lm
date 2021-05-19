@@ -430,8 +430,8 @@ class TextEntryLogger:
     def _init_logger(self) -> None:
         if os.stat(self.__log_file_name).st_size == 0:
             # log file is empty, add the csv headers
-            print('event_type, timestamp, participant_id, condition, with_autocompletion, entered_content,'
-                  'start_time_in_s, end_time_in_s, duration_in_s')
+            print('event_type,timestamp,participant_id,condition,with_autocompletion,entered_content,'
+                  'start_time_in_s,end_time_in_s,duration_in_s')
 
         if os.path.isfile(self.__questionnaire_log_file_name):
             self.__questionnaire_data = pd.read_csv(self.__questionnaire_log_file_name)
