@@ -1,0 +1,32 @@
+Design and Analysis of Intelligent Text Entry Systems with
+Function Structure Models and Envelope Analysis:
+
+Für diese Studie wurde ein Android-Keyboard implementiert, das viele Anpassungmöglichkeiten beinhaltet.
+Sowohl Darstellungsfarbe als auch eingebundene Emojis konnten vom Nutzer selbst gesetzt werden.
+Ausserdem bietet die Tastatur die Möglichkeit eigene Anpassungen mit anderen zu teilen.
+In einer Durchgeführten Studie kamen die Verfasser zu dem Ergebnis, dass die meisten Ihrer Testpersonen
+die Tastatur auch gerne ausserhalb der Studie verwenden würden, weil sie durch die gemeinsame Anpassung
+eine größere soziale Verbundenheit zum "Tastatur-Partner" spürten.
+
+Hummer: Text Entry by Gaze and Hum
+
+In dieser Studie wurde mithilfe eines Eye-Trackers der Blick der Testperson auf einen Bildschirm aufgezeichnet.
+Auf dem Bildschirm war eine Tastatur zu sehen. Im Test wurde das Schreiben auf der Tastatur durch Fokusieren der
+Tasten mit den Augen auf 2 Arten erweitert. In einer Kennzeichnete die Testperson Anfang und Ende der Worte durch
+ein kurzes summen, in der anderen summte die Testperson die ganze Zeit während sie gerade ein Wort schrieb. 
+Durch die 2. Erweiterung verbesserte die Text eingabe Geschwindigkeit im Vergleich zu den anderen, und die Test-
+personen erreichten eine Eingabe geschwindikeit von Durchschnittlich 20,45 Wörtern pro Minute.
+
+FingerText: Exploring and Optimizing Performance for
+Wearable, Mobile and One-Handed Typing
+
+Diese Studie befasste sich mit der Texteingabe durch berühren des Daumens mit einem anderen Finger. Dies sollte
+die Texteingabe während des gehens oder anderen nicht statischen Beschäftigungen erleichtern. Dafür bauten die 
+Autoren ein Gerät, das beim Zusammendrücken des Daumens mit einem anderen Finger, in unterschiedlichen Bereichen
+unterschiedliche Buchstaben ausgibt. Es wurde versucht die Bereiche für die jeweiligen Buchstaben möglichst effizient
+zu verteilen. In einer Studie konnte im Vergleich zu einem QWERTY-artigen Layout eine 10,45% Verbesserung bei der Wort-
+pro-Minute Geschwindikeit, sowie eine 39,44% geringere Wort Fehler Rate feststellen.  
+ 
+
+
+ 
