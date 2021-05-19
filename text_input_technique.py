@@ -28,13 +28,9 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
         self.completer.setMaxVisibleItems(self.popup_entry_count)
         self.current_popup = None
         self.completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.numbers = []
-        self.template_doc = ""
-        self.prev_content = ""
-        self.completer.activated.connect(self.insertCompletion)
+        self.completer.activated.connect(self.insert_text)
 
-    # https://www.qtcentre.org/threads/23518-How-to-change-completion-rule-of-QCompleter?highlight=qcompleter
-    def insertCompletion(self, completion):
+    def insert_text(self, completion):
         tc = self.textCursor()
         tc.movePosition(QtGui.QTextCursor.EndOfWord)
         tc.select(QtGui.QTextCursor.WordUnderCursor)
@@ -51,17 +47,17 @@ class CompleterTextEdit(QtWidgets.QTextEdit):
             # the three words shown in the popup can be selected by pressing 1, 2 or 3 on the keyboard.
             if event.text() == "1":
                 self.completer.setCurrentRow(0)
-                self.insertCompletion(self.completer.currentCompletion())
+                self.insert_text(self.completer.currentCompletion())
                 self.current_popup.hide()
                 return
             if event.text() == "2":
                 self.completer.setCurrentRow(1)
-                self.insertCompletion(self.completer.currentCompletion())
+                self.insert_text(self.completer.currentCompletion())
                 self.current_popup.hide()
                 return
             if event.text() == "3":
                 self.completer.setCurrentRow(2)
-                self.insertCompletion(self.completer.currentCompletion())
+                self.insert_text(self.completer.currentCompletion())
                 self.current_popup.hide()
                 return
             if event.key() == QtCore.Qt.Key_Space:
